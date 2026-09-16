@@ -1,16 +1,32 @@
 {
   "hero": {
     "badge": "Engineered for scale",
-    "headline": "High-conversion engines for Shopify & Klaviyo.",
+    "headline": "High-conversion solutions for Shopify & Klaviyo.",
     "lead": "We build technical infrastructure that converts. From custom Shopify Plus architecture to retention-first Klaviyo automation, every pixel is calibrated for ROI.",
     "cta_label": "View Results",
-    "trust_marks": ["Verified Partner", "Shopify Plus", "Klaviyo Elite"]
+    "trust_marks": [
+      "Verified Partner",
+      "Shopify Plus",
+      "Klaviyo Elite"
+    ]
   },
   "stats": [
-    { "num": "+142%", "label": "Revenue growth" },
-    { "num": "22.4%", "label": "Klaviyo attrib." },
-    { "num": "$42M", "label": "GMV managed" },
-    { "num": "1.8s", "label": "Avg load time" }
+    {
+      "num": "+142%",
+      "label": "Revenue growth"
+    },
+    {
+      "num": "22.4%",
+      "label": "Klaviyo attrib."
+    },
+    {
+      "num": "$42M",
+      "label": "GMV managed"
+    },
+    {
+      "num": "1.8s",
+      "label": "Avg load time"
+    }
   ],
   "specializations": {
     "heading": "Core Specializations",
@@ -20,13 +36,21 @@
         "icon": "store",
         "title": "Shopify Plus Architecture",
         "desc": "Custom headless builds, 2.0 theme migrations, and deep API integrations designed for sub-second performance.",
-        "bullets": ["Custom App Development", "Technical SEO Audit", "Speed Optimization"]
+        "bullets": [
+          "Custom App Development",
+          "Technical SEO Audit",
+          "Speed Optimization"
+        ]
       },
       {
         "icon": "mail",
         "title": "CRM & Klaviyo Lifecycle",
         "desc": "Data-driven retention strategies that turn one-time shoppers into lifetime advocates through behavioral flows.",
-        "bullets": ["Predictive Analytics Mapping", "Advanced Segmentation", "SMS & Email Flow Audits"]
+        "bullets": [
+          "Predictive Analytics Mapping",
+          "Advanced Segmentation",
+          "SMS & Email Flow Audits"
+        ]
       }
     ]
   },
