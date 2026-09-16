@@ -16,6 +16,8 @@
   --green-dark: #5A9612;
   --green-tint: #EAF4D8;
   --border: #E4E4DE;
+  --yellow: #FFC60B;
+  --yellow-dark: #E6B200;
   --shadow: 0 1px 2px rgba(20,20,15,0.04), 0 8px 24px rgba(20,20,15,0.04);
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -59,21 +61,23 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
   justify-content: space-between;
   padding: 22px 48px;
   border-bottom: 1px solid var(--border);
+  background: var(--white);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-weight: 800;
-  font-size: 17px;
-  letter-spacing: -0.01em;
 }
 
-.logo-mark {
-  width: 18px;
-  height: 18px;
-  color: var(--green);
+.logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.footer-about .logo-img {
+  height: 24px;
 }
 
 .nav-links {
@@ -114,6 +118,9 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
 .btn-dark { background: rgba(255,255,255,0.1); color: var(--white); }
 .btn-dark:hover { background: rgba(255,255,255,0.18); }
 
+.btn-yellow { background: var(--yellow); color: var(--black); }
+.btn-yellow:hover { background: var(--yellow-dark); }
+
 /* ---------- Badge / eyebrow ---------- */
 .badge {
   font-family: var(--font-accent);
@@ -142,6 +149,27 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
   padding: 72px 48px 56px;
   max-width: var(--max);
   margin: 0 auto;
+}
+
+body[data-page="home"] .hero {
+  max-width: none;
+  background: var(--green) url('images/hero-bg-green.png') center/cover no-repeat;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+body[data-page="home"] .hero > * {
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-page="home"] .hero .hero-cta-row .btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+body[data-page="home"] .hero .hero-cta-row .btn-primary:hover {
+  background: #1E1E1B;
 }
 
 .hero h1 {
@@ -182,6 +210,11 @@ h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
 }
 
 .trust-marks span:not(:first-child) { color: var(--ink-soft); }
+
+body[data-page="home"] .hero .trust-marks,
+body[data-page="home"] .hero .trust-marks span:not(:first-child) {
+  color: var(--black);
+}
 
 /* ---------- Stats bar (black) ---------- */
 .stats-bar {
