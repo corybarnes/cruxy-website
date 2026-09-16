@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/cruxy-website   # <-- change to your actual repo, e.g. corybarnes/cruxy-website
+  repo: corybarnes/cruxy-website   # <-- change to your actual repo, e.g. corybarnes/cruxy-website
   branch: main
-  base_url: https://YOUR-OAUTH-WORKER.workers.dev   # <-- see README for the 5-minute Cloudflare Worker setup
+  base_url: https://sveltia-cms-auth.cory-p-barnes.workers.dev   # <-- see README for the 5-minute Cloudflare Worker setup
 
 site_url: https://cruxy.io
 logo_url: /images/aura-labs.jpg
