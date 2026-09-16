@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: corybarnes/cruxy-website   # <-- change to your actual repo, e.g. corybarnes/cruxy-website
+  repo: corybarnes/cruxy-website
   branch: main
-  base_url: https://sveltia-cms-auth.cory-p-barnes.workers.dev   # <-- see README for the 5-minute Cloudflare Worker setup
+  base_url: https://sveltia-cms-auth.cory-p-barnes.workers.dev
 
 site_url: https://cruxy.io
 logo_url: /images/aura-labs.jpg
@@ -17,46 +17,66 @@ collections:
         label: Home Page Content
         file: content/home.json
         fields:
-          - { name: hero, label: Hero, widget: object, fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
               - { name: badge, label: Badge text, widget: string }
               - { name: headline, label: Headline, widget: string }
               - { name: lead, label: Subheadline, widget: text }
               - { name: cta_label, label: Button label, widget: string }
-              - { name: trust_marks, label: Trust marks, widget: list, field: { name: mark, widget: string } }
-            }
-          - { name: stats, label: Stat Bar, widget: list, fields:
+              - name: trust_marks
+                label: Trust marks
+                widget: list
+                field: { name: mark, widget: string }
+          - name: stats
+            label: Stat Bar
+            widget: list
+            fields:
               - { name: num, label: Number, widget: string }
               - { name: label, label: Label, widget: string }
-            }
-          - { name: specializations, label: Specializations, widget: object, fields:
+          - name: specializations
+            label: Specializations
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-              - { name: items, label: Cards, widget: list, fields:
+              - name: items
+                label: Cards
+                widget: list
+                fields:
                   - { name: icon, label: Icon, widget: select, options: [store, mail] }
                   - { name: title, label: Title, widget: string }
                   - { name: desc, label: Description, widget: text }
-                  - { name: bullets, label: Bullets, widget: list, field: { name: bullet, widget: string } }
-                }
-            }
-          - { name: feature, label: Featured Client Story, widget: object, fields:
+                  - name: bullets
+                    label: Bullets
+                    widget: list
+                    field: { name: bullet, widget: string }
+          - name: feature
+            label: Featured Client Story
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: stat_num, label: Stat number, widget: string }
               - { name: stat_label, label: Stat label, widget: string }
               - { name: link_label, label: Link text, widget: string }
               - { name: image, label: Image, widget: image }
-            }
-          - { name: testimonial, label: Testimonial, widget: object, fields:
+          - name: testimonial
+            label: Testimonial
+            widget: object
+            fields:
               - { name: quote, label: Quote, widget: text }
               - { name: name, label: Name, widget: string }
               - { name: role, label: Role, widget: string }
-            }
-          - { name: cta, label: Bottom CTA, widget: object, fields:
+          - name: cta
+            label: Bottom CTA
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: primary, label: Primary button, widget: string }
               - { name: secondary, label: Secondary button, widget: string }
-            }
 
   - name: solutions
     label: Solutions Page
@@ -65,31 +85,44 @@ collections:
         label: Solutions Page Content
         file: content/solutions.json
         fields:
-          - { name: hero, label: Hero, widget: object, fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
               - { name: badge, label: Badge text, widget: string }
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-            }
-          - { name: disciplines, label: Disciplines, widget: list, fields:
+          - name: disciplines
+            label: Disciplines
+            widget: list
+            fields:
               - { name: num, label: Number, widget: string }
               - { name: title, label: Title, widget: string }
               - { name: desc, label: Description, widget: text }
-              - { name: bullets, label: Bullets, widget: list, field: { name: bullet, widget: string } }
-            }
-          - { name: engage, label: How We Engage, widget: object, fields:
+              - name: bullets
+                label: Bullets
+                widget: list
+                field: { name: bullet, widget: string }
+          - name: engage
+            label: How We Engage
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-              - { name: tiers, label: Pricing tiers, widget: list, fields:
+              - name: tiers
+                label: Pricing tiers
+                widget: list
+                fields:
                   - { name: title, label: Title, widget: string }
                   - { name: price, label: Price, widget: string }
                   - { name: desc, label: Description, widget: text }
-                }
-            }
-          - { name: cta, label: Bottom CTA, widget: object, fields:
+          - name: cta
+            label: Bottom CTA
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: primary, label: Primary button, widget: string }
-            }
 
   - name: case_studies
     label: Case Studies Page
@@ -98,33 +131,43 @@ collections:
         label: Case Studies Page Content
         file: content/case-studies.json
         fields:
-          - { name: hero, label: Hero, widget: object, fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
               - { name: badge, label: Badge text, widget: string }
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-            }
-          - { name: feature, label: Featured Case, widget: object, fields:
+          - name: feature
+            label: Featured Case
+            widget: object
+            fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: image, label: Image, widget: image }
-            }
-          - { name: cases, label: Case Studies, widget: list, fields:
+          - name: cases
+            label: Case Studies
+            widget: list
+            fields:
               - { name: name, label: Client name, widget: string }
               - { name: tag, label: Tag, widget: string }
               - { name: title, label: Title, widget: string }
               - { name: body, label: Body, widget: text }
-              - { name: stats, label: Stats, widget: list, fields:
+              - name: stats
+                label: Stats
+                widget: list
+                fields:
                   - { name: num, label: Number, widget: string }
                   - { name: label, label: Label, widget: string }
-                }
-            }
-          - { name: cta, label: Bottom CTA, widget: object, fields:
+          - name: cta
+            label: Bottom CTA
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: primary, label: Primary button, widget: string }
               - { name: secondary, label: Secondary button, widget: string }
-            }
 
   - name: about
     label: About Page
@@ -133,42 +176,60 @@ collections:
         label: About Page Content
         file: content/about.json
         fields:
-          - { name: hero, label: Hero, widget: object, fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
               - { name: badge, label: Badge text, widget: string }
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-            }
-          - { name: stats, label: Stat Bar, widget: list, fields:
+          - name: stats
+            label: Stat Bar
+            widget: list
+            fields:
               - { name: num, label: Number, widget: string }
               - { name: label, label: Label, widget: string }
-            }
-          - { name: operate, label: How We Operate, widget: object, fields:
+          - name: operate
+            label: How We Operate
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-              - { name: principles, label: Principles, widget: list, fields:
+              - name: principles
+                label: Principles
+                widget: list
+                fields:
                   - { name: title, label: Title, widget: string }
                   - { name: desc, label: Description, widget: text }
-                }
-            }
-          - { name: process, label: Our Process, widget: object, fields:
+          - name: process
+            label: Our Process
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-              - { name: steps, label: Steps, widget: list, fields:
+              - name: steps
+                label: Steps
+                widget: list
+                fields:
                   - { name: num, label: Number, widget: string }
                   - { name: title, label: Title, widget: string }
                   - { name: desc, label: Description, widget: text }
-                }
-            }
-          - { name: team, label: The Team, widget: object, fields:
+          - name: team
+            label: The Team
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: lead, label: Subheading, widget: text }
-              - { name: members, label: Members, widget: list, fields:
+              - name: members
+                label: Members
+                widget: list
+                fields:
                   - { name: name, label: Name, widget: string }
                   - { name: role, label: Role, widget: string }
-                }
-            }
-          - { name: cta, label: Bottom CTA, widget: object, fields:
+          - name: cta
+            label: Bottom CTA
+            widget: object
+            fields:
               - { name: heading, label: Heading, widget: string }
               - { name: body, label: Body, widget: text }
               - { name: primary, label: Primary button, widget: string }
-            }
