@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "badge": "About",
+    "heading": "A small team, deliberately.",
+    "lead": "Cruxy was founded in 2018 by engineers who were tired of watching good brands lose revenue to bad infrastructure. We stay small so the people who sell the work are the people who ship it."
+  },
+  "stats": [
+    { "num": "2018", "label": "Founded" },
+    { "num": "60+", "label": "Brands shipped" },
+    { "num": "$42M", "label": "GMV managed" },
+    { "num": "11", "label": "Senior specialists" }
+  ],
+  "operate": {
+    "heading": "How we operate",
+    "lead": "Four principles that decide what we take on and how we run it.",
+    "principles": [
+      { "title": "One metric, agreed up front", "desc": "Before a line of code, we agree on the single number the engagement is judged by. Everything else is context." },
+      { "title": "Senior people only", "desc": "No account layer, no juniors learning on your store. The people in the kickoff are the people doing the work." },
+      { "title": "Own your stack", "desc": "We build on documented, standard Shopify and Klaviyo patterns. Nothing we ship requires us to stay." },
+      { "title": "Speed is a feature", "desc": "Performance budgets are set at the start and enforced through launch. Slow is a bug, not a tradeoff." }
+    ]
+  },
+  "process": {
+    "heading": "Our process",
+    "lead": "The same four phases on every engagement, scaled to the scope.",
+    "steps": [
+      { "num": "01", "title": "Diagnose", "desc": "Technical, lifecycle, and analytics audit. We find where revenue is leaking and price the fixes." },
+      { "num": "02", "title": "Architect", "desc": "A prioritized roadmap with scope, sequencing, and the expected impact of each workstream." },
+      { "num": "03", "title": "Build", "desc": "Two-week cycles with a shared board. You see progress on staging every sprint, not at the end." },
+      { "num": "04", "title": "Compound", "desc": "Post-launch testing, lifecycle iteration, and performance monitoring against the agreed metric." }
+    ]
+  },
+  "team": {
+    "heading": "The team",
+    "lead": "Eleven specialists across engineering, lifecycle, and analytics. Here are the leads you'll work with.",
+    "members": [
+      { "name": "Marcus Idowu", "role": "Founder & Technical Director" },
+      { "name": "Priya Raman", "role": "Lead Shopify Engineer" },
+      { "name": "Elena Márquez", "role": "Head of Lifecycle & CRM" },
+      { "name": "Tom Fischer", "role": "CRO & Analytics Lead" }
+    ]
+  },
+  "cta": {
+    "heading": "Let's see if we're a fit.",
+    "body": "We take on a limited number of engagements each quarter so the senior team stays on every project.",
+    "primary": "Start a conversation"
+  }
+}

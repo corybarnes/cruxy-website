@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "badge": "Solutions",
+    "heading": "Four disciplines. One revenue system.",
+    "lead": "We don't sell channels in isolation. Storefront, lifecycle, and performance are engineered together so every improvement compounds against the same number."
+  },
+  "disciplines": [
+    {
+      "num": "01",
+      "title": "Shopify Plus Architecture",
+      "desc": "Custom theme and headless builds engineered around your catalog, markets, and merchandising logic — not a template.",
+      "bullets": ["Legacy platform migrations", "Headless (Hydrogen) storefronts", "Custom app & API development", "Multi-market / multi-currency setup"]
+    },
+    {
+      "num": "02",
+      "title": "Klaviyo Lifecycle & CRM",
+      "desc": "Retention systems built on behavioral data: flows, segmentation, and SMS that compound revenue month over month.",
+      "bullets": ["Flow architecture & rebuilds", "Predictive segmentation", "SMS + email orchestration", "Deliverability & list health"]
+    },
+    {
+      "num": "03",
+      "title": "Conversion Rate Optimization",
+      "desc": "A continuous testing program grounded in analytics, session data, and statistically sound experiment design.",
+      "bullets": ["PDP & checkout experiments", "Analytics instrumentation", "Heuristic UX audits", "Quarterly test roadmaps"]
+    },
+    {
+      "num": "04",
+      "title": "Performance Engineering",
+      "desc": "Sub-second storefronts. We treat Core Web Vitals as a revenue metric, because that's exactly what it is.",
+      "bullets": ["Core Web Vitals remediation", "App bloat & script audits", "Image & font pipelines", "Technical SEO foundations"]
+    }
+  ],
+  "engage": {
+    "heading": "How we engage",
+    "lead": "Most brands start with an audit, then move into a build or a growth retainer once the roadmap is priced.",
+    "tiers": [
+      { "title": "Audit", "price": "From $6k", "desc": "A two-week technical and lifecycle teardown with a prioritized, costed roadmap." },
+      { "title": "Build", "price": "From $45k", "desc": "Full storefront architecture or replatform, delivered in six to twelve weeks." },
+      { "title": "Growth Retainer", "price": "From $9k / mo", "desc": "Ongoing CRO, lifecycle, and performance work with a dedicated pod." }
+    ]
+  },
+  "cta": {
+    "heading": "Not sure which one you need?",
+    "body": "Send us your store URL. We'll come back with a short, honest read on where the biggest gains are.",
+    "primary": "Book a Performance Audit"
+  }
+}
