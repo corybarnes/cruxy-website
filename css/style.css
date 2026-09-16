@@ -2,7 +2,7 @@
    Cruxy — shared design system
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Source+Sans+3:wght@400&display=swap');
 
 :root {
   --bg: #F7F7F4;
@@ -20,7 +20,10 @@
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 10px;
-  --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-accent: 'Source Sans Pro', 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  --font: var(--font-body);
   --max: 1180px;
 }
 
@@ -30,7 +33,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font-body);
+  font-weight: 400;
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -43,6 +47,8 @@ a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
 
 h1, h2, h3, p { margin: 0; }
+
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
 
@@ -77,8 +83,10 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .nav-links a {
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: 14.5px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--ink-soft);
 }
 
@@ -108,6 +116,8 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Badge / eyebrow ---------- */
 .badge {
+  font-family: var(--font-accent);
+  font-weight: 400;
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -115,7 +125,7 @@ h1, h2, h3, p { margin: 0; }
   padding: 7px 14px;
   border-radius: 999px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink-soft);
 }
 
@@ -160,11 +170,13 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .trust-marks {
+  font-family: var(--font-accent);
+  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 18px;
   font-size: 11.5px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--ink-faint);
 }
@@ -191,8 +203,10 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .stat .stat-label {
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #9C9C93;
@@ -221,6 +235,8 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .section-head p {
+  font-family: var(--font-accent);
+  font-weight: 400;
   color: var(--ink-soft);
   font-size: 1rem;
   line-height: 1.65;
@@ -324,8 +340,10 @@ h1, h2, h3, p { margin: 0; }
 .media-badge .stat-label { color: var(--ink-faint); }
 
 .split-copy .eyebrow {
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.05em;
   color: var(--green-dark);
   margin-bottom: 12px;
@@ -447,8 +465,10 @@ footer {
 .footer-cols { display: flex; gap: 64px; }
 
 .footer-col h4 {
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-faint);
@@ -459,6 +479,8 @@ footer {
 .footer-col a:hover { color: var(--ink); }
 
 .footer-bottom {
+  font-family: var(--font-accent);
+  font-weight: 400;
   max-width: var(--max);
   margin: 32px auto 0;
   padding-top: 24px;
@@ -504,10 +526,12 @@ footer {
 }
 
 .case-tag {
+  font-family: var(--font-accent);
+  font-weight: 400;
   display: inline-block;
   background: var(--bg-alt);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.03em;
   padding: 5px 12px;
   border-radius: 999px;
@@ -520,7 +544,9 @@ footer {
 
 .case-stats { display: flex; gap: 32px; }
 .case-stats .stat-num { color: var(--green-dark); font-size: 1.6rem; }
-.case-stats .stat-label { color: var(--ink-faint); font-size: 10px; }
+.case-stats .stat-label {
+  font-family: var(--font-accent);
+  font-weight: 400; color: var(--ink-faint); font-size: 10px; }
 
 .team-grid {
   max-width: var(--max);
