@@ -5,7 +5,16 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const KLAVIYO_PUBLIC_KEY = 'SKasJK';
 const KLAVIYO_LIST_ID = 'YfTN2r';
 
+// Bot protection: a hidden honeypot field (real visitors never see or fill it,
+// since it's off-screen via CSS) plus a minimum-time check (scripted bots
+// often submit instantly; a human takes at least a couple seconds to fill
+// the form). Both checks fail silently with a fake success, so bots don't
+// learn to adapt and real visitors are never affected.
+const formLoadedAt = Date.now();
+const MIN_SUBMIT_MS = 2000;
+
 const form = document.getElementById('contactForm');
+const honeypot = document.getElementById('website');
 const submitBtn = document.getElementById('submitBtn');
 const formError = document.getElementById('formError');
 const formPanel = document.getElementById('formPanel');
@@ -29,6 +38,14 @@ function setSubmitting(isSubmitting) {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  // Bot check: honeypot filled in, or submitted too fast to be a real person.
+  // Show the normal success state without actually sending anything to Klaviyo.
+  if (honeypot.value || (Date.now() - formLoadedAt) < MIN_SUBMIT_MS) {
+    formPanel.classList.add('hidden');
+    successPanel.classList.add('visible');
+    return;
+  }
 
   const firstName = document.getElementById('firstName').value;
   const lastName = document.getElementById('lastName').value;

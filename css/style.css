@@ -155,6 +155,7 @@ header.site-header .wrap {
 }
 .btn-submit:disabled { opacity: 0.6; cursor: default; }
 .form-error { margin-top: 12px; font-size: 13px; color: #C0392B; display: none; }
+.hp-field { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-error.visible { display: block; }
 
 /* ---------- Footer ---------- */
