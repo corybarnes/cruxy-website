@@ -85,6 +85,23 @@ header.site-header .wrap {
   #hero-img-wrap img { width: 100%; max-width: 100%; }
 }
 
+/* ---------- Mobile header/nav ---------- */
+@media (max-width: 640px) {
+  header.site-header .wrap { padding: 0 16px; }
+  .logo-link img { height: 36px; }
+  .main-nav { gap: 14px; }
+  .main-nav a.nav-link { font-size: 13px; }
+  .btn-book { padding: 7px 14px; font-size: 12px; }
+}
+
+/* ---------- Mobile contact form ---------- */
+@media (max-width: 640px) {
+  #contact .wrap { padding: 0 16px; }
+  .form-panel { padding: 20px; }
+  .form-grid { grid-template-columns: 1fr; gap: 16px; }
+  .field input, .field textarea { font-size: 16px; }
+}
+
 /* ---------- Services ---------- */
 #services { background: #F8F8F8; padding: 80px 24px; }
 .section-head { text-align: center; margin-bottom: 48px; }
