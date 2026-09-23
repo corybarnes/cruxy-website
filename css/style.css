@@ -30,7 +30,7 @@
 body { margin: 0; font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; color: #0D0D0D; overflow-x: hidden; }
 a { color: #FFC60B; }
 a:hover { color: #D9A500; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
@@ -137,6 +137,7 @@ header.site-header .wrap {
 .field.full { grid-column: 1 / -1; }
 .field label { font-size: 12px; font-weight: 600; color: #0D0D0D; }
 .field input, .field textarea {
+  width: 100%;
   padding: 10px 14px;
   border: 1.5px solid #E0E0E0;
   border-radius: 6px;
