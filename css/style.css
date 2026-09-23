@@ -86,9 +86,9 @@ header.site-header .wrap {
 @media (max-width: 640px) {
   header.site-header .wrap { padding: 0 16px; }
   .logo-link img { height: 36px; }
-  .main-nav { gap: 14px; }
+  .main-nav { gap: 18px; }
   .main-nav a.nav-link { font-size: 13px; }
-  .btn-book { padding: 7px 14px; font-size: 12px; }
+  .btn-book { display: none; }
 }
 
 /* ---------- Mobile contact form ---------- */
