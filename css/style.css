@@ -78,8 +78,8 @@ header.site-header .wrap {
 #hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 480px; max-width: 42vw; }
 #hero-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 16px; }
 @media (max-width: 640px) {
-  #hero-img-wrap { margin-left: 0; width: 100%; min-width: 0; }
-  #hero-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  #hero-img-wrap { display: none; }
+  .work-grid { grid-template-columns: 1fr !important; }
 }
 
 /* ---------- Mobile header/nav ---------- */
