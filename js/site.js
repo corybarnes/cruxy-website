@@ -95,3 +95,14 @@ form.addEventListener('submit', async (e) => {
     setError('Something went wrong. Please try again or email us directly.');
   }
 });
+
+// Sticky header shadow on scroll
+(function () {
+  var header = document.querySelector('header.site-header');
+  if (!header) return;
+  function updateHeaderShadow() {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+  updateHeaderShadow();
+})();
