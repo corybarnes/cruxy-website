@@ -191,7 +191,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 
 /* ---------- Mobile contact form ---------- */
 @media (max-width: 640px) {
-  #contact .wrap { padding: 0 16px; }
+  #contact .wrap { padding: 0; }
   .form-panel { padding: 20px; }
   .form-grid { grid-template-columns: 1fr; gap: 16px; }
   .field input, .field textarea { font-size: 16px; }
