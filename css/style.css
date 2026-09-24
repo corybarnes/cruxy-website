@@ -80,6 +80,8 @@ header.site-header .wrap {
 @media (max-width: 640px) {
   #hero-img-wrap { display: none; }
   .work-grid { grid-template-columns: 1fr !important; }
+  #home .wrap { padding: 56px 24px; }
+  #services .wrap { padding: 0; }
 }
 
 /* ---------- Mobile header/nav ---------- */
