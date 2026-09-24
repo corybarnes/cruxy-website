@@ -46,8 +46,13 @@ header.site-header {
 header.site-header.is-scrolled {
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
-#services, #work, #contact {
-  scroll-margin-top: 80px;
+/* Each section's own top padding differs, so scroll-margin-top is sized
+   per-section to land at the same visual gap below the sticky header. */
+#services, #contact {
+  scroll-margin-top: 16px;
+}
+#work {
+  scroll-margin-top: 96px;
 }
 header.site-header .wrap {
   height: 64px;
