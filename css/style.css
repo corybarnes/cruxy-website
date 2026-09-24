@@ -48,7 +48,7 @@ header.site-header.is-scrolled {
 }
 /* Each section's own top padding differs, so scroll-margin-top is sized
    per-section to land at the same visual gap below the sticky header. */
-#services, #contact {
+#services, #about, #contact {
   scroll-margin-top: 16px;
 }
 #work {
@@ -94,6 +94,10 @@ header.site-header .wrap {
   .work-grid { grid-template-columns: 1fr !important; }
   #home .wrap { padding: 56px 24px; }
   #services .wrap { padding: 0; }
+  #about .wrap { padding: 0; }
+  .about-grid { flex-direction: column; gap: 28px; }
+  .about-photo { width: 100%; }
+  .about-photo img { aspect-ratio: 4/3; }
 }
 
 /* ---------- Mobile header/nav ---------- */
@@ -129,6 +133,19 @@ header.site-header .wrap {
 .cta-banner h2 { font-size: 2rem; font-weight: 900; color: #0D0D0D; margin: 0 0 16px; letter-spacing: -0.02em; line-height: 1.15; }
 .cta-banner p { font-size: 15px; color: #4A4A4A; margin: 0 0 28px; line-height: 1.65; }
 .btn-dark { background: #0D0D0D; color: #fff; padding: 13px 32px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; display: inline-block; }
+
+/* ---------- About ---------- */
+#about { background: #fff; padding: 80px 24px; }
+.about-grid { display: flex; align-items: center; gap: 56px; flex-wrap: wrap; }
+.about-photo { flex-shrink: 0; width: 400px; max-width: 100%; }
+.about-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 8px; display: block; }
+.about-copy { flex: 1; min-width: 280px; }
+.about-copy .section-eyebrow { margin-bottom: 14px; }
+.about-copy h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 20px; }
+.about-copy .lead { font-size: 15px; color: #4A4A4A; line-height: 1.7; margin: 0 0 28px; max-width: 560px; }
+.about-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.about-stat-num { font-size: 28px; font-weight: 800; color: #0D0D0D; }
+.about-stat-label { font-size: 13px; color: #727272; }
 
 /* ---------- Contact ---------- */
 #contact { background: #F8F8F8; padding: 80px 24px; }
