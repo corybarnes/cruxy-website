@@ -75,11 +75,11 @@ header.site-header .wrap {
 .hero-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .btn-primary { background: #FFC60B; color: #0D0D0D; padding: 13px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
 .hero-secondary-link { color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; }
-#hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 380px; max-width: 40vw; }
-#hero-img-wrap img { max-width: 100%; height: auto; display: block; border-radius: 16px; }
+#hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 480px; max-width: 42vw; }
+#hero-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border-radius: 16px; }
 @media (max-width: 640px) {
   #hero-img-wrap { margin-left: 0; width: 100%; min-width: 0; }
-  #hero-img-wrap img { width: 100%; max-width: 100%; }
+  #hero-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 }
 
 /* ---------- Mobile header/nav ---------- */
