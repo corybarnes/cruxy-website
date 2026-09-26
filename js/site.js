@@ -1,6 +1,7 @@
-// Cruxy landing page — footer year + Klaviyo contact form submission.
+// Cruxy site-wide script: footer year, Klaviyo contact form (home page only), sticky header shadow.
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const KLAVIYO_PUBLIC_KEY = 'SKasJK';
 const KLAVIYO_LIST_ID = 'YfTN2r';
@@ -14,6 +15,11 @@ const formLoadedAt = Date.now();
 const MIN_SUBMIT_MS = 2000;
 
 const form = document.getElementById('contactForm');
+
+// Everything below only applies on pages that actually have the contact
+// form (currently just the home page) — skip entirely elsewhere so this
+// shared script doesn't error out on other pages.
+if (form) {
 const honeypot = document.getElementById('website');
 const submitBtn = document.getElementById('submitBtn');
 const formError = document.getElementById('formError');
@@ -95,6 +101,7 @@ form.addEventListener('submit', async (e) => {
     setError('Something went wrong. Please try again or email us directly.');
   }
 });
+} // end if (form)
 
 // Sticky header shadow on scroll
 (function () {

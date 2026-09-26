@@ -147,6 +147,32 @@ header.site-header .wrap {
 .about-stat-num { font-size: 28px; font-weight: 800; color: #0D0D0D; }
 .about-stat-label { font-size: 13px; color: #727272; }
 
+/* ---------- Apps page ---------- */
+#apps-hero { background: #F8F8F8; padding: 64px 24px 40px; }
+#apps-hero .section-head { text-align: center; margin-bottom: 0; }
+#apps-hero h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 12px; }
+#apps-hero .lead { font-size: 15px; color: #727272; max-width: 520px; margin: 0 auto; line-height: 1.65; }
+#apps-list { background: #F8F8F8; padding: 0 24px 80px; }
+#apps-list .wrap { max-width: 720px; }
+.app-grid { display: flex; flex-direction: column; gap: 20px; }
+.app-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0E0E0; display: flex; align-items: stretch; gap: 24px; }
+.app-card-icon { flex-shrink: 0; display: block; width: 140px; }
+.app-card-icon img { width: 140px; height: 100%; object-fit: cover; display: block; }
+.app-card-body { padding: 24px 28px 24px 0; }
+.app-card-badges { display: flex; gap: 8px; margin-bottom: 12px; }
+.app-card-body h3 { font-size: 20px; font-weight: 700; color: #0D0D0D; margin: 0 0 8px; }
+.app-card-body p { font-size: 14px; color: #727272; line-height: 1.65; margin: 0; }
+.badge { display: inline-block; background: #F8F8F8; color: #4A4A4A; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+.badge-outline { background: #fff; border: 1px solid #D0D0D0; padding: 3px 9px; }
+@media (max-width: 640px) {
+  #apps-hero .wrap { padding: 0; }
+  #apps-list .wrap { padding: 0; }
+  .app-card { flex-direction: column; }
+  .app-card-icon { width: 100%; }
+  .app-card-icon img { width: 100%; height: auto; aspect-ratio: 16/9; }
+  .app-card-body { padding: 20px; }
+}
+
 /* ---------- Contact ---------- */
 #contact { background: #F8F8F8; padding: 80px 24px; }
 #contact .wrap { max-width: 720px; }
