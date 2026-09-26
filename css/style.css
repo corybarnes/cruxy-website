@@ -169,8 +169,8 @@ header.site-header .wrap {
   #apps-hero .wrap { padding: 0; }
   #apps-list .wrap { padding: 0; }
   .app-card { flex-direction: column; }
-  .app-card-icon { width: 100%; }
-  .app-card-icon img { width: 100%; height: auto; aspect-ratio: 16/9; }
+  .app-card-icon { width: 100%; background: #0D0D0D; display: flex; align-items: center; justify-content: center; padding: 28px 0; }
+  .app-card-icon img { width: 96px; height: 96px; aspect-ratio: 1/1; object-fit: contain; }
   .app-card-body { padding: 20px; }
 }
 
