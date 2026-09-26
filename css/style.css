@@ -160,7 +160,7 @@ header.site-header .wrap {
 .app-card-icon { flex-shrink: 0; display: block; width: 140px; }
 .app-card-icon img { width: 140px; height: 100%; object-fit: cover; display: block; }
 .app-card-title-row { display: flex; align-items: center; gap: 10px; }
-.app-card-title-row img.icon-mobile { display: none; }
+.app-card-title-row svg.icon-mobile { display: none; }
 .app-card-body { padding: 24px 28px 24px 0; }
 .app-card-badges { display: flex; gap: 8px; margin-bottom: 12px; }
 .app-card-body h3 { font-size: 20px; font-weight: 700; color: #0D0D0D; margin: 0 0 8px; }
@@ -172,8 +172,10 @@ header.site-header .wrap {
   #apps-list .wrap { padding: 0; }
   .app-card { flex-direction: column; }
   .app-card-icon { display: none; }
-  .app-card-title-row img.icon-mobile { display: block; width: 24px; height: 24px; flex-shrink: 0; }
+  .app-card-title-row svg.icon-mobile { display: block; width: 24px; height: 24px; flex-shrink: 0; }
   .app-card-body { padding: 20px; }
+  .app-card-badges { flex-wrap: wrap; }
+  .badge-outline { background: transparent; border: 1px solid #0D0D0D; color: #0D0D0D; }
 }
 
 /* ---------- Contact ---------- */
