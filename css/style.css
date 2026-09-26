@@ -159,6 +159,7 @@ header.site-header .wrap {
 .app-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0E0E0; display: flex; align-items: stretch; gap: 24px; }
 .app-card-icon { flex-shrink: 0; display: block; width: 140px; }
 .app-card-icon img { width: 140px; height: 100%; object-fit: cover; display: block; }
+.app-card-icon img.icon-mobile { display: none; }
 .app-card-body { padding: 24px 28px 24px 0; }
 .app-card-badges { display: flex; gap: 8px; margin-bottom: 12px; }
 .app-card-body h3 { font-size: 20px; font-weight: 700; color: #0D0D0D; margin: 0 0 8px; }
@@ -169,8 +170,9 @@ header.site-header .wrap {
   #apps-hero .wrap { padding: 0; }
   #apps-list .wrap { padding: 0; }
   .app-card { flex-direction: column; }
-  .app-card-icon { width: 100%; background: #0D0D0D; display: flex; align-items: center; justify-content: center; padding: 28px 0; }
-  .app-card-icon img { width: 96px; height: 96px; aspect-ratio: 1/1; object-fit: contain; }
+  .app-card-icon { width: auto; padding: 20px 20px 0; }
+  .app-card-icon img.icon-full { display: none; }
+  .app-card-icon img.icon-mobile { display: block; width: 40px; height: 40px; }
   .app-card-body { padding: 20px; }
 }
 
