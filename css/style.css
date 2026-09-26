@@ -156,7 +156,7 @@ header.site-header .wrap {
 #apps-list { background: #F8F8F8; padding: 0 24px 80px; }
 #apps-list .wrap { max-width: 720px; }
 .app-grid { display: flex; flex-direction: column; gap: 20px; }
-.app-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0E0E0; display: flex; align-items: stretch; gap: 24px; }
+.app-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid #E0E0E0; display: flex; align-items: stretch; gap: 24px; text-decoration: none; color: inherit; }
 .app-card-icon { flex-shrink: 0; display: block; width: 140px; }
 .app-card-icon img { width: 140px; height: 100%; object-fit: cover; display: block; }
 .app-card-title-row { display: flex; align-items: center; gap: 10px; }
