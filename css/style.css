@@ -172,7 +172,8 @@ header.site-header .wrap {
   #apps-list .wrap { padding: 0; }
   .app-card { flex-direction: column; }
   .app-card-icon { display: none; }
-  .app-card-title-row svg.icon-mobile { display: block; width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+  .app-card-title-row svg.icon-mobile { display: block; width: 24px; height: 24px; flex-shrink: 0; }
+  .app-card-title-row h3 { line-height: 1; }
   .app-card-body { padding: 20px; }
   .app-card-badges { flex-wrap: wrap; }
   .badge-outline { background: transparent; border: 1px solid #0D0D0D; color: #0D0D0D; }
