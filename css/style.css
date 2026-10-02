@@ -248,3 +248,76 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
   .form-grid { grid-template-columns: 1fr; gap: 16px; }
   .field input, .field textarea { font-size: 16px; }
 }
+
+/* ============================================
+   App marketing page — Positioning / Features /
+   Pricing / FAQ / Final CTA
+   ============================================ */
+#why-cruxy, #features, #pricing, #faq, #download {
+  scroll-margin-top: 16px;
+}
+
+/* ---------- Positioning ("Why Cruxy") ---------- */
+.positioning { background: #F8F8F8; padding: 80px 24px; }
+.positioning .wrap { max-width: 900px; }
+.positioning-grid { display: flex; gap: 24px; flex-wrap: wrap; text-align: left; }
+.positioning-card { flex: 1; min-width: 280px; background: #fff; border: 1px solid #E0E0E0; border-radius: 12px; padding: 28px; }
+.positioning-card-dark { background: #0D0D0D; border-color: #0D0D0D; }
+.positioning-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #727272; margin-bottom: 12px; }
+.positioning-label-accent { color: #FFC60B; }
+.positioning-card p { font-size: 15px; color: #4A4A4A; line-height: 1.65; margin: 0; }
+.positioning-card-dark p { color: #fff; }
+
+/* ---------- Features ---------- */
+#features { background: #fff; padding: 80px 24px; }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.feature-card { background: #F8F8F8; border-radius: 12px; overflow: hidden; }
+.feature-card img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
+.feature-card-body { padding: 18px; }
+.feature-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #D9A500; margin-bottom: 8px; }
+.feature-card h3 { font-size: 15px; font-weight: 700; color: #0D0D0D; margin: 0 0 6px; line-height: 1.3; }
+.feature-card p { font-size: 13px; color: #727272; line-height: 1.55; margin: 0; }
+@media (max-width: 900px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .feature-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .feature-card-body { padding: 14px; }
+}
+
+/* ---------- Pricing ---------- */
+#pricing { background: #F8F8F8; padding: 80px 24px; }
+.pricing-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; text-align: left; max-width: 760px; margin: 0 auto; }
+.pricing-card { flex: 1; min-width: 280px; max-width: 340px; background: #fff; border: 1px solid #E0E0E0; border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; }
+.pricing-plan { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #727272; margin-bottom: 8px; }
+.pricing-plan-accent { color: #FFC60B; }
+.pricing-amount { font-size: 2.25rem; font-weight: 700; color: #0D0D0D; margin-bottom: 24px; }
+.pricing-period { font-size: 1rem; font-weight: 500; color: #9A9A9A; }
+.pricing-features { list-style: none; margin: 0 0 32px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.pricing-features li { font-size: 14px; color: #4A4A4A; padding-left: 24px; position: relative; }
+.pricing-features li::before { content: '✓'; position: absolute; left: 0; color: #D9A500; font-weight: 700; }
+.btn-secondary { display: block; text-align: center; border: 1.5px solid #0D0D0D; color: #0D0D0D; padding: 12px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: auto; }
+
+.pricing-card-pro { background: #0D0D0D; border-color: #0D0D0D; position: relative; }
+.pricing-badge { position: absolute; top: -12px; right: 28px; background: #FFC60B; color: #0D0D0D; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 9999px; }
+.pricing-card-pro .pricing-amount { color: #fff; }
+.pricing-card-pro .pricing-features li { color: #fff; }
+.pricing-card-pro .pricing-features li::before { color: #FFC60B; }
+.pricing-cta { text-align: center; margin-top: auto; }
+
+/* ---------- FAQ ---------- */
+#faq { background: #fff; padding: 80px 24px; }
+#faq .wrap { max-width: 760px; }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid #E0E0E0; padding: 20px 0; }
+.faq-item summary { font-size: 16px; font-weight: 600; color: #0D0D0D; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 20px; color: #9A9A9A; flex-shrink: 0; }
+.faq-item[open] summary::after { content: '–'; }
+.faq-item p { font-size: 14px; color: #727272; line-height: 1.65; margin: 14px 0 0; }
+
+/* ---------- Mobile: positioning / pricing / features ---------- */
+@media (max-width: 640px) {
+  .positioning .wrap, #pricing .wrap, #faq .wrap { padding: 0; }
+  .positioning-card, .pricing-card { padding: 24px; }
+}
