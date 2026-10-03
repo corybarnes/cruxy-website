@@ -172,7 +172,7 @@ header.site-header .wrap {
 .badge-outline { background: transparent; border: 1px solid #0D0D0D; color: #0D0D0D; padding: 3px 9px; }
 
 /* ---------- Contact ---------- */
-#contact { background: #F8F8F8; padding: 80px 24px; }
+#contact { background: #fff; padding: 80px 24px; }
 #contact .wrap { max-width: 720px; }
 #contact .section-head { text-align: left; margin-bottom: 10px; }
 #contact .section-eyebrow { margin-bottom: 14px; }
