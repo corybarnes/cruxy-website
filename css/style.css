@@ -91,7 +91,8 @@ header.site-header .wrap {
 #hero-img-wrap { flex-shrink: 0; margin-left: 50px; width: 480px; max-width: 42vw; }
 #hero-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; border-radius: 16px; }
 @media (max-width: 640px) {
-  #hero-img-wrap { display: none; }
+  #hero-img-wrap { width: 100%; max-width: 100%; margin-left: 0; margin-top: 32px; }
+  #hero-img-wrap img { aspect-ratio: 4/3; }
   .work-grid { grid-template-columns: 1fr !important; }
   #home .wrap { padding: 56px 24px; }
   #services .wrap { padding: 0; }
