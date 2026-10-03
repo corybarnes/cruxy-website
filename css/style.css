@@ -241,6 +241,9 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .footer-col a { display: block; font-size: 13px; color: #9A9A9A; text-decoration: none; margin-bottom: 9px; }
 .footer-bottom { border-top: 1px solid #1E1E1E; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .footer-bottom span { font-size: 12px; color: #4A4A4A; }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { font-size: 12px; color: #4A4A4A; text-decoration: none; }
+.footer-legal a:hover { color: #9A9A9A; }
 
 /* ---------- Mobile contact form ---------- */
 @media (max-width: 640px) {
