@@ -259,10 +259,12 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 }
 
 /* ---------- Positioning ("Why Cruxy") ---------- */
-.positioning { background: #F8F8F8; padding: 80px 24px; }
+.positioning { background: #fff; padding: 80px 24px; }
 .positioning .wrap { max-width: 900px; }
-.positioning-grid { display: flex; gap: 24px; flex-wrap: wrap; text-align: left; }
-.positioning-card { flex: 1; min-width: 280px; background: #fff; border: 1px solid #E0E0E0; border-radius: 12px; padding: 28px; }
+.positioning-box { text-align: center; border: 1px solid #E0E0E0; border-radius: 16px; padding: 56px 48px 40px; background: #F8F8F8; }
+.positioning-box .section-head { margin-bottom: 40px; }
+.positioning-grid { display: flex; gap: 40px; flex-wrap: wrap; text-align: left; }
+.positioning-card { flex: 1; min-width: 260px; background: #fff; border: 1px solid #E0E0E0; border-radius: 12px; padding: 32px; }
 .positioning-card-dark { background: #0D0D0D; border-color: #0D0D0D; }
 .positioning-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #727272; margin-bottom: 12px; }
 .positioning-label-accent { color: #FFC60B; }
@@ -320,6 +322,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 
 /* ---------- Mobile: positioning / pricing / features ---------- */
 @media (max-width: 640px) {
-  .positioning .wrap, #pricing .wrap, #faq .wrap { padding: 0; }
+  #pricing .wrap, #faq .wrap { padding: 0; }
+  .positioning-box { padding: 32px 24px 24px; }
   .positioning-card, .pricing-card { padding: 24px; }
 }
