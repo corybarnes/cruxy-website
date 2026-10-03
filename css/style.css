@@ -259,7 +259,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 }
 
 /* ---------- Positioning ("Why Cruxy") ---------- */
-.positioning { background: #fff; padding: 80px 24px; }
+.positioning { background: #fff; padding: 80px 24px 0; }
 .positioning .wrap { max-width: 1040px; }
 .positioning-box { border: 1px solid #E0E0E0; border-radius: 16px; padding: 56px 48px; background: #F8F8F8; }
 .positioning-box .section-head { margin-bottom: 40px; }
