@@ -172,7 +172,12 @@ header.site-header .wrap {
 .badge-outline { background: transparent; border: 1px solid #0D0D0D; color: #0D0D0D; padding: 3px 9px; }
 
 /* ---------- Contact ---------- */
-#contact { background: #fff; padding: 80px 24px; min-height: calc(100vh - 16px); }
+#contact { background: #fff; padding: 80px 24px; }
+/* Contact is the last section, so on tall desktop windows the page ends before it can scroll to the
+   same offset as the other anchors. Pad it by exactly the shortfall (viewport - 16px offset - footer). */
+@media (min-width: 641px) {
+  #contact { min-height: calc(100vh - 16px - 305px); }
+}
 #contact .wrap { max-width: 720px; }
 #contact .section-head { text-align: left; margin-bottom: 10px; }
 #contact .section-eyebrow { margin-bottom: 14px; }
