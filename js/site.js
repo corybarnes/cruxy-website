@@ -39,7 +39,7 @@ function setError(msg) {
 function setSubmitting(isSubmitting) {
   submitBtn.disabled = isSubmitting;
   submitBtn.style.opacity = isSubmitting ? '0.6' : '1';
-  submitBtn.textContent = isSubmitting ? 'Sending...' : 'Book a Discovery Call';
+  submitBtn.textContent = isSubmitting ? 'Sending...' : 'Submit';
 }
 
 form.addEventListener('submit', async (e) => {
@@ -56,7 +56,7 @@ form.addEventListener('submit', async (e) => {
   const firstName = document.getElementById('firstName').value;
   const lastName = document.getElementById('lastName').value;
   const email = document.getElementById('email').value;
-  const storeUrl = document.getElementById('storeUrl').value;
+  const company = document.getElementById('company').value;
   const goals = document.getElementById('goals').value;
 
   if (!email) {
@@ -82,7 +82,7 @@ form.addEventListener('submit', async (e) => {
                   email,
                   first_name: firstName,
                   last_name: lastName,
-                  properties: { 'Store URL': storeUrl, 'Goals': goals },
+                  properties: { 'Company': company, 'Message': goals },
                 },
               },
             },
