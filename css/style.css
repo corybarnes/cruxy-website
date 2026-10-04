@@ -313,7 +313,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .pricing-cta { text-align: center; margin-top: auto; }
 
 /* ---------- Support ---------- */
-#support { background: #fff; padding: 80px 24px; }
+#support { background: #fff; padding: 80px 24px 0; }
 #support .wrap { max-width: 700px; }
 .support-box { text-align: center; border: 1px solid #E0E0E0; border-radius: 16px; padding: 48px; background: #F8F8F8; }
 .support-photo { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; margin: 0 auto 32px; }
