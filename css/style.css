@@ -287,9 +287,8 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 @media (max-width: 900px) {
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 480px) {
-  .feature-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-  .feature-card-body { padding: 14px; }
+@media (max-width: 600px) {
+  .feature-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ---------- Pricing ---------- */
