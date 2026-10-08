@@ -15,6 +15,6 @@
 
 ## Links
 - [Home](https://cruxy.io/): features, pricing and FAQ
-- [Start free](https://get.cruxy.io): the app
+- [Start free](https://get.cruxy.io/signup): the app
 - [FAQ](https://cruxy.io/#faq)
 - [Pricing](https://cruxy.io/#pricing)
