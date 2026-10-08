@@ -65,7 +65,7 @@ header.site-header .wrap {
 .logo-link img { height: 50px; width: auto; }
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav a.nav-link { color: #4A4A4A; text-decoration: none; font-size: 14px; font-weight: 500; }
-.btn-book { background: #FFC60B; color: #0D0D0D; padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; }
+.btn-book { white-space: nowrap; background: #FFC60B; color: #0D0D0D; padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; }
 
 /* ---------- Hero ---------- */
 #home {
@@ -85,6 +85,7 @@ header.site-header .wrap {
 .hero-copy h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; color: #fff; margin: 0 0 20px; }
 .hero-copy h1 .accent { color: #FFC60B; }
 .hero-lead { font-size: 18px; color: #9A9A9A; line-height: 1.65; margin: 0 0 36px; max-width: 480px; }
+.hero-lead.hero-soon { margin: 20px 0 0; }
 .hero-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .btn-primary { background: #FFC60B; color: #0D0D0D; padding: 13px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
 .hero-secondary-link { color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; }
@@ -94,7 +95,7 @@ header.site-header .wrap {
   #hero-img-wrap { width: 100%; max-width: 100%; margin-left: 0; margin-top: 32px; }
   #hero-img-wrap img { aspect-ratio: 4/3; }
   .work-grid { grid-template-columns: 1fr !important; }
-  #home .wrap { padding: 56px 24px; }
+  #home .wrap { padding: 56px 24px; gap: 0; }
   #services .wrap { padding: 0; }
   #about .wrap { padding: 0; }
   .about-grid { flex-direction: column; gap: 28px; }
@@ -104,11 +105,11 @@ header.site-header .wrap {
 
 /* ---------- Mobile header/nav ---------- */
 @media (max-width: 640px) {
-  header.site-header .wrap { padding: 0 16px; }
-  .logo-link img { height: 36px; }
-  .main-nav { gap: 18px; }
-  .main-nav a.nav-link { font-size: 13px; }
-  .btn-book { display: none; }
+  header.site-header .wrap { padding: 0 12px; }
+  .logo-link img { height: 30px; }
+  .main-nav { gap: 12px; }
+  .main-nav a.nav-link { font-size: 12.5px; }
+  .btn-book { padding: 8px 12px; font-size: 12px; }
 }
 
 /* ---------- Services ---------- */
@@ -405,3 +406,12 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 }
 /* Two adjacent gray blocks read as one band */
 .deep-dive-light + .deep-dive-light { padding-top: 0; }
+
+/* Button hover: lift and brighten instead of the global gold link color */
+.btn-book, .btn-primary, .btn-outline-light, .btn-dark, .btn-secondary { transition: background-color .15s, color .15s, transform .15s, border-color .15s; }
+a.btn-book:hover, a.btn-primary:hover { background: #FFD43B; color: #0D0D0D; transform: translateY(-1px); }
+a.btn-outline-light:hover { background: #fff; color: #0D0D0D; }
+a.btn-dark:hover { background: #2B2B2B; color: #fff; transform: translateY(-1px); }
+a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
+a.btn-book:active, a.btn-primary:active, a.btn-dark:active { transform: translateY(0); }
+.main-nav a.nav-link:hover { color: #0D0D0D; }
