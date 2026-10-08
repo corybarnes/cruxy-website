@@ -318,6 +318,8 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .pricing-card-pro .pricing-amount { color: #fff; }
 .pricing-card-pro .pricing-features li { color: #fff; }
 .pricing-card-pro .pricing-features li::before { color: #FFC60B; }
+.pricing-includes { font-size: 14px; font-weight: 700; color: #FFC60B; margin: 0 0 16px; }
+.pricing-card .btn-primary, .pricing-card .btn-secondary { box-sizing: border-box; display: flex; align-items: center; justify-content: center; height: 48px; padding: 0 28px; font-size: 15px; line-height: 1; margin-top: auto; text-align: center; }
 .pricing-cta { text-align: center; margin-top: auto; }
 
 /* ---------- Support ---------- */
