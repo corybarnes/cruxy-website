@@ -3,8 +3,6 @@
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const KLAVIYO_PUBLIC_KEY = 'SKasJK';
-const KLAVIYO_LIST_ID = 'YfTN2r';
 const CONTACT_ENDPOINT = 'https://iztknzqbkouknleqjyug.supabase.co/functions/v1/contact-form';
 
 // Bot protection: a hidden honeypot field (real visitors never see or fill it,
@@ -82,27 +80,8 @@ form.addEventListener('submit', async (e) => {
     });
     if (!res.ok) throw new Error('Submission failed');
 
-    // 2) Only if the visitor ticked the box: subscribe name, email and company
-    // to Klaviyo. The message is never sent there. A Klaviyo failure never
-    // affects the form, since the email already went through.
-    if (optIn) {
-      fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_PUBLIC_KEY}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
-        body: JSON.stringify({
-          data: {
-            type: 'subscription',
-            attributes: {
-              profile: { data: { type: 'profile', attributes: {
-                email, first_name: firstName, last_name: lastName,
-                properties: { 'Company': company, 'Source': 'Website contact form' },
-              } } },
-            },
-            relationships: { list: { data: { type: 'list', id: KLAVIYO_LIST_ID } } },
-          },
-        }),
-      }).catch(() => {});
-    }
+    // The server also saves name, email and company to Klaviyo, and sends
+    // marketing consent only when the box is ticked.
 
     formPanel.classList.add('hidden');
     successPanel.classList.add('visible');
