@@ -405,13 +405,12 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 /* Two adjacent gray blocks read as one band */
 .deep-dive-light + .deep-dive-light { padding-top: 0; }
 
-/* Button hover: lift and brighten instead of the global gold link color */
-.btn-book, .btn-primary, .btn-outline-light, .btn-dark, .btn-secondary { transition: background-color .15s, color .15s, transform .15s, border-color .15s; }
-a.btn-book:hover, a.btn-primary:hover { background: #FFD43B; color: #0D0D0D; transform: translateY(-1px); }
+/* Button hover: brighten instead of the global gold link color */
+.btn-book, .btn-primary, .btn-outline-light, .btn-dark, .btn-secondary, .btn-submit { transition: background-color .15s, color .15s, border-color .15s; }
+a.btn-book:hover, a.btn-primary:hover { background: #FFD43B; color: #0D0D0D; }
 a.btn-outline-light:hover { background: #fff; color: #0D0D0D; }
-a.btn-dark:hover { background: #2B2B2B; color: #fff; transform: translateY(-1px); }
+a.btn-dark:hover { background: #2B2B2B; color: #fff; }
 a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
-a.btn-book:active, a.btn-primary:active, a.btn-dark:active { transform: translateY(0); }
 .main-nav a.nav-link:hover { color: #0D0D0D; }
 
 .consent { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 0; font-size: 13px; line-height: 1.5; color: #5A5A5A; cursor: pointer; }
@@ -428,3 +427,4 @@ a.btn-book:active, a.btn-primary:active, a.btn-dark:active { transform: translat
 .legal ul { margin: 0 0 12px; padding-left: 22px; }
 .legal li { margin-bottom: 6px; }
 .legal a { color: #B88A00; }
+.btn-submit:hover:not(:disabled) { background: #FFD43B; color: #0D0D0D; }
