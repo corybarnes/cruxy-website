@@ -288,8 +288,6 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .feature-card-img-wrap { padding: 20px 20px 0; }
 .feature-card img { width: 100%; max-width: 220px; margin: 0 auto; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06); }
 .feature-card-body { padding: 18px; }
-.feature-grid-more { margin-top: 20px; }
-.feature-card-text { background: #F8F8F8; }
 .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .feature-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #D9A500; margin-bottom: 8px; }
 .feature-card h3 { font-size: 15px; font-weight: 700; color: #0D0D0D; margin: 0 0 6px; line-height: 1.3; }
