@@ -1,10 +1,11 @@
-// Cruxy site-wide script: footer year, Klaviyo contact form (home page only), sticky header shadow.
+// Cruxy site-wide script: footer year, contact form (home page only), sticky header shadow.
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const KLAVIYO_PUBLIC_KEY = 'SKasJK';
 const KLAVIYO_LIST_ID = 'YfTN2r';
+const CONTACT_ENDPOINT = 'https://iztknzqbkouknleqjyug.supabase.co/functions/v1/contact-form';
 
 // Bot protection: a hidden honeypot field (real visitors never see or fill it,
 // since it's off-screen via CSS) plus a minimum-time check (scripted bots
@@ -53,14 +54,19 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const company = document.getElementById('company').value;
-  const goals = document.getElementById('goals').value;
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const goals = document.getElementById('goals').value.trim();
+  const optIn = document.getElementById('optIn').checked;
 
-  if (!email) {
-    setError('Email is required.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    setError('Please enter a valid email.');
+    return;
+  }
+  if (!goals) {
+    setError('Please tell us how we can help.');
     return;
   }
 
@@ -68,31 +74,35 @@ form.addEventListener('submit', async (e) => {
   setSubmitting(true);
 
   try {
-    const res = await fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_PUBLIC_KEY}`, {
+    // 1) The message always goes to us by email, independent of Klaviyo.
+    const res = await fetch(CONTACT_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
-      body: JSON.stringify({
-        data: {
-          type: 'subscription',
-          attributes: {
-            profile: {
-              data: {
-                type: 'profile',
-                attributes: {
-                  email,
-                  first_name: firstName,
-                  last_name: lastName,
-                  properties: { 'Company': company, 'Message': goals },
-                },
-              },
-            },
-          },
-          relationships: { list: { data: { type: 'list', id: KLAVIYO_LIST_ID } } },
-        },
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, lastName, email, company, message: goals, optIn }),
     });
-
     if (!res.ok) throw new Error('Submission failed');
+
+    // 2) Only if the visitor ticked the box: subscribe name, email and company
+    // to Klaviyo. The message is never sent there. A Klaviyo failure never
+    // affects the form, since the email already went through.
+    if (optIn) {
+      fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_PUBLIC_KEY}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
+        body: JSON.stringify({
+          data: {
+            type: 'subscription',
+            attributes: {
+              profile: { data: { type: 'profile', attributes: {
+                email, first_name: firstName, last_name: lastName,
+                properties: { 'Company': company, 'Source': 'Website contact form' },
+              } } },
+            },
+            relationships: { list: { data: { type: 'list', id: KLAVIYO_LIST_ID } } },
+          },
+        }),
+      }).catch(() => {});
+    }
 
     formPanel.classList.add('hidden');
     successPanel.classList.add('visible');

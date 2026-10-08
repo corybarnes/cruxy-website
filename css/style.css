@@ -415,3 +415,6 @@ a.btn-dark:hover { background: #2B2B2B; color: #fff; transform: translateY(-1px)
 a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 a.btn-book:active, a.btn-primary:active, a.btn-dark:active { transform: translateY(0); }
 .main-nav a.nav-link:hover { color: #0D0D0D; }
+
+.consent { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 0; font-size: 13px; line-height: 1.5; color: #5A5A5A; cursor: pointer; }
+.consent input { margin-top: 3px; accent-color: #FFC60B; width: 16px; height: 16px; flex-shrink: 0; }
