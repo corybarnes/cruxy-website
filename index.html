@@ -93,6 +93,50 @@
       <div class="section-eyebrow">What It Does</div>
       <h2>Everything a freelancer needs.</h2>
     </div>
+    <div class="ft" id="feature-tabs">
+      <div class="ft-tabs" role="tablist" aria-label="What Cruxy does">
+        <button type="button" role="tab" id="ft-tab-0" class="ft-tab is-active" aria-selected="true" aria-controls="ft-panel-0" tabindex="0">Timer</button>
+        <button type="button" role="tab" id="ft-tab-1" class="ft-tab" aria-selected="false" aria-controls="ft-panel-1" tabindex="-1">Entries</button>
+        <button type="button" role="tab" id="ft-tab-2" class="ft-tab" aria-selected="false" aria-controls="ft-panel-2" tabindex="-1">Summary</button>
+        <button type="button" role="tab" id="ft-tab-3" class="ft-tab" aria-selected="false" aria-controls="ft-panel-3" tabindex="-1">Clients</button>
+      </div>
+      <div class="ft-panels">
+        <div role="tabpanel" id="ft-panel-0" class="ft-panel is-active" aria-labelledby="ft-tab-0">
+          <div class="ft-shot"><img src="images/app/app-timer.jpg" alt="The Cruxy timer: pick a client, project and task and start tracking" width="535" height="1086" loading="lazy"></div>
+          <div class="ft-copy">
+            <div class="feature-tag">Timer</div>
+            <h3>Start tracking in seconds</h3>
+            <p>Pick a client, project and task, and go. Pause and resume any of the day's entries.</p>
+          </div>
+        </div>
+        <div role="tabpanel" id="ft-panel-1" class="ft-panel" aria-labelledby="ft-tab-1">
+          <div class="ft-shot"><img src="images/app/app-entries.jpg" alt="The Cruxy entries list, filtered by client" width="535" height="1086" loading="lazy"></div>
+          <div class="ft-copy">
+            <div class="feature-tag">Entries</div>
+            <h3>Every minute, accounted for</h3>
+            <p>Filter entries by client, edit anytime, and export to CSV. Forgot to start the timer? Add an entry manually.</p>
+          </div>
+        </div>
+        <div role="tabpanel" id="ft-panel-2" class="ft-panel" aria-labelledby="ft-tab-2">
+          <div class="ft-shot"><img src="images/app/app-summary.jpg" alt="The Cruxy summary of hours and earnings for a period" width="535" height="1086" loading="lazy"></div>
+          <div class="ft-copy">
+            <div class="feature-tag">Summary</div>
+            <h3>View earnings at a glance</h3>
+            <p>See any period's hours and earnings, for a single client or many. Then download a PDF statement.</p>
+          </div>
+        </div>
+        <div role="tabpanel" id="ft-panel-3" class="ft-panel" aria-labelledby="ft-tab-3">
+          <div class="ft-shot"><img src="images/app/app-clients.jpg" alt="The Cruxy clients list with rates and unbilled amounts" width="535" height="1086" loading="lazy"></div>
+          <div class="ft-copy">
+            <div class="feature-tag">Clients</div>
+            <h3>Customize each client</h3>
+            <p>Set different hourly rates and projects for each client. Rate changes don't affect past earnings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Previous layout: all four feature cards in a grid. Kept for reference; not shown. The .feature-grid CSS is still in style.css.
     <div class="feature-grid">
 
       <div class="feature-card">
@@ -132,6 +176,7 @@
       </div>
 
     </div>
+    -->
   </div>
 </section>
 

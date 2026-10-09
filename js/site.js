@@ -102,3 +102,61 @@ form.addEventListener('submit', async (e) => {
   window.addEventListener('scroll', updateHeaderShadow, { passive: true });
   updateHeaderShadow();
 })();
+
+// "What It Does" tabs: one feature at a time. Advances by itself every 6 seconds until the visitor
+// taps, swipes or uses the keyboard (or hovers, which only pauses it). Stays still for people who
+// prefer reduced motion, and while off-screen.
+(function () {
+  const root = document.getElementById('feature-tabs');
+  if (!root) return;
+  const tabs = Array.from(root.querySelectorAll('.ft-tab'));
+  const panels = Array.from(root.querySelectorAll('.ft-panel'));
+  let current = 0;
+  let stopped = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let hovering = false;
+  let visible = false;
+
+  function show(i) {
+    current = (i + tabs.length) % tabs.length;
+    tabs.forEach((t, n) => {
+      const on = n === current;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      panels[n].classList.toggle('is-active', on);
+    });
+    const tab = tabs[current];
+    const row = tab.parentElement;
+    row.scrollTo({ left: tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2, behavior: 'smooth' });
+  }
+  function userShow(i) { stopped = true; show(i); }
+
+  tabs.forEach((t, n) => {
+    t.addEventListener('click', () => userShow(n));
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      userShow(current + (e.key === 'ArrowRight' ? 1 : -1));
+      tabs[current].focus();
+    });
+  });
+
+  let startX = null;
+  const area = root.querySelector('.ft-panels');
+  area.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  area.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    startX = null;
+    if (Math.abs(dx) > 50) userShow(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+
+  root.addEventListener('mouseenter', () => { hovering = true; });
+  root.addEventListener('mouseleave', () => { hovering = false; });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; }, { threshold: 0.4 }).observe(root);
+  } else {
+    visible = true;
+  }
+  setInterval(() => { if (!stopped && !hovering && visible) show(current + 1); }, 6000);
+})();

@@ -299,6 +299,31 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
   .feature-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
+/* Feature tabs ("What It Does"): one feature at a time. All panels stay in the page (stacked in one grid cell so the height never jumps). */
+.ft { max-width: 880px; margin: 0 auto; }
+.ft-tabs { display: flex; gap: 8px; justify-content: center; margin-bottom: 24px; overflow-x: auto; padding: 2px; scrollbar-width: none; }
+.ft-tabs::-webkit-scrollbar { display: none; }
+.ft-tab { flex: none; border: none; cursor: pointer; font: inherit; font-size: 14px; font-weight: 700; padding: 10px 20px; border-radius: 999px; background: #F0F0F0; color: #4A4A4A; transition: background 0.2s, color 0.2s; }
+.ft-tab:hover { background: #E4E4E4; color: #0D0D0D; }
+.ft-tab.is-active, .ft-tab.is-active:hover { background: #0D0D0D; color: #fff; }
+.ft-tab:focus-visible { outline: 2px solid #FFC60B; outline-offset: 2px; }
+.ft-panels { display: grid; touch-action: pan-y; }
+.ft-panel { grid-area: 1 / 1; display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; background: #F8F8F8; border-radius: 16px; padding: 40px 48px; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.ft-panel.is-active { opacity: 1; visibility: visible; }
+.ft-shot img { width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06); }
+.ft-copy .feature-tag { font-size: 11px; }
+.ft-copy h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: #0D0D0D; margin: 0 0 12px; }
+.ft-copy p { font-size: 16px; color: #4A4A4A; line-height: 1.65; margin: 0; }
+@media (max-width: 720px) {
+  .ft-tabs { justify-content: flex-start; }
+  .ft-tabs { gap: 6px; }
+  .ft-tab { padding: 9px 13px; font-size: 13px; }
+  .ft-panel { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
+  .ft-shot img { max-width: 240px; }
+  .ft-copy h3 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .ft-panel, .ft-tab { transition: none; } }
+
 /* ---------- Pricing ---------- */
 #pricing { background: #F8F8F8; padding: 80px 24px; }
 .pricing-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; text-align: left; max-width: 760px; margin: 0 auto; }
