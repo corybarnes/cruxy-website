@@ -456,3 +456,37 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 .legal li { margin-bottom: 6px; }
 .legal a { color: #B88A00; }
 .btn-submit:hover:not(:disabled) { background: #FFD43B; color: #0D0D0D; }
+
+/* ---------- Support pages ---------- */
+.support-page { padding: 48px 24px 96px; background: #fff; }
+.support-page .wrap { max-width: 880px; padding: 0; }
+.crumbs { font-size: 13px; color: #727272; margin: 0 0 20px; }
+.crumbs a { color: #727272; text-decoration: none; }
+.crumbs a:hover { color: #0D0D0D; }
+.support-page h1 { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 12px; }
+.support-lead { font-size: 18px; line-height: 1.6; color: #4A4A4A; margin: 0 0 40px; max-width: 640px; }
+.step { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: start; padding: 40px 0; border-top: 1px solid #E0E0E0; }
+.step-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: #FFC60B; color: #0D0D0D; font-weight: 800; font-size: 14px; margin-bottom: 12px; }
+.step h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; color: #0D0D0D; margin: 0 0 14px; }
+.step p, .step li { font-size: 16px; line-height: 1.65; color: #4A4A4A; }
+.step p { margin: 0 0 12px; }
+.step ol, .step ul { margin: 0 0 14px; padding-left: 22px; }
+.step li { margin-bottom: 6px; }
+.step a { color: #B88A00; }
+.step-note { background: #F8F8F8; border: 1px solid #E0E0E0; border-radius: 10px; padding: 12px 16px; font-size: 14.5px !important; }
+.step-shots { display: flex; flex-direction: column; gap: 16px; }
+.step-shots figure { margin: 0; }
+.step-shots img { display: block; width: 100%; height: auto; border: 1px solid #E0E0E0; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+.support-h2 { font-size: 22px; font-weight: 800; margin: 40px 0 16px; color: #0D0D0D; }
+.next-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.next-links a { display: block; border: 1px solid #E0E0E0; border-radius: 12px; padding: 18px; text-decoration: none; color: #0D0D0D; font-weight: 700; font-size: 15px; }
+.next-links a span { display: block; font-weight: 500; font-size: 13.5px; color: #727272; margin-top: 4px; }
+.next-links a:hover { border-color: #0D0D0D; }
+.still-stuck { margin-top: 40px; background: #F8F8F8; border: 1px solid #E0E0E0; border-radius: 14px; padding: 28px; text-align: center; color: #4A4A4A; font-size: 16px; }
+.still-stuck a { color: #B88A00; font-weight: 700; }
+@media (max-width: 760px) {
+  .support-page { padding: 32px 16px 72px; }
+  .step { grid-template-columns: 1fr; gap: 20px; padding: 32px 0; }
+  .step-shots { order: 2; max-width: 300px; margin: 0 auto; }
+  .next-links { grid-template-columns: 1fr; }
+}
