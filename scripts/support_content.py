@@ -99,7 +99,7 @@ PAGES.append(dict(
 <p>Tap an entry in Entries (or in "Your entries today" on the Timer) to open it. Change what you need and tap <strong>Save Changes</strong>. To remove it, tap the trash icon and confirm. Deleting can't be undone.</p>
 <p>A few things to know:</p>
 <ul>
-<li>Entries for an archived client are view only.</li>
+<li>Entries for an inactive client are view only.</li>
 <li>If the time is already on an invoice, a note tells you which one. You can still edit or delete the entry, but the invoice does not change.</li>
 <li>Each entry keeps the rate it was logged at. If you change a client's rate later, old entries keep their original rate. Tap <strong>Use Current Rate</strong> on an entry to switch it.</li>
 </ul>''', []),
@@ -122,7 +122,7 @@ PAGES.append(dict(
 <ul>
 <li><strong>Unbilled</strong> or <strong>Billed</strong> time</li>
 <li>Time, fixed fees or expenses</li>
-<li>One or more clients, including archived clients</li>
+<li>One or more clients, including inactive clients</li>
 </ul>
 <p>The client filter also applies to the Summary tab.</p>''',
      [shot(S+'filter-entries.png', 'The Filter entries sheet')]),
@@ -154,7 +154,7 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Clients and projects
 PAGES.append(dict(
     slug='clients-projects', title='Clients and projects', nav='Clients and projects',
-    desc='Add clients and projects in Cruxy, set rates and currencies, archive clients, import from Clockify, Toggl or Harvest, and add fixed fees and expenses.',
+    desc='Add clients and projects in Cruxy, set rates and currencies, deactivate clients, import from Clockify, Toggl or Harvest, and add fixed fees and expenses.',
     intro='Clients and projects organize your time and decide what you charge.',
     sections=[
     ('add-client', 'Add a client', '''
@@ -164,7 +164,7 @@ PAGES.append(dict(
 <li>Choose a currency and your hourly rate. A rate of 0 makes the client non-billable, so no invoices can be made for them.</li>
 <li>Pick a color and tap <strong>Add Client</strong>.</li>
 </ol>
-<p>Free includes 2 active clients. Archive one you're finished with, or <a href="../free-vs-pro/">go Pro</a> for unlimited.</p>''',
+<p>Free includes 2 active clients. Deactivate one you're finished with, or <a href="../free-vs-pro/">go Pro</a> for unlimited.</p>''',
      [shot(A+'app-clients.jpg', 'The Cruxy Clients list')]),
     ('client-details', 'Edit a client\'s details', '''
 <p>Tap a client, then the gear icon next to the name. You can change:</p>
@@ -181,21 +181,21 @@ PAGES.append(dict(
 <p>Tap a client, then the <strong>Projects</strong> tab.</p>
 <ul>
 <li>Type a name in the box and tap <strong>Add</strong> to create a project.</li>
-<li>Tap a project to rename it, give it its own hourly rate, or archive it.</li>
-<li><strong>View archived projects</strong> shows the ones you've put away. Archived projects don't appear when you log time, but their old entries stay.</li>
+<li>Tap a project to rename it, give it its own hourly rate, or deactivate it.</li>
+<li><strong>View inactive projects</strong> shows the ones you've put away. Inactive projects don't appear when you log time, but their old entries stay.</li>
 </ul>
 <p>A project rate replaces the client's rate for that project. Leave it blank to use the client's rate. A project can't make a non-billable client billable.</p>''',
      [shot(S+'client-projects.png', 'The Projects tab for a client')]),
-    ('archive', 'Archive and unarchive a client', '''
-<p>Archive a client when the work is done. In the client's details, tap <strong>Archive</strong> and confirm.</p>
+    ('deactivate', 'Deactivate and activate a client', '''
+<p>Deactivate a client when the work is done. In the client's details, tap <strong>Deactivate</strong> and confirm.</p>
 <ul>
-<li>Archived clients are hidden from the timer and pickers and become read-only.</li>
+<li>Inactive clients are hidden from the timer and pickers and become read-only.</li>
 <li>Their time, projects and invoices stay. You can still invoice unbilled time and mark invoices paid.</li>
-<li>Archived clients don't count toward your 2 active clients on Free.</li>
+<li>Inactive clients don't count toward your 2 active clients on Free.</li>
 </ul>
-<p>To bring one back, tap <strong>Show Archived Clients</strong> on the Clients tab, then <strong>Unarchive</strong>. On Free you need a free slot first, so archive another client or go Pro.</p>''', []),
+<p>To bring one back, tap <strong>Show/Hide Inactive Clients</strong> on the Clients tab, then <strong>Activate</strong>. On Free you need a free slot first, so deactivate another client or go Pro.</p>''', []),
     ('delete-client', 'Delete a client', '''
-<p>Deleting a client permanently deletes its projects and all of its time entries. It can't be undone. If you might need the history, archive the client instead.</p>''', []),
+<p>Deleting a client permanently deletes its projects and all of its time entries. It can't be undone. If you might need the history, deactivate the client instead.</p>''', []),
     ('charges', 'Add a fixed fee or expense', '''
 <p>Use a charge for something that isn't hourly, like a flat fee or a purchase you're passing on.</p>
 <ol>
@@ -215,11 +215,11 @@ PAGES.append(dict(
 <li>Tap <strong>Import</strong>.</li>
 </ol>
 <p>Every row needs a date, a duration and a client. Entries already in Cruxy are skipped, so importing the same file twice is safe. If any rows can't be read, nothing is imported until you fix the file. The file can be up to 10 MB.</p>
-<p>On Free, new clients beyond your 2 active clients are imported as archived. You can choose which to keep active, or go Pro.</p>
+<p>On Free, new clients beyond your 2 active clients are imported as inactive. You can choose which to keep active, or go Pro.</p>
 <p>Right after an import, tap <strong>Undo Import</strong> if you need to take it back. Once you close that screen, the option is gone.</p>''',
      [shot(A+'import-pick.jpg', 'Choosing a CSV file to import'), shot(A+'import-review.png', 'Reviewing an import before it runs')]),
     ('choose-clients', 'If Cruxy asks you to choose clients', '''
-<p>If a Free workspace has more than 2 active clients, for example after Pro ends, Cruxy asks you to pick the 2 to keep active. The others are archived with their data kept. You can't log new time until you choose. Going Pro again lifts the limit.</p>''',
+<p>If a Free workspace has more than 2 active clients, for example after Pro ends, Cruxy asks you to pick the 2 to keep active. The others are made inactive with their data kept. You can't log new time until you choose. Going Pro again lifts the limit.</p>''',
      [shot(None, 'The Choose clients to keep active sheet', 'The "Choose clients to keep active" sheet with two clients ticked')]),
     ]))
 
@@ -387,7 +387,7 @@ PAGES.append(dict(
 </tbody></table></div>
 <p>Free also includes unlimited projects and tasks, CSV import from Clockify, Toggl and Harvest, and CSV export. Free is not a trial. It doesn't expire.</p>''', []),
     ('clients-limit', 'What counts as an active client', '''
-<p>Free includes 2 active clients. A client you've archived doesn't count, and keeps all its history, read-only. When you finish with a client, archive them to make room.</p>
+<p>Free includes 2 active clients. A client you've deactivated doesn't count, and keeps all its history, read-only. When you finish with a client, deactivate them to make room.</p>
 <p>If you try to add a third active client on Free, Cruxy offers Pro instead.</p>''', []),
     ('email-limit', 'The emailed invoice limit', '''
 <p>Free includes 3 emailed invoices or reminders a month, renewing on the 1st (in your time zone). The email sheet shows how many you have left. <strong>Sharing and downloading invoices stay free and unlimited</strong>, so you can always send a PDF yourself.</p>''',
@@ -397,7 +397,7 @@ PAGES.append(dict(
     ('pro-ends', 'If Pro ends', '''
 <p>Your data stays. When Pro ends:</p>
 <ul>
-<li>If you have more than 2 active clients, Cruxy asks you to choose 2 to keep active. The rest are archived, read-only.</li>
+<li>If you have more than 2 active clients, Cruxy asks you to choose 2 to keep active. The rest are made inactive, read-only.</li>
 <li>Emailing invoices is limited to 3 a month. Sharing and downloading are still free.</li>
 <li>Budgets keep what's set but can't be changed. Retainers pause.</li>
 <li>PDFs show the small Cruxy credit again.</li>
