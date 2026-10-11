@@ -1,6 +1,6 @@
 /* Support / help center pages. Loaded after style.css. */
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.support-shell { max-width: 1120px; margin: 0 auto; padding: 40px 24px 96px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; background: #fff; }
+.support-shell { max-width: 1200px; margin: 0 auto; padding: 40px 48px 96px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; background: #fff; }
 .snav { position: sticky; top: 24px; font-size: 14.5px; }
 .snav-title { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #727272; margin-bottom: 10px; }
 .snav ul { list-style: none; margin: 0; padding: 0; }
@@ -65,7 +65,7 @@
 .support-home { background: #fff; padding-bottom: 96px; }
 .home-hero { background: #F8F8F8; border-bottom: 1px solid #E0E0E0; padding: 64px 24px; text-align: center; }
 .home-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: #0D0D0D; margin: 0 0 24px; }
-.wrap-s { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.wrap-s { max-width: 960px; margin: 0 auto; padding: 0 40px; }
 .wrap-s h2 { font-size: 22px; font-weight: 800; color: #0D0D0D; margin: 48px 0 18px; }
 .start-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 40px; background: #0D0D0D; color: #fff; border-radius: 16px; padding: 28px 32px; text-decoration: none; }
 .start-card strong { display: block; font-size: 20px; margin-bottom: 4px; }
@@ -82,8 +82,9 @@
 .pop a:hover { color: #B88A00; }
 
 @media (max-width: 900px) {
-  .support-shell { grid-template-columns: 1fr; gap: 0; padding: 28px 16px 72px; }
+  .support-shell { grid-template-columns: 1fr; gap: 0; padding: 28px 20px 72px; }
   .snav { display: none; }
+  .wrap-s { padding: 0 20px; }
   .topics { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
@@ -92,5 +93,5 @@
   .toc ol { columns: 1; }
   .topics { grid-template-columns: 1fr; }
   .start-card { flex-direction: column; align-items: flex-start; }
-  .home-hero { padding: 44px 16px; }
+  .home-hero { padding: 44px 20px; }
 }
