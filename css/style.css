@@ -308,7 +308,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .ft-tab.is-active, .ft-tab.is-active:hover { background: #FFC60B; color: #0D0D0D; }
 .ft-tab:focus-visible { outline: 2px solid #FFC60B; outline-offset: 2px; }
 .ft-panels { display: grid; touch-action: pan-y; }
-.ft-panel { grid-area: 1 / 1; display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; background: #F8F8F8; border-radius: 16px; padding: 40px 48px; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.ft-panel { grid-area: 1 / 1; display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; background: #F8F8F8; border: 1px solid #E0E0E0; border-radius: 16px; padding: 40px 48px; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
 .ft-panel.is-active { opacity: 1; visibility: visible; }
 .ft-shot img { width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06); }
 .ft-icon { color: #0D0D0D; margin-bottom: 18px; line-height: 0; }
