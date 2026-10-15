@@ -357,7 +357,7 @@ PAGES.append(dict(
 <li>Tap <strong>Save Retainer</strong>.</li>
 </ol>
 <p>Each client can have one retainer. The row shows the next charge date, or that it's paused or ended. Charges appear in Entries like any fixed fee, and the Invoices tab shows how many are ready to invoice.</p>''',
-     [shot(S+'retainer.png', 'The Retainer sheet'), shot(A+'retainers-progress.png', 'Retainer charges ready to invoice')]),
+     [shot(S+'retainer.png', 'The Retainer sheet'), shot(A+'retainers-progress.jpg', 'Retainer charges ready to invoice')]),
     ('pause', 'Pause or end a retainer', '''
 <p>Open the retainer and switch on <strong>Paused</strong> to stop new charges without losing the setup. Set an end date to stop it on a date, or tap the trash icon to delete it. Charges already created stay.</p>
 <p>If your workspace goes back to Free, retainers pause until you upgrade again. Existing budgets stay in place but can't be changed.</p>''', []),
