@@ -251,7 +251,7 @@ PAGES.append(dict(
 <p>If the period has nothing to invoice, Cruxy says so and doesn't make an invoice.</p>''', []),
     ('view', 'View an invoice', '''
 <p>Tap an invoice in the client's list to see Bill To, the lines, the totals, your payment instructions and notes. The status shows as <strong>Not sent</strong>, <strong>Sent</strong>, <strong>Overdue</strong> or <strong>Paid</strong>.</p>''',
-     [shot(A+'invoices-list.png', 'A client\'s invoices with paid and overdue statuses')]),
+     [shot(A+'invoices-list.jpg', 'A client\'s invoices with paid and overdue statuses')]),
     ('email', 'Email an invoice', '''
 <ol>
 <li>Open the invoice and tap the email icon.</li>
