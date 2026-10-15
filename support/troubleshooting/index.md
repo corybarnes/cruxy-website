@@ -46,14 +46,6 @@ Editing or deleting entries needs a connection. Check you're online and try agai
 
 Still stuck? Email [support@cruxy.io](mailto:support@cruxy.io) from the address on your account.
 
-## Cruxy looks tiny after signing in with Google (Android)
-
-This happens when Chrome is set to show the desktop version of sites. In Chrome, tap the menu (three dots), then turn off **Desktop site**, and reopen Cruxy.
-
-## I subscribed on Android but Cruxy still shows Free
-
-Google Play ties the subscription to the Google account you paid with. Check that Chrome and the Play Store on your phone use that same account, then reopen Cruxy. If you subscribed with a different Cruxy login, sign in with the one you meant to upgrade. Still showing Free? Email [support@cruxy.io](mailto:support@cruxy.io) with the email on your account.
-
 ## The app reloaded by itself
 
 When we release an update, Cruxy refreshes itself the next time it checks. If you were typing in a form, finish and save before you step away.

@@ -425,33 +425,27 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Billing
 PAGES.append(dict(
     slug='billing', title='Billing', nav='Billing',
-    desc='How billing works for Cruxy Pro: upgrading on the web or in the Android app, receipts, updating your card, cancelling, and refunds.',
-    intro='Cruxy Pro is $4.99 a month. On the web, payments are handled by Stripe. In the Android app, they go through Google Play.',
+    desc='How billing works for Cruxy Pro: upgrading, receipts, updating your card, cancelling, and refunds.',
+    intro='Cruxy Pro is $4.99 a month. Payments are handled by Stripe.',
     sections=[
     ('upgrade', 'Upgrade to Pro', '''
 <ol>
 <li>Open <strong>Settings &gt; Profile</strong> and tap <strong>Go Pro</strong>. You can also tap <strong>Go Pro</strong> when Cruxy offers it, for example when you reach a limit.</li>
-<li>Pay on the checkout page. On the web that is Stripe. In the Android app it is Google Play.</li>
+<li>Enter your payment details on the Stripe checkout page.</li>
 <li>When you return to Cruxy, you're on Pro straight away.</li>
 </ol>
 <p>Pro is billed monthly. There's no contract.</p>''',
      [shot(S+'upgrade.png', 'The Upgrade to Pro sheet')]),
-    ('where', 'Where you manage your plan', '''
-<p>It depends on where you paid. Open <strong>Settings &gt; Profile</strong> and look at the Plan row:</p>
-<ul>
-<li><strong>Manage Subscription</strong> means you paid on the web with Stripe. Tap it to open Stripe's billing page.</li>
-<li><strong>Managed in Google Play</strong> means you subscribed in the Android app. Manage it in the Google Play app: tap your profile picture, then <strong>Payments &amp; subscriptions</strong>, then <strong>Subscriptions</strong>, then Cruxy.</li>
-</ul>''',
-     [shot(S+'settings-profile.png', 'The Profile tab in Settings with the Plan row')]),
     ('receipts', 'Receipts and invoices', '''
-<p>If you paid with Stripe, you can see past payments and download receipts from the billing page behind <strong>Manage Subscription</strong>. If you paid through Google Play, Google emails your receipts and lists them under Payments &amp; subscriptions. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>''', []),
-    ('card', 'Update your card', '''
-<p>With Stripe, tap <strong>Manage Subscription</strong> and update your card on the billing page. With Google Play, change your payment method in the Google Play app under Payments &amp; subscriptions.</p>''', []),
+<p>Stripe handles your payments and billing history. You can see past payments, and download receipts, from the billing page behind <strong>Manage Subscription</strong>. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>''', []),
+    ('manage', 'Manage your subscription or update your card', '''
+<p>Open <strong>Settings &gt; Profile</strong> and tap <strong>Manage Subscription</strong>. This opens Stripe's billing page, where you can update your card, see your payments, or cancel.</p>''',
+     [shot(S+'settings-profile.png', 'The Profile tab in Settings with the Plan row')]),
     ('cancel', 'Cancel Pro', '''
-<p>Cancel where you pay: <strong>Manage Subscription</strong> for Stripe, or Subscriptions in the Google Play app. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends. If you paid with Stripe, a <strong>Keep Pro</strong> button lets you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
+<p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Manage Subscription</strong>, and cancel there. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends and a <strong>Keep Pro</strong> button if you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
     ('refunds', 'Refunds', '''
-<p>Fees are non-refundable except as required by law. If you were charged by mistake, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> and we'll look into it. If you paid through Google Play, Google handles refund requests for those purchases.</p>
-<p>Deleting your account cancels a Stripe subscription straight away and doesn't refund the current period. A Google Play subscription must be cancelled in Google Play.</p>''', []),
+<p>Fees are non-refundable except as required by law. If you were charged by mistake, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> and we'll look into it.</p>
+<p>Deleting your account cancels Pro straight away and doesn't refund the current period.</p>''', []),
     ]))
 
 # ---------------------------------------------------------------- Account
@@ -471,17 +465,17 @@ PAGES.append(dict(
     ('install', 'Install Cruxy on your phone', '''
 <p>Cruxy works in your browser at get.cruxy.io. To open it like an app:</p>
 <ul>
-<li><strong>Android:</strong> get Cruxy from Google Play. Or open get.cruxy.io in Chrome, tap the menu, then <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
+<li><strong>Android:</strong> open get.cruxy.io in Chrome, tap the menu, then <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
 <li><strong>iPhone:</strong> open get.cruxy.io in Safari, tap the Share button, then <strong>Add to Home Screen</strong>.</li>
 </ul>
-<p>The Android app opens Cruxy through Chrome, so Chrome should be your phone's default browser. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
+<p>Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
     ('logout', 'Log out', '''
 <p>Tap your avatar in the top right and choose <strong>Log Out</strong>.</p>''', []),
     ('delete', 'Delete your account', '''
 <p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Delete Account</strong>, type <strong>DELETE</strong> and confirm.</p>
 <ul>
 <li>Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.</li>
-<li>A Stripe subscription is cancelled straight away, with no refund for the current period. If you subscribed through Google Play, cancel it in Google Play too.</li>
+<li>A Pro subscription is cancelled straight away, with no refund for the current period.</li>
 <li>There is no undo and no grace period.</li>
 </ul>
 <p>Export what you need first. See <a href="../time/#export">Export your time</a>, and download your invoice PDFs. If you can't sign in, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account.</p>''',
@@ -525,10 +519,6 @@ PAGES.append(dict(
 <li>After signing up, you may need to confirm your email before you can sign in.</li>
 </ul>
 <p>Still stuck? Email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account.</p>''', []),
-    ('tiny-layout', 'Cruxy looks tiny after signing in with Google (Android)', '''
-<p>This happens when Chrome is set to show the desktop version of sites. In Chrome, tap the menu (three dots), then turn off <strong>Desktop site</strong>, and reopen Cruxy.</p>''', []),
-    ('pro-missing', 'I subscribed on Android but Cruxy still shows Free', '''
-<p>Google Play ties the subscription to the Google account you paid with. Check that Chrome and the Play Store on your phone use that same account, then reopen Cruxy. If you subscribed with a different Cruxy login, sign in with the one you meant to upgrade. Still showing Free? Email <a href="mailto:support@cruxy.io">support@cruxy.io</a> with the email on your account.</p>''', []),
     ('reloaded', 'The app reloaded by itself', '''
 <p>When we release an update, Cruxy refreshes itself the next time it checks. If you were typing in a form, finish and save before you step away.</p>''', []),
     ]))

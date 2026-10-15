@@ -516,42 +516,36 @@ Still stuck? Email support@cruxy.io and you'll get a quick response from a real 
 
 # Billing
 
-> Cruxy Pro is $4.99 a month. On the web, payments are handled by Stripe. In the Android app, they go through Google Play.
+> Cruxy Pro is $4.99 a month. Payments are handled by Stripe.
 
 Source: https://cruxy.io/support/billing/ (updated 2026-10-14)
 
 ## Upgrade to Pro
 
 1. Open **Settings > Profile** and tap **Go Pro**. You can also tap **Go Pro** when Cruxy offers it, for example when you reach a limit.
-2. Pay on the checkout page. On the web that is Stripe. In the Android app it is Google Play.
+2. Enter your payment details on the Stripe checkout page.
 3. When you return to Cruxy, you're on Pro straight away.
 
 
 Pro is billed monthly. There's no contract.
 
-## Where you manage your plan
-
-It depends on where you paid. Open **Settings > Profile** and look at the Plan row:
-- **Manage Subscription** means you paid on the web with Stripe. Tap it to open Stripe's billing page.
-- **Managed in Google Play** means you subscribed in the Android app. Manage it in the Google Play app: tap your profile picture, then **Payments & subscriptions**, then **Subscriptions**, then Cruxy.
-
 ## Receipts and invoices
 
-If you paid with Stripe, you can see past payments and download receipts from the billing page behind **Manage Subscription**. If you paid through Google Play, Google emails your receipts and lists them under Payments & subscriptions. If you need a receipt in a particular form, email [support@cruxy.io](mailto:support@cruxy.io).
+Stripe handles your payments and billing history. You can see past payments, and download receipts, from the billing page behind **Manage Subscription**. If you need a receipt in a particular form, email [support@cruxy.io](mailto:support@cruxy.io).
 
-## Update your card
+## Manage your subscription or update your card
 
-With Stripe, tap **Manage Subscription** and update your card on the billing page. With Google Play, change your payment method in the Google Play app under Payments & subscriptions.
+Open **Settings > Profile** and tap **Manage Subscription**. This opens Stripe's billing page, where you can update your card, see your payments, or cancel.
 
 ## Cancel Pro
 
-Cancel where you pay: **Manage Subscription** for Stripe, or Subscriptions in the Google Play app. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends. If you paid with Stripe, a **Keep Pro** button lets you change your mind. After that your workspace moves to Free. See [If Pro ends](https://cruxy.io/support/free-vs-pro/#pro-ends).
+Open **Settings > Profile**, tap **Manage Subscription**, and cancel there. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends and a **Keep Pro** button if you change your mind. After that your workspace moves to Free. See [If Pro ends](https://cruxy.io/support/free-vs-pro/#pro-ends).
 
 ## Refunds
 
-Fees are non-refundable except as required by law. If you were charged by mistake, email [support@cruxy.io](mailto:support@cruxy.io) and we'll look into it. If you paid through Google Play, Google handles refund requests for those purchases.
+Fees are non-refundable except as required by law. If you were charged by mistake, email [support@cruxy.io](mailto:support@cruxy.io) and we'll look into it.
 
-Deleting your account cancels a Stripe subscription straight away and doesn't refund the current period. A Google Play subscription must be cancelled in Google Play.
+Deleting your account cancels Pro straight away and doesn't refund the current period.
 
 ---
 Still stuck? Email support@cruxy.io and you'll get a quick response from a real person.
@@ -580,11 +574,11 @@ On the sign-in screen, tap **Forgot Password?**, enter your email and tap **Send
 ## Install Cruxy on your phone
 
 Cruxy works in your browser at get.cruxy.io. To open it like an app:
-- **Android:** get Cruxy from Google Play. Or open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
+- **Android:** open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
 - **iPhone:** open get.cruxy.io in Safari, tap the Share button, then **Add to Home Screen**.
 
 
-The Android app opens Cruxy through Chrome, so Chrome should be your phone's default browser. Cruxy updates itself. If it reloads after an update, that's why.
+Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If it reloads after an update, that's why.
 
 ## Log out
 
@@ -594,7 +588,7 @@ Tap your avatar in the top right and choose **Log Out**.
 
 Open **Settings > Profile**, tap **Delete Account**, type **DELETE** and confirm.
 - Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
-- A Stripe subscription is cancelled straight away, with no refund for the current period. If you subscribed through Google Play, cancel it in Google Play too.
+- A Pro subscription is cancelled straight away, with no refund for the current period.
 - There is no undo and no grace period.
 
 
@@ -651,14 +645,6 @@ Editing or deleting entries needs a connection. Check you're online and try agai
 
 
 Still stuck? Email [support@cruxy.io](mailto:support@cruxy.io) from the address on your account.
-
-## Cruxy looks tiny after signing in with Google (Android)
-
-This happens when Chrome is set to show the desktop version of sites. In Chrome, tap the menu (three dots), then turn off **Desktop site**, and reopen Cruxy.
-
-## I subscribed on Android but Cruxy still shows Free
-
-Google Play ties the subscription to the Google account you paid with. Check that Chrome and the Play Store on your phone use that same account, then reopen Cruxy. If you subscribed with a different Cruxy login, sign in with the one you meant to upgrade. Still showing Free? Email [support@cruxy.io](mailto:support@cruxy.io) with the email on your account.
 
 ## The app reloaded by itself
 

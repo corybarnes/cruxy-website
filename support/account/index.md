@@ -21,11 +21,11 @@ On the sign-in screen, tap **Forgot Password?**, enter your email and tap **Send
 ## Install Cruxy on your phone
 
 Cruxy works in your browser at get.cruxy.io. To open it like an app:
-- **Android:** get Cruxy from Google Play. Or open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
+- **Android:** open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
 - **iPhone:** open get.cruxy.io in Safari, tap the Share button, then **Add to Home Screen**.
 
 
-The Android app opens Cruxy through Chrome, so Chrome should be your phone's default browser. Cruxy updates itself. If it reloads after an update, that's why.
+Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If it reloads after an update, that's why.
 
 ## Log out
 
@@ -35,7 +35,7 @@ Tap your avatar in the top right and choose **Log Out**.
 
 Open **Settings > Profile**, tap **Delete Account**, type **DELETE** and confirm.
 - Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
-- A Stripe subscription is cancelled straight away, with no refund for the current period. If you subscribed through Google Play, cancel it in Google Play too.
+- A Pro subscription is cancelled straight away, with no refund for the current period.
 - There is no undo and no grace period.
 
 

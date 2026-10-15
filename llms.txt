@@ -24,7 +24,7 @@
 - [Alerts](https://cruxy.io/support/alerts/): Cruxy can nudge you to log time, tell you when an invoice is overdue, and on Pro remind your clients for you.
 - [Budgets and retainers](https://cruxy.io/support/budgets-retainers/): Project budgets and retainers are Pro features. They help you stay on scope and bill recurring work.
 - [Free vs Pro](https://cruxy.io/support/free-vs-pro/): Free covers time tracking and invoicing for up to 2 active clients. Pro is $4.99 a month for everything else.
-- [Billing](https://cruxy.io/support/billing/): Cruxy Pro is $4.99 a month. On the web, payments are handled by Stripe. In the Android app, they go through Google Play.
+- [Billing](https://cruxy.io/support/billing/): Cruxy Pro is $4.99 a month. Payments are handled by Stripe.
 - [Account](https://cruxy.io/support/account/): Your profile, how you sign in, and how to leave.
 - [Troubleshooting](https://cruxy.io/support/troubleshooting/): Quick answers to the problems people run into most.
 - [Contact us](https://cruxy.io/support/contact/): Email us and you'll get a quick response from a real person.
