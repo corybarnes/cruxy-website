@@ -43,6 +43,14 @@ Tap **Save**. You can change any of this later. Changes apply to invoices you cr
 
 To send invoices by email, add a billing email. Tap the client, then the yellow pencil next to the name to open the details.
 
+## Check your tasks
+
+A task says what kind of work you did, like Design or Meetings. Tasks live in **Settings**, not on each client. Tap your avatar, then **Settings**, then the **Tasks** tab. Every client uses the same list.
+
+We start you with six: Admin, Design, Development, Meetings, Research and Support. Tap **New task** to add your own.
+
+Once a task is on an entry, it can't be deleted, but you can rename it.
+
 ## Log your first time
 
 **With the timer**

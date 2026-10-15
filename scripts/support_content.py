@@ -48,6 +48,11 @@ PAGES.append(dict(
 </ol>
 <p>To send invoices by email, add a billing email. Tap the client, then the yellow pencil next to the name to open the details.</p>''',
      [shot(S+'client-new.png', 'The New client form in Cruxy')], 'step'),
+    ('tasks', 'Check your tasks', '''
+<p>A task says what kind of work you did, like Design or Meetings. Tasks live in <strong>Settings</strong>, not on each client. Tap your avatar, then <strong>Settings</strong>, then the <strong>Tasks</strong> tab. Every client uses the same list.</p>
+<p>We start you with six: Admin, Design, Development, Meetings, Research and Support. Tap <strong>New task</strong> to add your own.</p>
+<p>Once a task is on an entry, it can't be deleted, but you can rename it.</p>''',
+     [shot(S+'settings-tasks.png', 'The Tasks tab in Cruxy Settings with the starter tasks')], 'step'),
     ('first-time', 'Log your first time', '''
 <p><strong>With the timer</strong></p>
 <ol>
