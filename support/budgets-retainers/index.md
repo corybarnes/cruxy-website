@@ -28,7 +28,7 @@ Weekly budgets follow the week start day set on each device.
 ## Bill a retainer
 
 A retainer is a fixed fee that repeats. Cruxy adds the charge on each date, ready to go on your next invoice.
-1. Tap a client, then the yellow pencil for details.
+1. Tap a client, then the yellow pencil for details. (When you add a new client, the Retainer row is on the same form.)
 2. Tap **Add a fixed fee that repeats** under Retainer.
 3. Enter a description and amount, and choose how often it repeats (monthly, weekly, every 2 weeks or quarterly) and on which day.
 4. Set the start date, and an end date if you want one.

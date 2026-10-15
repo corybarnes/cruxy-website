@@ -371,7 +371,7 @@ PAGES.append(dict(
     ('retainer', 'Bill a retainer', '''
 <p>A retainer is a fixed fee that repeats. Cruxy adds the charge on each date, ready to go on your next invoice.</p>
 <ol>
-<li>Tap a client, then the yellow pencil for details.</li>
+<li>Tap a client, then the yellow pencil for details. (When you add a new client, the Retainer row is on the same form.)</li>
 <li>Tap <strong>Add a fixed fee that repeats</strong> under Retainer.</li>
 <li>Enter a description and amount, and choose how often it repeats (monthly, weekly, every 2 weeks or quarterly) and on which day.</li>
 <li>Set the start date, and an end date if you want one.</li>
