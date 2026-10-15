@@ -47,13 +47,10 @@ header.site-header {
 header.site-header.is-scrolled {
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
-/* Each section's own top padding differs, so scroll-margin-top is sized
-   per-section to land at the same visual gap below the sticky header. */
-#services, #about, #contact {
-  scroll-margin-top: 16px;
-}
-#work {
-  scroll-margin-top: 96px;
+/* Sticky header is about 65px tall, so anchored sections stop just under it.
+   (scroll-margin-top 64px.) */
+#services, #about, #contact, #work {
+  scroll-margin-top: 64px;
 }
 header.site-header .wrap {
   height: 64px;
@@ -264,8 +261,8 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
    App marketing page — Positioning / Features /
    Pricing / FAQ / Final CTA
    ============================================ */
-#why-cruxy, #features, #pricing, #faq, #download {
-  scroll-margin-top: 16px;
+#why-cruxy, #features, #pricing, #support, #faq, #download {
+  scroll-margin-top: 64px;
 }
 
 /* ---------- Positioning ("Why Cruxy") ---------- */
@@ -379,7 +376,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 }
 
 /* ---------- Feature deep dive ---------- */
-.deep-dive { background: #0D0D0D; padding: 96px 24px; scroll-margin-top: 16px; }
+.deep-dive { background: #0D0D0D; padding: 96px 24px; scroll-margin-top: 64px; }
 .deep-dive-wrap { display: grid; grid-template-columns: 4fr 8fr; gap: 56px; align-items: center; max-width: 1200px; }
 .deep-dive h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: #fff; margin: 0 0 20px; }
 .deep-dive-lede { font-size: 16px; line-height: 1.6; color: #B5B5B5; margin: 0 0 28px; }

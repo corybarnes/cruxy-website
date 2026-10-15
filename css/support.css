@@ -19,7 +19,7 @@
 .toc li { font-size: 14.5px; line-height: 1.5; margin-bottom: 4px; break-inside: avoid; }
 .toc a { color: #0D0D0D; text-decoration: none; }
 .toc a:hover { text-decoration: underline; }
-.sec { padding: 36px 0; border-top: 1px solid #E0E0E0; scroll-margin-top: 16px; }
+.sec { padding: 36px 0; border-top: 1px solid #E0E0E0; scroll-margin-top: 72px; }
 .sec-shots { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 40px; align-items: start; }
 .sec h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: #0D0D0D; margin: 0 0 14px; }
 .sec p, .sec li { font-size: 16px; line-height: 1.65; color: #4A4A4A; }
