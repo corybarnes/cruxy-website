@@ -72,7 +72,7 @@ The bar at the top of Entries and Summary switches between **Week**, **Month** a
 
 The **Summary** tab shows your hours and **Total Billable** for the period: time at your rates, plus fixed fees (retainers included) and expenses, before tax. It's what an invoice for the period would total. The **Fixed Fees** and **Expenses** tiles show the breakdown.
 
-Below that are a chart of hours by day and breakdowns **By client**, **By project** and **By task**. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task list them on their own **Fixed fees & expenses** line. Amounts are shown per currency.
+Below that are a chart of hours by day and breakdowns **By client**, **By project** and **By task**. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task show time only. Amounts are shown per currency.
 
 ## Export your time
 

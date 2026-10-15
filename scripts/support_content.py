@@ -135,7 +135,7 @@ PAGES.append(dict(
 <p>The bar at the top of Entries and Summary switches between <strong>Week</strong>, <strong>Month</strong> and <strong>Custom</strong>. Use the arrows to step to the previous or next period, and the double arrow to jump back to today. Both tabs share the same period.</p>''', []),
     ('summary', 'See your totals on Summary', '''
 <p>The <strong>Summary</strong> tab shows your hours and <strong>Total Billable</strong> for the period: time at your rates, plus fixed fees (retainers included) and expenses, before tax. It's what an invoice for the period would total. The <strong>Fixed Fees</strong> and <strong>Expenses</strong> tiles show the breakdown.</p>
-<p>Below that are a chart of hours by day and breakdowns <strong>By client</strong>, <strong>By project</strong> and <strong>By task</strong>. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task list them on their own <strong>Fixed fees &amp; expenses</strong> line. Amounts are shown per currency.</p>''',
+<p>Below that are a chart of hours by day and breakdowns <strong>By client</strong>, <strong>By project</strong> and <strong>By task</strong>. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task show time only. Amounts are shown per currency.</p>''',
      [shot(S+'screen-summary.png', 'The Cruxy Summary tab')]),
     ('export', 'Export your time', '''
 <p>On Summary, use the two download icons at the top right.</p>
