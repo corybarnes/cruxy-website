@@ -159,7 +159,7 @@ def main():
     lines += ['', '## Existing screenshots to retake or check when refreshing the set',
               '- [ ] settings-invoicing.png, settings-profile.png, settings-tasks.png: the Settings tab row now has an Alerts tab',
               '- [ ] client-details.png and client-invoices.png: check against the current client modal (gear icon for details, Reminders tab)',
-              '- [ ] app/import-pick.jpg, app/import-review.png, app/invoices-list.jpg, app/retainers-progress.jpg: older shots, check they match the current app',
+              '- [ ] app/import-pick.jpg, app/import-review.jpg, app/invoices-list.jpg, app/retainers-progress.jpg: older shots, check they match the current app',
               '- [ ] Retake all with one consistent demo workspace and device frame once the client-reminders work is merged']
     open(os.path.join(ROOT, 'scripts', 'SCREENSHOTS.md'), 'w').write('\n'.join(lines) + '\n')
     print('pages: %d + home, sections: %d, missing screenshots: %d' % (len(PAGES), len(index), len(missing)))

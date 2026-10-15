@@ -217,7 +217,7 @@ PAGES.append(dict(
 <p>Every row needs a date, a duration and a client. Entries already in Cruxy are skipped, so importing the same file twice is safe. If any rows can't be read, nothing is imported until you fix the file. The file can be up to 10 MB.</p>
 <p>On Free, new clients beyond your 2 active clients are imported as inactive. You can choose which to keep active, or go Pro.</p>
 <p>Right after an import, tap <strong>Undo Import</strong> if you need to take it back. Once you close that screen, the option is gone.</p>''',
-     [shot(A+'import-pick.jpg', 'Choosing a CSV file to import'), shot(A+'import-review.png', 'Reviewing an import before it runs')]),
+     [shot(A+'import-pick.jpg', 'Choosing a CSV file to import'), shot(A+'import-review.jpg', 'Reviewing an import before it runs')]),
     ('choose-clients', 'If Cruxy asks you to choose clients', '''
 <p>If a Free workspace has more than 2 active clients, for example after Pro ends, Cruxy asks you to pick the 2 to keep active. The others are made inactive with their data kept. You can't log new time until you choose. Going Pro again lifts the limit.</p>''',
      [shot(None, 'The Choose clients to keep active sheet', 'The "Choose clients to keep active" sheet with two clients ticked')]),
