@@ -134,13 +134,14 @@ PAGES.append(dict(
     ('period', 'Change the period you are viewing', '''
 <p>The bar at the top of Entries and Summary switches between <strong>Week</strong>, <strong>Month</strong> and <strong>Custom</strong>. Use the arrows to step to the previous or next period, and the double arrow to jump back to today. Both tabs share the same period.</p>''', []),
     ('summary', 'See your totals on Summary', '''
-<p>The <strong>Summary</strong> tab shows hours, what you earned, and any fixed fees and expenses for the period, a chart of hours by day, and breakdowns <strong>By client</strong>, <strong>By project</strong> and <strong>By task</strong>. Amounts are shown per currency.</p>''',
+<p>The <strong>Summary</strong> tab shows your hours and <strong>Total Billable</strong> for the period: time at your rates, plus fixed fees (retainers included) and expenses, before tax. It's what an invoice for the period would total. The <strong>Fixed Fees</strong> and <strong>Expenses</strong> tiles show the breakdown.</p>
+<p>Below that are a chart of hours by day and breakdowns <strong>By client</strong>, <strong>By project</strong> and <strong>By task</strong>. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task list them on their own <strong>Fixed fees &amp; expenses</strong> line. Amounts are shown per currency.</p>''',
      [shot(S+'screen-summary.png', 'The Cruxy Summary tab')]),
     ('export', 'Export your time', '''
 <p>On Summary, use the two download icons at the top right.</p>
 <ul>
 <li>The <strong>CSV</strong> icon saves every entry in the period: date, client, project, task, hours, rate, earnings, currency, whether it's billable, invoice number and note.</li>
-<li>The <strong>PDF</strong> icon saves a summary for the period with one section per client.</li>
+<li>The <strong>PDF</strong> icon saves a summary for the period with one section per client, including fixed fees and expenses.</li>
 </ul>
 <p>Free PDFs carry a small "Generated with Cruxy" credit. Pro PDFs don't.</p>''', []),
     ('tasks', 'Manage your tasks', '''

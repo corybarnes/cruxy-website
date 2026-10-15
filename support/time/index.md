@@ -70,13 +70,15 @@ The bar at the top of Entries and Summary switches between **Week**, **Month** a
 
 ## See your totals on Summary
 
-The **Summary** tab shows hours, what you earned, and any fixed fees and expenses for the period, a chart of hours by day, and breakdowns **By client**, **By project** and **By task**. Amounts are shown per currency.
+The **Summary** tab shows your hours and **Total Billable** for the period: time at your rates, plus fixed fees (retainers included) and expenses, before tax. It's what an invoice for the period would total. The **Fixed Fees** and **Expenses** tiles show the breakdown.
+
+Below that are a chart of hours by day and breakdowns **By client**, **By project** and **By task**. By client includes each client's fixed fees and expenses. Fees and expenses belong to a client, not a task or project, so By project and By task list them on their own **Fixed fees & expenses** line. Amounts are shown per currency.
 
 ## Export your time
 
 On Summary, use the two download icons at the top right.
 - The **CSV** icon saves every entry in the period: date, client, project, task, hours, rate, earnings, currency, whether it's billable, invoice number and note.
-- The **PDF** icon saves a summary for the period with one section per client.
+- The **PDF** icon saves a summary for the period with one section per client, including fixed fees and expenses.
 
 
 Free PDFs carry a small "Generated with Cruxy" credit. Pro PDFs don't.
