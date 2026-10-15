@@ -412,12 +412,12 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .deep-dive-light .deep-dive-points strong { color: #0D0D0D; }
 .deep-dive-light .deep-dive-points li::before { color: #D9A500; }
 .deep-dive-light .dd-shot { box-shadow: 0 0 0 1px rgba(0,0,0,0.06); filter: drop-shadow(0 18px 30px rgba(0,0,0,0.16)); }
-.dd-two { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.dd-two { grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; max-width: 600px; justify-self: center; }
 .dd-budget { position: relative; }
 .dd-float { position: absolute; left: -9%; right: -3%; bottom: -2%; width: 112%; max-width: none; height: auto; border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.06); }
 .dd-rem { display: flex; flex-direction: column; align-items: flex-start; }
-.dd-rem-email { width: 86%; height: auto; display: block; border-radius: 18px; filter: drop-shadow(0 18px 32px rgba(0,0,0,0.55)); }
-.dd-rem-settings { width: 72%; height: auto; display: block; margin: -14px 0 0 auto; border-radius: 16px; border: 6px solid #fff; background: #fff; box-shadow: 0 18px 36px rgba(0,0,0,0.5); }
+.dd-rem-email { width: 72%; height: auto; display: block; border-radius: 18px; filter: drop-shadow(0 18px 32px rgba(0,0,0,0.55)); }
+.dd-rem-settings { width: 62%; height: auto; display: block; margin: -14px 0 0 auto; border-radius: 16px; border: 6px solid #fff; background: #fff; box-shadow: 0 18px 36px rgba(0,0,0,0.5); }
 @media (max-width: 900px) {
   .deep-dive-flip .deep-dive-wrap { grid-template-columns: 1fr; }
   .deep-dive-flip .deep-dive-copy, .deep-dive-flip .deep-dive-shots { grid-column: auto; grid-row: auto; }
