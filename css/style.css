@@ -107,6 +107,7 @@ header.site-header .wrap {
   .main-nav { gap: 12px; }
   .main-nav a.nav-link { font-size: 12.5px; }
   .btn-book { padding: 8px 12px; font-size: 12px; }
+  .main-nav a.nav-login { display: none; } /* too tight on phones; the footer has a Log in link */
 }
 
 /* ---------- Services ---------- */
