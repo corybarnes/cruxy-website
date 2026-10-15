@@ -26,18 +26,18 @@ PAGES.append(dict(
 <li>If we ask you to confirm your email, open the message we sent, tap the link, then sign in.</li>
 </ol>
 <p class="note">Cruxy is free to start. You don't need a credit card.</p>
-<p>You can use Cruxy on the web at get.cruxy.io, or add it to your phone's home screen so it opens like an app. See <a href="../account/#install">Install Cruxy on your phone</a>.</p>''',
-     [shot(S+'signup.png', 'The Cruxy Create your account form, filled in with example details')], 'step'),
+<p>You can use Cruxy on the web at get.cruxy.io, or install it on your phone so it opens like an app. See <a href="../account/#install">Install Cruxy on your phone</a>.</p>''',
+     [], 'step'),
     ('business-details', 'Add your business details', '''
-<p>Tap your avatar in the top right, then the gear icon to open Settings. Choose the <strong>Invoicing</strong> tab and fill in:</p>
+<p>Tap your avatar in the top right, then <strong>Settings</strong>. Choose the <strong>Invoicing</strong> tab and fill in:</p>
 <ul>
 <li>Your business address and email, which appear on your invoices</li>
 <li>Payment instructions, such as bank details or a payment link</li>
-<li>Payment terms: Due on receipt, Net 15 or Net 30</li>
+<li>Your default payment terms: Due on receipt, Net 15, Net 30, Net 45 or Net 60</li>
 <li>Your tax label and rate, if you charge tax</li>
 <li>A logo (PNG or JPG, up to 2 MB), if you want one</li>
 </ul>
-<p>Tap <strong>Save</strong>. You can change any of this later. Changes apply to invoices you create afterward, not ones you've already made.</p>''',
+<p>Tap <strong>Save</strong>. You can change any of this later. Changes apply to invoices you create afterward, not ones you've already made. Each client can also have its own payment terms and tax rate.</p>''',
      [shot(S+'settings-invoicing.png', 'The Invoicing tab in Cruxy Settings with business address, payment instructions, terms and tax')], 'step'),
     ('first-client', 'Add your first client', '''
 <ol>
@@ -46,8 +46,8 @@ PAGES.append(dict(
 <li>Choose a currency and enter your hourly rate. A rate of 0 makes the client non-billable.</li>
 <li>Pick a color, then tap <strong>Add Client</strong>.</li>
 </ol>
-<p>To send invoices by email, add a billing email. Tap the client, then the gear icon next to the name to open the details.</p>''',
-     [shot(None, 'The New client form in Cruxy', 'The New client sheet: client name, first project, currency, hourly rate and color')], 'step'),
+<p>To send invoices by email, add a billing email. Tap the client, then the yellow pencil next to the name to open the details.</p>''',
+     [shot(S+'client-new.png', 'The New client form in Cruxy')], 'step'),
     ('first-time', 'Log your first time', '''
 <p><strong>With the timer</strong></p>
 <ol>
@@ -57,7 +57,7 @@ PAGES.append(dict(
 </ol>
 <p><strong>By hand</strong></p>
 <p>Tap <strong>Entries</strong>, then <strong>New</strong>, then <strong>Time Entry</strong>. Enter the date, hours and minutes.</p>''',
-     [shot(A+'app-timer.jpg', 'The Cruxy timer running for a client, project and task'), shot(S+'new-entry.png', 'The New entry form in Cruxy')], 'step'),
+     [shot(S+'screen-timer.png', 'The Cruxy Timer screen'), shot(S+'new-entry.png', 'The New entry form in Cruxy')], 'step'),
     ('first-invoice', 'Send your first invoice', '''
 <ol>
 <li>Tap <strong>Clients</strong>, then the client, then the <strong>Invoices</strong> tab.</li>
@@ -85,7 +85,7 @@ PAGES.append(dict(
 </ol>
 <p>Time is rounded to the nearest minute, with a minimum of 1 minute. Paused time isn't counted. The pickers are locked while the timer runs.</p>
 <p>A running timer survives closing the app. If you start it on your phone, you can stop it from another device.</p>''',
-     [shot(A+'app-timer.jpg', 'The Cruxy timer running')]),
+     [shot(S+'screen-timer.png', 'The Cruxy Timer screen')]),
     ('manual-entry', 'Add a time entry by hand', '''
 <ol>
 <li>Tap <strong>Entries</strong>, then <strong>New</strong>, then <strong>Time Entry</strong>.</li>
@@ -108,7 +108,7 @@ PAGES.append(dict(
     ('resume', 'Resume an earlier entry', '''
 <p>In "Your entries today" on the Timer, tap <strong>Resume</strong> on an entry. The timer starts, and when you stop it the time is added to that entry. If another timer is running, it is logged first.</p>''', []),
     ('timesheet', 'Use the weekly timesheet', '''
-<p>On <strong>Entries</strong>, switch to <strong>Timesheet view</strong> to see the week as a grid, one card per client.</p>
+<p>On <strong>Entries</strong>, tap the calendar icon to switch to <strong>Timesheet view</strong>, which shows the week as a grid, one card per client. Tap the list icon to switch back.</p>
 <ul>
 <li><strong>Add Row</strong> picks a client, project and task to list.</li>
 <li><strong>Copy Last Week's Rows</strong> brings over last week's rows (not the time) to save setup.</li>
@@ -116,45 +116,45 @@ PAGES.append(dict(
 <li>Tap a cell that already has time to edit it. A cell with several entries opens a list.</li>
 </ul>
 <p>The week starts on the day you choose in <a href="../account/#profile">Settings &gt; Profile</a>.</p>''',
-     [shot(S+'timesheet-phone.png', 'The weekly timesheet in Cruxy')]),
+     [shot(S+'screen-timesheet.png', 'The weekly timesheet in Cruxy')]),
     ('filter', 'Filter your entries', '''
-<p>On Entries, tap the filter button (sliders icon). You can show:</p>
+<p>On Entries, tap the filter button (the sliders icon). You can show:</p>
 <ul>
 <li><strong>Unbilled</strong> or <strong>Billed</strong> time</li>
 <li>Time, fixed fees or expenses</li>
-<li>One or more clients, including inactive clients</li>
+<li>One or more clients, including inactive ones</li>
 </ul>
 <p>The client filter also applies to the Summary tab.</p>''',
      [shot(S+'filter-entries.png', 'The Filter entries sheet')]),
     ('period', 'Change the period you are viewing', '''
 <p>The bar at the top of Entries and Summary switches between <strong>Week</strong>, <strong>Month</strong> and <strong>Custom</strong>. Use the arrows to step to the previous or next period, and the double arrow to jump back to today. Both tabs share the same period.</p>''', []),
     ('summary', 'See your totals on Summary', '''
-<p>The <strong>Summary</strong> tab shows hours, what you earned, and any fixed fees and expenses for the period, a chart by day or week, and breakdowns by client and by task. Amounts are shown per currency.</p>''',
-     [shot(A+'app-summary.jpg', 'The Cruxy Summary tab')]),
+<p>The <strong>Summary</strong> tab shows hours, what you earned, and any fixed fees and expenses for the period, a chart of hours by day, and breakdowns <strong>By client</strong>, <strong>By project</strong> and <strong>By task</strong>. Amounts are shown per currency.</p>''',
+     [shot(S+'screen-summary.png', 'The Cruxy Summary tab')]),
     ('export', 'Export your time', '''
-<p>On Summary, tap the download icon.</p>
+<p>On Summary, use the two download icons at the top right.</p>
 <ul>
-<li><strong>Export CSV</strong> saves every entry in the period: date, client, project, task, hours, rate, earnings, currency, whether it's billable, invoice number and note.</li>
-<li><strong>Export PDF</strong> saves a summary for the period with one section per client.</li>
+<li>The <strong>CSV</strong> icon saves every entry in the period: date, client, project, task, hours, rate, earnings, currency, whether it's billable, invoice number and note.</li>
+<li>The <strong>PDF</strong> icon saves a summary for the period with one section per client.</li>
 </ul>
 <p>Free PDFs carry a small "Generated with Cruxy" credit. Pro PDFs don't.</p>''', []),
     ('tasks', 'Manage your tasks', '''
-<p>Tasks (like Design or Meetings) are shared across all your clients. Open <strong>Settings &gt; Tasks</strong> to add, rename or delete them.</p>
+<p>Tasks (like Design or Meetings) are shared across all your clients. Open <strong>Settings &gt; Tasks</strong> and tap <strong>New task</strong> to add one, or tap a task to rename it.</p>
 <ul>
 <li>You can also add a task from the Timer's task list with <strong>+ Add task</strong>.</li>
 <li>Renaming a task changes its name on every entry, including old ones.</li>
-<li>You can't delete a task that has entries. Rename it instead.</li>
+<li>A task that has entries can't be deleted, and its trash icon is crossed out. Rename it instead.</li>
 </ul>''',
      [shot(S+'settings-tasks.png', 'The Tasks tab in Settings')]),
     ('offline', 'Work offline', '''
 <p>New time entries are saved on your device first, then sent when you're online. A banner shows when entries are waiting to sync and confirms when everything is saved.</p>
-<p>Editing or deleting entries, and anything in Clients, Settings and invoices, needs a connection. If an entry can't be saved (for example, its client was deleted), the banner offers <strong>Retry</strong> or <strong>Discard</strong>.</p>''', []),
+<p>Editing or deleting entries, and anything in Clients, Settings and Invoices, needs a connection. If an entry can't be saved (for example, its client was deleted), the banner offers <strong>Retry</strong> or <strong>Discard</strong>.</p>''', []),
     ]))
 
 # ---------------------------------------------------------------- Clients and projects
 PAGES.append(dict(
     slug='clients-projects', title='Clients and projects', nav='Clients and projects',
-    desc='Add clients and projects in Cruxy, set rates and currencies, deactivate clients, import from Clockify, Toggl or Harvest, and add fixed fees and expenses.',
+    desc='Add clients and projects in Cruxy, set rates and currencies, make clients inactive, import from Clockify, Toggl or Harvest, and add fixed fees and expenses.',
     intro='Clients and projects organize your time and decide what you charge.',
     sections=[
     ('add-client', 'Add a client', '''
@@ -164,38 +164,42 @@ PAGES.append(dict(
 <li>Choose a currency and your hourly rate. A rate of 0 makes the client non-billable, so no invoices can be made for them.</li>
 <li>Pick a color and tap <strong>Add Client</strong>.</li>
 </ol>
-<p>Free includes 2 active clients. Deactivate one you're finished with, or <a href="../free-vs-pro/">go Pro</a> for unlimited.</p>''',
-     [shot(A+'app-clients.jpg', 'The Cruxy Clients list')]),
+<p>Free includes 2 active clients. Make one inactive when you're finished with it, or <a href="../free-vs-pro/">go Pro</a> for unlimited.</p>''',
+     [shot(S+'screen-clients.png', 'The Cruxy Clients list')]),
     ('client-details', 'Edit a client\'s details', '''
-<p>Tap a client, then the gear icon next to the name. You can change:</p>
+<p>Tap a client, then the yellow pencil next to the name. You can change:</p>
 <ul>
 <li>Name, currency, hourly rate and color</li>
 <li>Billing name, email and address. These appear on the invoice, and the email is where invoices are sent.</li>
+<li>Payment terms for this client. <strong>Default</strong> follows the terms in Settings.</li>
 <li>A tax rate for this client, if different from your default</li>
 <li>How invoice time is rounded for this client</li>
+<li>A retainer, and whether the client is active</li>
 </ul>
 <p>Changing the hourly rate affects future entries only. Past entries keep the rate they were logged at.</p>
 <p>You can't change a client's currency while it has unbilled time or charges. Invoice them or remove them first. Changing the currency doesn't convert the rate, so update it too.</p>''',
-     [shot(S+'client-details.png', 'A client\'s details in Cruxy')]),
+     []),
     ('projects', 'Add and edit projects', '''
 <p>Tap a client, then the <strong>Projects</strong> tab.</p>
 <ul>
-<li>Type a name in the box and tap <strong>Add</strong> to create a project.</li>
-<li>Tap a project to rename it, give it its own hourly rate, or deactivate it.</li>
-<li><strong>View inactive projects</strong> shows the ones you've put away. Inactive projects don't appear when you log time, but their old entries stay.</li>
+<li>Tap <strong>New Project</strong> to create one.</li>
+<li>Tap a project to rename it, give it its own hourly rate, set a budget or make it inactive.</li>
+<li>A project with no entries can be deleted. Once it has time, make it inactive instead.</li>
+<li>Inactive projects don't appear when you log time, and they're read-only. Their old entries stay.</li>
 </ul>
 <p>A project rate replaces the client's rate for that project. Leave it blank to use the client's rate. A project can't make a non-billable client billable.</p>''',
      [shot(S+'client-projects.png', 'The Projects tab for a client')]),
-    ('deactivate', 'Deactivate and activate a client', '''
-<p>Deactivate a client when the work is done. In the client's details, tap <strong>Deactivate</strong> and confirm.</p>
+    ('deactivate', 'Make a client inactive or reactivate one', '''
+<p>When the work is done, make the client inactive. Tap the client, tap the yellow pencil, switch <strong>Client Status</strong> off and tap <strong>Save</strong>.</p>
 <ul>
 <li>Inactive clients are hidden from the timer and pickers and become read-only.</li>
 <li>Their time, projects and invoices stay. You can still invoice unbilled time and mark invoices paid.</li>
 <li>Inactive clients don't count toward your 2 active clients on Free.</li>
 </ul>
-<p>To bring one back, tap <strong>Show/Hide Inactive Clients</strong> on the Clients tab, then <strong>Activate</strong>. On Free you need a free slot first, so deactivate another client or go Pro.</p>''', []),
+<p>On the Clients tab, the <strong>All / Active / Inactive</strong> switch at the top controls which clients you see. To reactivate one, open it from Inactive and switch <strong>Client Status</strong> back on. On Free you need a free slot first, so make another client inactive or go Pro.</p>''',
+     [shot(S+'client-details.png', 'A client\'s details with the Client Status switch')]),
     ('delete-client', 'Delete a client', '''
-<p>Deleting a client permanently deletes its projects and all of its time entries. It can't be undone. If you might need the history, deactivate the client instead.</p>''', []),
+<p>Open the client's details and tap the trash icon. Deleting a client permanently deletes its projects and all of its time entries. It can't be undone. If you might need the history, make the client inactive instead.</p>''', []),
     ('charges', 'Add a fixed fee or expense', '''
 <p>Use a charge for something that isn't hourly, like a flat fee or a purchase you're passing on.</p>
 <ol>
@@ -210,17 +214,20 @@ PAGES.append(dict(
 <p>Switching from another tracker? Import your time from its CSV export. Import is free on every plan.</p>
 <ol>
 <li>Export your time entries as a CSV from Clockify, Toggl or Harvest.</li>
-<li>In Cruxy, tap <strong>Clients</strong>, then <strong>Import</strong>, then <strong>Choose CSV</strong>.</li>
+<li>In Cruxy, tap <strong>Entries</strong>, then the import icon (the tray with an arrow) in the top row.</li>
+<li>Tap <strong>Choose CSV</strong> and pick the file.</li>
 <li>Review the summary: the entries, the date range, and which clients are new or existing.</li>
 <li>Tap <strong>Import</strong>.</li>
 </ol>
-<p>Every row needs a date, a duration and a client. Entries already in Cruxy are skipped, so importing the same file twice is safe. If any rows can't be read, nothing is imported until you fix the file. The file can be up to 10 MB.</p>
+<p>Every row needs a date, a duration and a client. Rows with no project go into a project called <strong>General</strong>. Entries already in Cruxy are skipped, so importing the same file twice is safe. The file can be up to 10 MB.</p>
+<p>If any rows can't be read, nothing is imported. Tap <strong>Copy error list</strong> to see what to fix, then try again.</p>
+<p>If the file has time you've already invoiced, Cruxy asks <strong>Have these entries already been invoiced?</strong> Choose <strong>Yes, all of them</strong> or <strong>Some of them</strong> so they don't show up as unbilled.</p>
 <p>On Free, new clients beyond your 2 active clients are imported as inactive. You can choose which to keep active, or go Pro.</p>
 <p>Right after an import, tap <strong>Undo Import</strong> if you need to take it back. Once you close that screen, the option is gone.</p>''',
      [shot(A+'import-pick.jpg', 'Choosing a CSV file to import'), shot(A+'import-review.jpg', 'Reviewing an import before it runs')]),
     ('choose-clients', 'If Cruxy asks you to choose clients', '''
-<p>If a Free workspace has more than 2 active clients, for example after Pro ends, Cruxy asks you to pick the 2 to keep active. The others are made inactive with their data kept. You can't log new time until you choose. Going Pro again lifts the limit.</p>''',
-     [shot(None, 'The Choose clients to keep active sheet', 'The "Choose clients to keep active" sheet with two clients ticked')]),
+<p>If a Free workspace has more than 2 active clients, for example after Pro ends, Cruxy asks you to pick the 2 to keep active. The others are made inactive with their data kept. You can't log new time until you choose. Inactive clients are read-only, but you can still view and export their time and send or mark their invoices paid. Going Pro again lifts the limit.</p>''',
+     [shot(S+'choose-clients.png', 'The Choose clients to keep active sheet')]),
     ]))
 
 # ---------------------------------------------------------------- Invoices
@@ -232,14 +239,22 @@ PAGES.append(dict(
     ('create', 'Create an invoice', '''
 <ol>
 <li>Tap <strong>Clients</strong>, then the client, then the <strong>Invoices</strong> tab.</li>
-<li>Tap <strong>New Invoice</strong> and choose the period: last month, this month or a custom range.</li>
-<li>Check the <strong>invoice number</strong> (we suggest the next one), the issue date and the payment terms.</li>
+<li>Tap <strong>New Invoice</strong> and choose the period: last month, this month, all unbilled time, or a custom range.</li>
+<li>Check the <strong>invoice number</strong> (we suggest the next one), the issue date and the payment terms (Due on receipt, Net 15, 30, 45 or 60).</li>
 <li>Set the tax rate, and add a discount or a note if you need to.</li>
 <li>Under <strong>Fees and expenses</strong>, untick any charge you want to leave off, or tap <strong>Add Charge</strong>.</li>
 <li>Tap <strong>Create Invoice</strong>.</li>
 </ol>
-<p>The client needs an hourly rate above 0 to be invoiced. The Invoices tab also shows how much is unbilled.</p>''',
-     [shot(S+'client-invoices.png', 'A client\'s Invoices tab'), shot(S+'new-invoice.png', 'The New Invoice sheet')]),
+<p>The client needs an hourly rate above 0 to be invoiced. When you close the sheet, you go back to the client.</p>''',
+     [shot(S+'new-invoice.png', 'The New Invoice sheet')]),
+    ('unbilled', 'See what\'s unbilled', '''
+<p>The client's <strong>Invoices</strong> tab shows how much is unbilled. Tap that amount to open <strong>Unbilled Entries</strong>, a list of the time and charges that aren't on an invoice yet.</p>
+<ul>
+<li>Tap a row to open that entry.</li>
+<li><strong>Create Invoice</strong> shows the unbilled total. The invoice itself can differ a little, for example with tax or retainer charges.</li>
+<li><strong>Mark All Entries as Billed</strong> marks all the time as billed without making an invoice. Use it for work you invoiced outside Cruxy. Fixed fees and expenses are marked billed when they're put on an invoice.</li>
+</ul>''',
+     [shot(S+'unbilled.png', 'The Unbilled Entries sheet'), shot(S+'client-invoices.png', 'A client\'s Invoices tab')]),
     ('contents', 'What goes on an invoice', '''
 <ul>
 <li>Billable time in the period. Non-billable entries stay off, and so does time already on another invoice.</li>
@@ -250,11 +265,11 @@ PAGES.append(dict(
 <p>An invoice is a snapshot. Later changes to the client, your settings or the entries don't change it. If you need a change, delete the invoice and create it again.</p>
 <p>If the period has nothing to invoice, Cruxy says so and doesn't make an invoice.</p>''', []),
     ('view', 'View an invoice', '''
-<p>Tap an invoice in the client's list to see Bill To, the lines, the totals, your payment instructions and notes. The status shows as <strong>Not sent</strong>, <strong>Sent</strong>, <strong>Overdue</strong> or <strong>Paid</strong>.</p>''',
-     [shot(A+'invoices-list.jpg', 'A client\'s invoices with paid and overdue statuses')]),
+<p>Tap an invoice in the client's list to see Bill To, the lines, the totals, your payment instructions and notes. In the list, each invoice shows <strong>Not sent</strong>, <strong>Sent</strong> with the date, <strong>Overdue</strong> with how many days, or <strong>Paid</strong> with the date.</p>''',
+     [shot(S+'invoice-view.png', 'An invoice in Cruxy'), shot(S+'screen-invoices.png', 'The Invoices tab with paid and overdue invoices')]),
     ('email', 'Email an invoice', '''
 <ol>
-<li>Open the invoice and tap the email icon.</li>
+<li>Tap the email icon, either in the invoice list or on the invoice. It shows on invoices that are <strong>Not sent</strong> or <strong>Overdue</strong>.</li>
 <li>Check the <strong>To</strong> address. It comes from the client's billing email.</li>
 <li>Edit the subject and message if you like. A copy to yourself is on by default.</li>
 <li>Tap <strong>Send Invoice</strong>.</li>
@@ -263,7 +278,7 @@ PAGES.append(dict(
 <p>Free includes 3 emailed invoices or reminders a month, renewing on the 1st. Pro has no monthly limit. See <a href="../free-vs-pro/">Free vs Pro</a>.</p>''',
      [shot(S+'email-invoice.png', 'The Email invoice sheet')]),
     ('share-download', 'Share or download an invoice', '''
-<p>Tap <strong>Download</strong> to save the PDF, or <strong>Share</strong> to send it with your phone's share sheet (on devices that support it). Sharing and downloading are free and unlimited. Sharing an unsent invoice marks it as sent.</p>
+<p>Open the invoice and tap the download icon to save the PDF, or the share option to send it with your phone's share sheet (on devices that support it). Sharing and downloading are free and unlimited. Sharing an unsent invoice marks it as sent.</p>
 <p>Free invoices carry a small "Generated with Cruxy" line at the bottom. Pro invoices don't. If you've uploaded a logo, it's included.</p>''', []),
     ('status', 'Mark an invoice sent or paid', '''
 <ul>
@@ -272,11 +287,12 @@ PAGES.append(dict(
 <li><strong>Mark as Unpaid</strong> or <strong>Mark as Unsent</strong> reverses the status.</li>
 <li>Tap the underlined sent or paid date to change it.</li>
 </ul>
-<p>An invoice is <strong>Overdue</strong> when it's been sent, isn't paid and is past its due date. An invoice due on receipt gets one business day before it counts as overdue.</p>
+<p>An invoice is <strong>Overdue</strong> when it's been sent, isn't paid and is past its due date. An invoice due on receipt becomes overdue one business day after the day it was sent.</p>
 <p>Cruxy doesn't take payments from your clients. You get paid however your payment instructions say.</p>''', []),
     ('reminder', 'Send a reminder for an overdue invoice', '''
 <p>Open an overdue invoice and tap the email icon. Switch to <strong>Reminder</strong>, check the message and tap <strong>Send Reminder</strong>. A manual reminder counts toward your free monthly emails.</p>
-<p>Pro can send reminders automatically. See <a href="../alerts/#client-reminders">Automatic reminders to your clients</a>.</p>''', []),
+<p>Pro can send reminders automatically. See <a href="../alerts/#client-reminders">Automatic reminders to your clients</a>.</p>''',
+     [shot(S+'invoice-overdue.png', 'An overdue invoice'), shot(S+'email-reminder.png', 'The Email invoice reminder sheet')]),
     ('delete', 'Delete an invoice', '''
 <p>Open the invoice and tap <strong>Delete</strong>. The time and charges on it count as unbilled again. This can't be undone, and there's no void. Deleting doesn't unsend an email your client already received.</p>
 <p>Invoices can't be edited after they're created. To change one, delete it and make a new one.</p>''', []),
@@ -289,39 +305,39 @@ PAGES.append(dict(
     intro='Cruxy can nudge you to log time, tell you when an invoice is overdue, and on Pro remind your clients for you.',
     sections=[
     ('overview', 'Where to find them', '''
-<p>Open <strong>Settings &gt; Alerts</strong>. There are three switches, and all start off:</p>
+<p>Open <strong>Settings &gt; Alerts</strong>. There are three switches:</p>
 <ul>
-<li><strong>Remind Me to Log Time</strong> (Free and Pro)</li>
-<li><strong>Send Me Overdue Invoice Alerts</strong> (Free and Pro)</li>
-<li><strong>Send My Clients Overdue Invoice Alerts</strong> (Pro)</li>
+<li><strong>Remind me to log time</strong> (Free and Pro)</li>
+<li><strong>Send me overdue alerts</strong> (Free and Pro)</li>
+<li><strong>Send clients overdue reminders</strong> (Pro)</li>
 </ul>
 <p>Each has a <strong>Customize</strong> link for the details. Flipping a switch saves it right away.</p>''',
-     [shot(None, 'The Alerts tab in Settings with three switches', 'Settings > Alerts with the three switches (one on, two off), Customize links visible')]),
+     [shot(S+'settings-alerts.png', 'The Alerts tab in Settings with three switches')]),
     ('log-time', 'Remind me to log time', '''
-<p>Turn on <strong>Remind Me to Log Time</strong> and Cruxy emails you at a time you choose, on the days you choose, as long as you haven't logged any time yet that day. Tap <strong>Customize</strong> to set <strong>Email Me At</strong> (any hour from 5:00 AM to 10:00 PM) and the days of the week. The default is 5:00 PM, Monday to Friday.</p>
+<p>Turn on <strong>Remind me to log time</strong> and Cruxy emails you at a time you choose, on the days you choose, as long as you haven't logged any time yet that day. Tap <strong>Customize</strong> to set <strong>Email Me At</strong> (any hour from 5:00 AM to 10:00 PM) and the days of the week. The default is 5:00 PM, Monday to Friday.</p>
 <p>The time uses the time zone of the device you saved it on.</p>''',
-     [shot(None, 'The Remind Me to Log Time sheet', 'The Customize sheet for the log-time reminder: time picker and day buttons')]),
+     [shot(S+'alerts-log-time.png', 'The Remind me to log time sheet')]),
     ('overdue', 'Overdue invoice alerts to you', '''
-<p>Turn on <strong>Send Me Overdue Invoice Alerts</strong> and Cruxy emails you when a sent invoice is still unpaid. Tap <strong>Customize</strong> to choose when: <strong>When Overdue</strong> (the day it becomes overdue), <strong>1 Week</strong>, <strong>30 Days</strong> and <strong>60 Days</strong> after.</p>
+<p>Turn on <strong>Send me overdue alerts</strong> and Cruxy emails you when a sent invoice is still unpaid. Tap <strong>Customize</strong> to choose when: <strong>Overdue</strong> (the day it becomes overdue), <strong>1 Week</strong>, <strong>30 Days</strong> and <strong>60 Days</strong> after.</p>
 <p>Each alert lists the invoice, the client, the amount and how many days it is overdue. It also says whether your client has been reminded.</p>
 <p>An invoice counts as overdue once it's been sent, isn't paid and is past its due date. Due-on-receipt invoices get one business day first.</p>''',
-     [shot(None, 'The Overdue Invoice Alerts sheet', 'The Customize sheet for overdue alerts with the four timing chips')]),
+     [shot(S+'alerts-overdue.png', 'The Overdue Invoice Alerts sheet')]),
     ('client-reminders', 'Automatic reminders to your clients (Pro)', '''
 <p>With Pro, Cruxy can email your client for you when an invoice is overdue. It goes out from your business name, so it reads like it came from you.</p>
 <ol>
-<li>Open <strong>Settings &gt; Alerts</strong> and turn on <strong>Send My Clients Overdue Invoice Alerts</strong>.</li>
-<li>Tap <strong>Customize</strong> to see a preview of the email and choose its wording.</li>
+<li>Open <strong>Settings &gt; Alerts</strong> and turn on <strong>Send clients overdue reminders</strong>.</li>
+<li>Tap <strong>Customize</strong> to open <strong>Client Invoice Reminders</strong>. Choose which days clients get a reminder, and see a preview of the email.</li>
 </ol>
-<p>When this is on, every active client gets reminders on the day an invoice becomes overdue, and again at 7 and 30 days. Clients with no billing email are skipped. Add one in the client's details. Nothing is sent for an invoice that has been paid.</p>''',
-     [shot(None, 'The Client Alerts sheet with a preview', 'The Customize sheet for client alerts: preview, Write My Own, Send Me a Test, Save')]),
+<p>When this is on, every active client gets reminders on the days you choose: <strong>Overdue</strong>, <strong>1 Week</strong>, <strong>30 Days</strong> or <strong>60 Days</strong>. Clients with no billing email are skipped. Add one in the client's details. Nothing is sent for an invoice that has been paid.</p>''',
+     [shot(S+'alerts-clients.png', 'The Client Invoice Reminders sheet with a preview')]),
     ('wording', 'Choose what the email says', '''
 <p>The default message is friendly and short: it says the invoice is past due, thanks them if they have already paid, and invites them to reply with questions.</p>
-<p>To write your own, tap <strong>Write My Own</strong> and type up to 1,000 characters of plain text. Tap <strong>Use Default</strong> to go back. Cruxy always adds the greeting, the invoice details (number, amount, due date and days overdue), your payment instructions and a thank-you. The subject is also written for you, for example "Reminder: Invoice 1042 from Acme is 7 days past due".</p>
+<p>To write your own, tap <strong>Write My Own</strong> and type up to 1,000 characters of plain text. Tap <strong>Use Default</strong> to go back. Cruxy always adds the greeting, the invoice details (number, amount, due date and days overdue), your payment instructions and a thank-you. The subject is also written for you, for example "Reminder: Invoice 1042 from Acme is 1 day past due".</p>
 <p>Tap <strong>Send Me a Test</strong> to get a sample at your own email address. It's never sent to a client. Replies from clients go to your business email, or to your login email if you haven't set one.</p>''',
-     [shot(None, 'An example reminder email as the client sees it', 'The reminder email in an inbox: subject, greeting, standard message, invoice details table, How to pay box, thank-you')]),
+     [shot(S+'email-reminder.png', 'The reminder message in the Email invoice reminder sheet')]),
     ('per-client', 'Change reminders for one client', '''
-<p>Open a client and tap the <strong>Reminders</strong> tab. Switch reminders off for just that client, or tap <strong>Customize</strong> to pick which days they get a reminder: When Overdue, 1 Week, 30 Days or 60 Days. If client reminders are off in Settings, this tab says so and offers a shortcut to turn them on.</p>''',
-     [shot(None, 'The Reminders tab for a client', 'A client\'s Reminders tab with the switch and Customize link')]),
+<p>Open a client and tap the <strong>Reminders</strong> tab. Switch <strong>Automatic Payment Reminders</strong> off for just that client, or tap <strong>Customize</strong> to give that client its own timing: Overdue, 1 Week, 30 Days or 60 Days. If client reminders are off in Settings, this tab says so and offers a shortcut to turn them on.</p>''',
+     [shot(S+'client-reminders.png', 'A client\'s Reminders tab'), shot(S+'client-reminders-customize.png', 'Payment Reminders for one client')]),
     ('status', 'See who has been reminded', '''
 <p>Open an overdue invoice. Under the title you'll see "Client reminded" with the date and the number sent, or a note if a reminder didn't arrive or was marked as spam. The overdue alert email you get also says whether the client was notified.</p>''', []),
     ]))
@@ -340,17 +356,17 @@ PAGES.append(dict(
 <li>Choose the <strong>Period</strong>: the whole project, each month or each week.</li>
 <li>Tap <strong>Save</strong>.</li>
 </ol>
-<p>A progress bar on the project shows how much is used, for example "26.5 of 40 hrs". Budgets count billable time for the whole workspace.</p>''',
-     [shot(S+'project-budget.png', 'The Edit project sheet with a budget')]),
+<p>A progress bar on the project shows how much is used, for example "13.5 of 20 hrs this month (68%)". Budgets count billable time for the whole workspace.</p>''',
+     [shot(S+'project-budget.png', 'The Edit project sheet with a budget'), shot(S+'client-projects.png', 'Projects with budget progress bars')]),
     ('heads-up', 'The 80% heads-up', '''
 <p>When logged time takes a project to 80% of its budget, Cruxy shows a heads-up. It shows another when the project goes over. The bar changes color at those points.</p>''', []),
     ('rollover', 'Roll over unused budget', '''
-<p>For a monthly budget, turn on <strong>Roll Over Unused Hours</strong> (or <strong>Budget</strong>). Unused budget carries into the next month, up to one month's worth, and overspending comes out of next month. The balance starts from the first of the current month and restarts if you change the budget.</p>
+<p>For a monthly budget, turn on <strong>Roll Over Unused Hours</strong> (or <strong>Budget</strong>). It saves as soon as you flip it. Unused budget carries into the next month, up to one month's worth, and overspending comes out of next month. Rollover starts on the first of the month you turned it on, with nothing carried in, and restarts if you change the budget.</p>
 <p>Weekly budgets follow the week start day set on each device.</p>''', []),
     ('retainer', 'Bill a retainer', '''
 <p>A retainer is a fixed fee that repeats. Cruxy adds the charge on each date, ready to go on your next invoice.</p>
 <ol>
-<li>Tap a client, then the gear icon for details.</li>
+<li>Tap a client, then the yellow pencil for details.</li>
 <li>Tap <strong>Add a fixed fee that repeats</strong> under Retainer.</li>
 <li>Enter a description and amount, and choose how often it repeats (monthly, weekly, every 2 weeks or quarterly) and on which day.</li>
 <li>Set the start date, and an end date if you want one.</li>
@@ -387,17 +403,18 @@ PAGES.append(dict(
 </tbody></table></div>
 <p>Free also includes unlimited projects and tasks, CSV import from Clockify, Toggl and Harvest, and CSV export. Free is not a trial. It doesn't expire.</p>''', []),
     ('clients-limit', 'What counts as an active client', '''
-<p>Free includes 2 active clients. A client you've deactivated doesn't count, and keeps all its history, read-only. When you finish with a client, deactivate them to make room.</p>
+<p>Free includes 2 active clients. An inactive client doesn't count, and keeps all its history, read-only. When you finish with a client, make it inactive to make room.</p>
 <p>If you try to add a third active client on Free, Cruxy offers Pro instead.</p>''', []),
     ('email-limit', 'The emailed invoice limit', '''
 <p>Free includes 3 emailed invoices or reminders a month, renewing on the 1st (in your time zone). The email sheet shows how many you have left. <strong>Sharing and downloading invoices stay free and unlimited</strong>, so you can always send a PDF yourself.</p>''',
-     [shot(None, 'The email limit message', 'The Upgrade to Pro sheet shown when the free monthly emails are used up')]),
+     []),
     ('upgrade', 'Upgrade to Pro', '''
-<p>Tap <strong>Upgrade</strong> when Cruxy offers it, or open <strong>Settings &gt; Profile</strong> and tap <strong>Upgrade to Pro</strong>. See <a href="../billing/">Billing</a> for how payment and cancelling work.</p>''', []),
+<p>Tap <strong>Upgrade</strong> when Cruxy offers it, or open <strong>Settings &gt; Profile</strong> and tap <strong>Go Pro</strong>. See <a href="../billing/">Billing</a> for how payment and cancelling work.</p>''',
+     [shot(S+'upgrade.png', 'The Upgrade to Pro sheet')]),
     ('pro-ends', 'If Pro ends', '''
 <p>Your data stays. When Pro ends:</p>
 <ul>
-<li>If you have more than 2 active clients, Cruxy asks you to choose 2 to keep active. The rest are made inactive, read-only.</li>
+<li>If you have more than 2 active clients, Cruxy asks you to choose 2 to keep active. The rest become inactive and read-only.</li>
 <li>Emailing invoices is limited to 3 a month. Sharing and downloading are still free.</li>
 <li>Budgets keep what's set but can't be changed. Retainers pause.</li>
 <li>PDFs show the small Cruxy credit again.</li>
@@ -408,27 +425,33 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Billing
 PAGES.append(dict(
     slug='billing', title='Billing', nav='Billing',
-    desc='How billing works for Cruxy Pro: upgrading, receipts, updating your card, cancelling, and refunds.',
-    intro='Cruxy Pro is $4.99 a month. Payments are handled by Stripe.',
+    desc='How billing works for Cruxy Pro: upgrading on the web or in the Android app, receipts, updating your card, cancelling, and refunds.',
+    intro='Cruxy Pro is $4.99 a month. On the web, payments are handled by Stripe. In the Android app, they go through Google Play.',
     sections=[
     ('upgrade', 'Upgrade to Pro', '''
 <ol>
-<li>Open <strong>Settings &gt; Profile</strong> and tap <strong>Upgrade to Pro</strong>. You can also tap <strong>Upgrade</strong> when Cruxy offers it, for example when you reach a limit.</li>
-<li>Enter your payment details on the Stripe checkout page.</li>
+<li>Open <strong>Settings &gt; Profile</strong> and tap <strong>Go Pro</strong>. You can also tap <strong>Go Pro</strong> when Cruxy offers it, for example when you reach a limit.</li>
+<li>Pay on the checkout page. On the web that is Stripe. In the Android app it is Google Play.</li>
 <li>When you return to Cruxy, you're on Pro straight away.</li>
 </ol>
 <p>Pro is billed monthly. There's no contract.</p>''',
-     [shot(None, 'The Upgrade to Pro sheet', 'The Upgrade to Pro sheet with the $4.99/mo button')]),
-    ('receipts', 'Receipts and invoices', '''
-<p>Stripe handles your payments and billing history. You can see past payments, and download receipts, from the billing page described below. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>''', []),
-    ('manage', 'Manage your subscription or update your card', '''
-<p>Open <strong>Settings &gt; Profile</strong> and tap <strong>Manage Subscription</strong>. This opens Stripe's billing page, where you can update your card, see your payments, or cancel.</p>''',
+     [shot(S+'upgrade.png', 'The Upgrade to Pro sheet')]),
+    ('where', 'Where you manage your plan', '''
+<p>It depends on where you paid. Open <strong>Settings &gt; Profile</strong> and look at the Plan row:</p>
+<ul>
+<li><strong>Manage Subscription</strong> means you paid on the web with Stripe. Tap it to open Stripe's billing page.</li>
+<li><strong>Managed in Google Play</strong> means you subscribed in the Android app. Manage it in the Google Play app: tap your profile picture, then <strong>Payments &amp; subscriptions</strong>, then <strong>Subscriptions</strong>, then Cruxy.</li>
+</ul>''',
      [shot(S+'settings-profile.png', 'The Profile tab in Settings with the Plan row')]),
+    ('receipts', 'Receipts and invoices', '''
+<p>If you paid with Stripe, you can see past payments and download receipts from the billing page behind <strong>Manage Subscription</strong>. If you paid through Google Play, Google emails your receipts and lists them under Payments &amp; subscriptions. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>''', []),
+    ('card', 'Update your card', '''
+<p>With Stripe, tap <strong>Manage Subscription</strong> and update your card on the billing page. With Google Play, change your payment method in the Google Play app under Payments &amp; subscriptions.</p>''', []),
     ('cancel', 'Cancel Pro', '''
-<p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Manage Subscription</strong>, and cancel there. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends and a <strong>Keep Pro</strong> button if you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
+<p>Cancel where you pay: <strong>Manage Subscription</strong> for Stripe, or Subscriptions in the Google Play app. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends. If you paid with Stripe, a <strong>Keep Pro</strong> button lets you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
     ('refunds', 'Refunds', '''
-<p>Fees are non-refundable except as required by law. If you were charged by mistake, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> and we'll look into it.</p>
-<p>Deleting your account cancels Pro straight away and doesn't refund the current period.</p>''', []),
+<p>Fees are non-refundable except as required by law. If you were charged by mistake, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> and we'll look into it. If you paid through Google Play, Google handles refund requests for those purchases.</p>
+<p>Deleting your account cancels a Stripe subscription straight away and doesn't refund the current period. A Google Play subscription must be cancelled in Google Play.</p>''', []),
     ]))
 
 # ---------------------------------------------------------------- Account
@@ -438,8 +461,8 @@ PAGES.append(dict(
     intro='Your profile, how you sign in, and how to leave.',
     sections=[
     ('profile', 'Edit your profile', '''
-<p>Tap your avatar, then the gear icon, and open the <strong>Profile</strong> tab. You can change your name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap <strong>Save</strong>.</p>''',
-     [shot(S+'settings-profile.png', 'The Profile tab in Settings')]),
+<p>Tap your avatar, then <strong>Settings</strong>, and open the <strong>Profile</strong> tab. You can change your name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap <strong>Save</strong>.</p>''',
+     [shot(S+'settings-profile-free.png', 'The Profile tab in Settings')]),
     ('google', 'Sign in with Google', '''
 <p>Sign-up is by email and password. To add Google sign-in afterward, open <strong>Settings &gt; Profile</strong> and tap <strong>Connect Google</strong>. From then on you can tap <strong>Continue with Google</strong> on the sign-in screen.</p>
 <p>Continue with Google only works for an account you've already created. If you try it without one, Cruxy asks you to sign up with your email first.</p>''', []),
@@ -448,22 +471,21 @@ PAGES.append(dict(
     ('install', 'Install Cruxy on your phone', '''
 <p>Cruxy works in your browser at get.cruxy.io. To open it like an app:</p>
 <ul>
+<li><strong>Android:</strong> get Cruxy from Google Play. Or open get.cruxy.io in Chrome, tap the menu, then <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
 <li><strong>iPhone:</strong> open get.cruxy.io in Safari, tap the Share button, then <strong>Add to Home Screen</strong>.</li>
-<li><strong>Android:</strong> open get.cruxy.io in Chrome, tap the menu, then <strong>Add to Home screen</strong> or <strong>Install app</strong>.</li>
 </ul>
-<p>Cruxy updates itself. If it reloads after an update, that's why.</p>''',
-     [shot(None, 'Adding Cruxy to the home screen on iPhone', 'The Safari Share sheet with Add to Home Screen highlighted')]),
+<p>The Android app opens Cruxy through Chrome, so Chrome should be your phone's default browser. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
     ('logout', 'Log out', '''
 <p>Tap your avatar in the top right and choose <strong>Log Out</strong>.</p>''', []),
     ('delete', 'Delete your account', '''
 <p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Delete Account</strong>, type <strong>DELETE</strong> and confirm.</p>
 <ul>
 <li>Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.</li>
-<li>A Pro subscription is cancelled straight away, with no refund for the current period.</li>
+<li>A Stripe subscription is cancelled straight away, with no refund for the current period. If you subscribed through Google Play, cancel it in Google Play too.</li>
 <li>There is no undo and no grace period.</li>
 </ul>
 <p>Export what you need first. See <a href="../time/#export">Export your time</a>, and download your invoice PDFs. If you can't sign in, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account.</p>''',
-     [shot(None, 'The Delete account sheet', 'The Delete account sheet with the DELETE confirmation box')]),
+     [shot(S+'delete-account.png', 'The Delete account sheet')]),
     ]))
 
 # ---------------------------------------------------------------- Troubleshooting
@@ -503,6 +525,10 @@ PAGES.append(dict(
 <li>After signing up, you may need to confirm your email before you can sign in.</li>
 </ul>
 <p>Still stuck? Email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account.</p>''', []),
+    ('tiny-layout', 'Cruxy looks tiny after signing in with Google (Android)', '''
+<p>This happens when Chrome is set to show the desktop version of sites. In Chrome, tap the menu (three dots), then turn off <strong>Desktop site</strong>, and reopen Cruxy.</p>''', []),
+    ('pro-missing', 'I subscribed on Android but Cruxy still shows Free', '''
+<p>Google Play ties the subscription to the Google account you paid with. Check that Chrome and the Play Store on your phone use that same account, then reopen Cruxy. If you subscribed with a different Cruxy login, sign in with the one you meant to upgrade. Still showing Free? Email <a href="mailto:support@cruxy.io">support@cruxy.io</a> with the email on your account.</p>''', []),
     ('reloaded', 'The app reloaded by itself', '''
 <p>When we release an update, Cruxy refreshes itself the next time it checks. If you were typing in a form, finish and save before you step away.</p>''', []),
     ]))
@@ -511,10 +537,10 @@ PAGES.append(dict(
 PAGES.append(dict(
     slug='contact', title='Contact us', nav='Contact us',
     desc='Contact Cruxy support by email, and what to include so we can help quickly.',
-    intro='Email us and a real person will reply.',
+    intro='Email us and you\'ll get a quick response from a real person.',
     sections=[
     ('email', 'Email support', '''
-<p>Write to <a href="mailto:support@cruxy.io">support@cruxy.io</a>. We reply as soon as we can.</p>
+<p>Write to <a href="mailto:support@cruxy.io">support@cruxy.io</a>. You'll get a quick response from a real person.</p>
 <p>It helps if you include:</p>
 <ul>
 <li>The email address on your Cruxy account</li>
