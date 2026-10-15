@@ -345,7 +345,7 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Budgets and retainers
 PAGES.append(dict(
     slug='budgets-retainers', title='Budgets and retainers', nav='Budgets and retainers',
-    desc='Set project budgets with monthly rollover and a heads-up at 80%, and bill retainers on a schedule with Cruxy Pro.',
+    desc='Set project budgets in Cruxy with monthly rollover and a heads-up at 80%, and bill retainers on a weekly, monthly or quarterly schedule with Pro.',
     intro='Project budgets and retainers are Pro features. They help you stay on scope and bill recurring work.',
     sections=[
     ('budget', 'Set a project budget', '''
@@ -382,7 +382,7 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Free vs Pro
 PAGES.append(dict(
     slug='free-vs-pro', title='Free vs Pro', nav='Free vs Pro',
-    desc='What Cruxy Free and Cruxy Pro include, what happens at the limits, and what happens if Pro ends.',
+    desc='What Cruxy Free and Cruxy Pro ($4.99 a month) include, what counts as an active client, the emailed invoice limit, and what happens if Pro ends.',
     intro='Free covers time tracking and invoicing for up to 2 active clients. Pro is $4.99 a month for everything else.',
     sections=[
     ('compare', 'What each plan includes', '''
@@ -536,7 +536,7 @@ PAGES.append(dict(
 # ---------------------------------------------------------------- Contact
 PAGES.append(dict(
     slug='contact', title='Contact us', nav='Contact us',
-    desc='Contact Cruxy support by email, and what to include so we can help quickly.',
+    desc='Email Cruxy support at support@cruxy.io and get a quick response from a real person. Here is what to include so we can help fast.',
     intro='Email us and you\'ll get a quick response from a real person.',
     sections=[
     ('email', 'Email support', '''
