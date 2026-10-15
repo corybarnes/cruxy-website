@@ -1,10 +1,9 @@
-// Cruxy site-wide script: footer year, Klaviyo contact form (home page only), sticky header shadow.
+// Cruxy site-wide script: footer year, contact form (home page only), sticky header shadow.
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const KLAVIYO_PUBLIC_KEY = 'SKasJK';
-const KLAVIYO_LIST_ID = 'YfTN2r';
+const CONTACT_ENDPOINT = 'https://iztknzqbkouknleqjyug.supabase.co/functions/v1/contact-form';
 
 // Bot protection: a hidden honeypot field (real visitors never see or fill it,
 // since it's off-screen via CSS) plus a minimum-time check (scripted bots
@@ -39,7 +38,7 @@ function setError(msg) {
 function setSubmitting(isSubmitting) {
   submitBtn.disabled = isSubmitting;
   submitBtn.style.opacity = isSubmitting ? '0.6' : '1';
-  submitBtn.textContent = isSubmitting ? 'Sending...' : 'Book a Discovery Call';
+  submitBtn.textContent = isSubmitting ? 'Sending...' : 'Submit';
 }
 
 form.addEventListener('submit', async (e) => {
@@ -53,14 +52,19 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const storeUrl = document.getElementById('storeUrl').value;
-  const goals = document.getElementById('goals').value;
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const goals = document.getElementById('goals').value.trim();
+  const optIn = document.getElementById('optIn').checked;
 
-  if (!email) {
-    setError('Email is required.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    setError('Please enter a valid email.');
+    return;
+  }
+  if (!goals) {
+    setError('Please tell us how we can help.');
     return;
   }
 
@@ -68,31 +72,16 @@ form.addEventListener('submit', async (e) => {
   setSubmitting(true);
 
   try {
-    const res = await fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_PUBLIC_KEY}`, {
+    // 1) The message always goes to us by email, independent of Klaviyo.
+    const res = await fetch(CONTACT_ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'revision': '2024-10-15' },
-      body: JSON.stringify({
-        data: {
-          type: 'subscription',
-          attributes: {
-            profile: {
-              data: {
-                type: 'profile',
-                attributes: {
-                  email,
-                  first_name: firstName,
-                  last_name: lastName,
-                  properties: { 'Store URL': storeUrl, 'Goals': goals },
-                },
-              },
-            },
-          },
-          relationships: { list: { data: { type: 'list', id: KLAVIYO_LIST_ID } } },
-        },
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName, lastName, email, company, message: goals, optIn }),
     });
-
     if (!res.ok) throw new Error('Submission failed');
+
+    // The server also saves name, email and company to Klaviyo, and sends
+    // marketing consent only when the box is ticked.
 
     formPanel.classList.add('hidden');
     successPanel.classList.add('visible');
@@ -112,4 +101,47 @@ form.addEventListener('submit', async (e) => {
   }
   window.addEventListener('scroll', updateHeaderShadow, { passive: true });
   updateHeaderShadow();
+})();
+
+// "What It Does" tabs: one feature at a time. Tap a tab, swipe the card, or use the arrow keys.
+(function () {
+  const root = document.getElementById('feature-tabs');
+  if (!root) return;
+  const tabs = Array.from(root.querySelectorAll('.ft-tab'));
+  const panels = Array.from(root.querySelectorAll('.ft-panel'));
+  let current = 0;
+
+  function show(i) {
+    current = (i + tabs.length) % tabs.length;
+    tabs.forEach((t, n) => {
+      const on = n === current;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      panels[n].classList.toggle('is-active', on);
+    });
+    const tab = tabs[current];
+    const row = tab.parentElement;
+    row.scrollTo({ left: tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2, behavior: 'smooth' });
+  }
+
+  tabs.forEach((t, n) => {
+    t.addEventListener('click', () => show(n));
+    t.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      show(current + (e.key === 'ArrowRight' ? 1 : -1));
+      tabs[current].focus();
+    });
+  });
+
+  let startX = null;
+  const area = root.querySelector('.ft-panels');
+  area.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  area.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    startX = null;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+  }, { passive: true });
 })();
