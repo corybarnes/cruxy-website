@@ -6,7 +6,7 @@ Source: https://cruxy.io/support/account/ (updated 2026-10-14)
 
 ## Edit your profile
 
-Tap your avatar, then **Settings**, and open the **Profile** tab. You can change your name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap **Save**.
+Tap your avatar, then **Settings**, and open the **Profile** tab. You can change your first and last name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap **Save**.
 
 ## Sign in with Google
 

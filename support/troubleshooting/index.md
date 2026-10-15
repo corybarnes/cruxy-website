@@ -19,7 +19,7 @@ Free includes 3 emailed invoices or reminders a month, and the count restarts on
 
 Check these:
 - **The client has no hourly rate.** Set a rate above 0 in the client's details.
-- **There's nothing to invoice.** The period may have no billable time, or it's already on another invoice.
+- **The client or period isn't listed.** New Invoice only offers clients with unbilled time or charges, and periods that have some. If a client is missing, the work may be non-billable or already on another invoice.
 - **The period has more than one currency.** Invoice each currency on its own.
 - **The invoice number already exists.** Pick another number.
 

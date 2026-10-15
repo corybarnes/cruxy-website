@@ -11,7 +11,7 @@ Source: https://cruxy.io/support/get-started/ (updated 2026-10-14)
 ## Create your account
 
 1. Go to [get.cruxy.io/signup](https://get.cruxy.io/signup).
-2. Enter your name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.
+2. Enter your first name, last name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.
 3. Tick the box to agree to the Terms and Privacy Policy.
 4. Tap **Create Account**.
 5. If we ask you to confirm your email, open the message we sent, tap the link, then sign in.
@@ -66,7 +66,7 @@ Tap **Entries**, then **New**, then **Time Entry**. Enter the date, hours and mi
 ## Send your first invoice
 
 1. Tap **Clients**, then the client, then the **Invoices** tab.
-2. Tap **New Invoice** and choose the period.
+2. Tap **New Invoice** and choose the period. It starts on all unbilled.
 3. Check the invoice number, dates and terms. Add a discount or a note if you need one, and untick any fees you want to leave off.
 4. Tap **Create Invoice**.
 5. Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.
@@ -166,7 +166,7 @@ Free PDFs carry a small "Generated with Cruxy" credit. Pro PDFs don't.
 ## Manage your tasks
 
 Tasks (like Design or Meetings) are shared across all your clients. Open **Settings > Tasks** and tap **New task** to add one, or tap a task to rename it.
-- You can also add a task from the Timer's task list with **+ Add task**.
+- You can also add a task from the Timer's task list with **+ Add new task**.
 - Renaming a task changes its name on every entry, including old ones.
 - A task that has entries can't be deleted, and its trash icon is crossed out. Rename it instead.
 
@@ -284,7 +284,7 @@ Source: https://cruxy.io/support/invoices/ (updated 2026-10-14)
 ## Create an invoice
 
 1. Tap **Clients**, then the client, then the **Invoices** tab.
-2. Tap **New Invoice** and choose the period: last month, this month, all unbilled time, or a custom range.
+2. Tap **New Invoice**. It starts on **All unbilled**, or choose last month, this month or a custom range. Each period shows its total, and Cruxy only offers periods that have something to invoice.
 3. Check the **invoice number** (we suggest the next one), the issue date and the payment terms (Due on receipt, Net 15, 30, 45 or 60).
 4. Set the tax rate, and add a discount or a note if you need to.
 5. Under **Fees and expenses**, untick any charge you want to leave off, or tap **Add Charge**.
@@ -310,7 +310,7 @@ The client's **Invoices** tab shows how much is unbilled. Tap that amount to ope
 
 An invoice is a snapshot. Later changes to the client, your settings or the entries don't change it. If you need a change, delete the invoice and create it again.
 
-If the period has nothing to invoice, Cruxy says so and doesn't make an invoice.
+Only clients and periods with something unbilled can be chosen, so you never end up with an empty invoice. With a custom range, Cruxy shows the items and total for those dates, or tells you there's nothing unbilled in them.
 
 ## View an invoice
 
@@ -569,7 +569,7 @@ Source: https://cruxy.io/support/account/ (updated 2026-10-14)
 
 ## Edit your profile
 
-Tap your avatar, then **Settings**, and open the **Profile** tab. You can change your name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap **Save**.
+Tap your avatar, then **Settings**, and open the **Profile** tab. You can change your first and last name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap **Save**.
 
 ## Sign in with Google
 
@@ -629,7 +629,7 @@ Free includes 3 emailed invoices or reminders a month, and the count restarts on
 
 Check these:
 - **The client has no hourly rate.** Set a rate above 0 in the client's details.
-- **There's nothing to invoice.** The period may have no billable time, or it's already on another invoice.
+- **The client or period isn't listed.** New Invoice only offers clients with unbilled time or charges, and periods that have some. If a client is missing, the work may be non-billable or already on another invoice.
 - **The period has more than one currency.** Invoice each currency on its own.
 - **The invoice number already exists.** Pick another number.
 

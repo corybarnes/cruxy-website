@@ -20,7 +20,7 @@ PAGES.append(dict(
     ('create-account', 'Create your account', '''
 <ol>
 <li>Go to <a href="https://get.cruxy.io/signup">get.cruxy.io/signup</a>.</li>
-<li>Enter your name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.</li>
+<li>Enter your first name, last name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.</li>
 <li>Tick the box to agree to the Terms and Privacy Policy.</li>
 <li>Tap <strong>Create Account</strong>.</li>
 <li>If we ask you to confirm your email, open the message we sent, tap the link, then sign in.</li>
@@ -66,7 +66,7 @@ PAGES.append(dict(
     ('first-invoice', 'Send your first invoice', '''
 <ol>
 <li>Tap <strong>Clients</strong>, then the client, then the <strong>Invoices</strong> tab.</li>
-<li>Tap <strong>New Invoice</strong> and choose the period.</li>
+<li>Tap <strong>New Invoice</strong> and choose the period. It starts on all unbilled.</li>
 <li>Check the invoice number, dates and terms. Add a discount or a note if you need one, and untick any fees you want to leave off.</li>
 <li>Tap <strong>Create Invoice</strong>.</li>
 <li>Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.</li>
@@ -147,7 +147,7 @@ PAGES.append(dict(
     ('tasks', 'Manage your tasks', '''
 <p>Tasks (like Design or Meetings) are shared across all your clients. Open <strong>Settings &gt; Tasks</strong> and tap <strong>New task</strong> to add one, or tap a task to rename it.</p>
 <ul>
-<li>You can also add a task from the Timer's task list with <strong>+ Add task</strong>.</li>
+<li>You can also add a task from the Timer's task list with <strong>+ Add new task</strong>.</li>
 <li>Renaming a task changes its name on every entry, including old ones.</li>
 <li>A task that has entries can't be deleted, and its trash icon is crossed out. Rename it instead.</li>
 </ul>''',
@@ -245,7 +245,7 @@ PAGES.append(dict(
     ('create', 'Create an invoice', '''
 <ol>
 <li>Tap <strong>Clients</strong>, then the client, then the <strong>Invoices</strong> tab.</li>
-<li>Tap <strong>New Invoice</strong> and choose the period: last month, this month, all unbilled time, or a custom range.</li>
+<li>Tap <strong>New Invoice</strong>. It starts on <strong>All unbilled</strong>, or choose last month, this month or a custom range. Each period shows its total, and Cruxy only offers periods that have something to invoice.</li>
 <li>Check the <strong>invoice number</strong> (we suggest the next one), the issue date and the payment terms (Due on receipt, Net 15, 30, 45 or 60).</li>
 <li>Set the tax rate, and add a discount or a note if you need to.</li>
 <li>Under <strong>Fees and expenses</strong>, untick any charge you want to leave off, or tap <strong>Add Charge</strong>.</li>
@@ -269,7 +269,7 @@ PAGES.append(dict(
 <li>If the period has time in more than one currency, Cruxy asks you to invoice them separately.</li>
 </ul>
 <p>An invoice is a snapshot. Later changes to the client, your settings or the entries don't change it. If you need a change, delete the invoice and create it again.</p>
-<p>If the period has nothing to invoice, Cruxy says so and doesn't make an invoice.</p>''', []),
+<p>Only clients and periods with something unbilled can be chosen, so you never end up with an empty invoice. With a custom range, Cruxy shows the items and total for those dates, or tells you there's nothing unbilled in them.</p>''', []),
     ('view', 'View an invoice', '''
 <p>Tap an invoice in the client's list to see Bill To, the lines, the totals, your payment instructions and notes. In the list, each invoice shows <strong>Not sent</strong>, <strong>Sent</strong> with the date, <strong>Overdue</strong> with how many days, or <strong>Paid</strong> with the date.</p>''',
      [shot(S+'invoice-view.png', 'An invoice in Cruxy'), shot(S+'screen-invoices.png', 'The Invoices tab with paid and overdue invoices')]),
@@ -461,7 +461,7 @@ PAGES.append(dict(
     intro='Your profile, how you sign in, and how to leave.',
     sections=[
     ('profile', 'Edit your profile', '''
-<p>Tap your avatar, then <strong>Settings</strong>, and open the <strong>Profile</strong> tab. You can change your name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap <strong>Save</strong>.</p>''',
+<p>Tap your avatar, then <strong>Settings</strong>, and open the <strong>Profile</strong> tab. You can change your first and last name, avatar color and workspace name, and choose which day the week starts on (Sunday or Monday). The week start is saved on each device, so set it on every device you use. Tap <strong>Save</strong>.</p>''',
      [shot(S+'settings-profile-free.png', 'The Profile tab in Settings')]),
     ('google', 'Sign in with Google', '''
 <p>Sign-up is by email and password. To add Google sign-in afterward, open <strong>Settings &gt; Profile</strong> and tap <strong>Connect Google</strong>. From then on you can tap <strong>Continue with Google</strong> on the sign-in screen.</p>
@@ -507,7 +507,7 @@ PAGES.append(dict(
 <p>Check these:</p>
 <ul>
 <li><strong>The client has no hourly rate.</strong> Set a rate above 0 in the client's details.</li>
-<li><strong>There's nothing to invoice.</strong> The period may have no billable time, or it's already on another invoice.</li>
+<li><strong>The client or period isn't listed.</strong> New Invoice only offers clients with unbilled time or charges, and periods that have some. If a client is missing, the work may be non-billable or already on another invoice.</li>
 <li><strong>The period has more than one currency.</strong> Invoice each currency on its own.</li>
 <li><strong>The invoice number already exists.</strong> Pick another number.</li>
 </ul>''', []),

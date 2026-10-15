@@ -7,7 +7,7 @@ Source: https://cruxy.io/support/get-started/ (updated 2026-10-14)
 ## Create your account
 
 1. Go to [get.cruxy.io/signup](https://get.cruxy.io/signup).
-2. Enter your name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.
+2. Enter your first name, last name, email and a password (at least 6 characters). Add your business or agency name if you like. We use your name if you leave it blank.
 3. Tick the box to agree to the Terms and Privacy Policy.
 4. Tap **Create Account**.
 5. If we ask you to confirm your email, open the message we sent, tap the link, then sign in.
@@ -62,7 +62,7 @@ Tap **Entries**, then **New**, then **Time Entry**. Enter the date, hours and mi
 ## Send your first invoice
 
 1. Tap **Clients**, then the client, then the **Invoices** tab.
-2. Tap **New Invoice** and choose the period.
+2. Tap **New Invoice** and choose the period. It starts on all unbilled.
 3. Check the invoice number, dates and terms. Add a discount or a note if you need one, and untick any fees you want to leave off.
 4. Tap **Create Invoice**.
 5. Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.

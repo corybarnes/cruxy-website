@@ -7,7 +7,7 @@ Source: https://cruxy.io/support/invoices/ (updated 2026-10-14)
 ## Create an invoice
 
 1. Tap **Clients**, then the client, then the **Invoices** tab.
-2. Tap **New Invoice** and choose the period: last month, this month, all unbilled time, or a custom range.
+2. Tap **New Invoice**. It starts on **All unbilled**, or choose last month, this month or a custom range. Each period shows its total, and Cruxy only offers periods that have something to invoice.
 3. Check the **invoice number** (we suggest the next one), the issue date and the payment terms (Due on receipt, Net 15, 30, 45 or 60).
 4. Set the tax rate, and add a discount or a note if you need to.
 5. Under **Fees and expenses**, untick any charge you want to leave off, or tap **Add Charge**.
@@ -33,7 +33,7 @@ The client's **Invoices** tab shows how much is unbilled. Tap that amount to ope
 
 An invoice is a snapshot. Later changes to the client, your settings or the entries don't change it. If you need a change, delete the invoice and create it again.
 
-If the period has nothing to invoice, Cruxy says so and doesn't make an invoice.
+Only clients and periods with something unbilled can be chosen, so you never end up with an empty invoice. With a custom range, Cruxy shows the items and total for those dates, or tells you there's nothing unbilled in them.
 
 ## View an invoice
 

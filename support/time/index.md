@@ -86,7 +86,7 @@ Free PDFs carry a small "Generated with Cruxy" credit. Pro PDFs don't.
 ## Manage your tasks
 
 Tasks (like Design or Meetings) are shared across all your clients. Open **Settings > Tasks** and tap **New task** to add one, or tap a task to rename it.
-- You can also add a task from the Timer's task list with **+ Add task**.
+- You can also add a task from the Timer's task list with **+ Add new task**.
 - Renaming a task changes its name on every entry, including old ones.
 - A task that has entries can't be deleted, and its trash icon is crossed out. Rename it instead.
 
