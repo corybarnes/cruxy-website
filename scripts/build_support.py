@@ -189,7 +189,7 @@ def page_schema(page):
     art = {'@type': 'TechArticle', 'headline': SEO_TITLES[page['slug']], 'description': page['desc'], 'url': url,
            'mainEntityOfPage': url, 'inLanguage': 'en', 'datePublished': PUBLISHED, 'dateModified': MODIFIED,
            'author': pub, 'publisher': pub, 'image': SOCIAL_IMG,
-           'about': {'@type': 'SoftwareApplication', 'name': 'Cruxy Time Tracker', 'url': SITE, 'applicationCategory': 'BusinessApplication'},
+           'about': {'@type': 'SoftwareApplication', 'name': 'Cruxy', 'url': SITE, 'applicationCategory': 'BusinessApplication'},
            'isPartOf': {'@type': 'CollectionPage', 'name': 'Cruxy Help Center', 'url': SITE + 'support/'}}
     objs = [art, crumbs]
     secs = page['sections']
