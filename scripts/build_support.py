@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 from support_content import PAGES  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOINDEX = False  # True adds noindex and leaves Support out of sitemap.xml / llms.txt
+NOINDEX = True  # True adds noindex and leaves Support out of sitemap.xml / llms.txt
 SITE = 'https://cruxy.io/'
 PUBLISHED = '2026-10-09'
 MODIFIED = '2026-10-14'
