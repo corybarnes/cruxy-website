@@ -464,6 +464,6 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 .btn-submit:hover:not(:disabled) { background: #FFD43B; color: #0D0D0D; }
 .footer-signup { flex: 1 1 280px; max-width: 360px; }
 .footer-signup .footer-col-title { margin-bottom: 10px; }
-/* Klaviyo adds its own padding inside the embed: pull the field up under the heading and flush left with it. */
-.footer-signup [class*="klaviyo-form-"] { margin: -58px 0 -40px -19px; }
-@media (max-width: 640px) { .footer-signup [class*="klaviyo-form-"] { margin-right: -19px; } }
+/* Klaviyo adds its own padding inside the embed: pull the field up under the heading and flush left with it.
+   Target only the embed's outer div; the form inside it carries a similar class and would double the offset. */
+.footer-signup > .klaviyo-form-XRxtqS { margin: -18px 0 -20px -15px; }
