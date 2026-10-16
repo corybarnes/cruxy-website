@@ -314,14 +314,19 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .ft-copy h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: #0D0D0D; margin: 0 0 12px; }
 .ft-copy p { font-size: 16px; color: #4A4A4A; line-height: 1.65; margin: 0; }
 @media (max-width: 720px) {
-  .ft-tabs { justify-content: flex-start; }
-  .ft-tabs { gap: 6px; }
+  /* Pills stay pinned under the header while this section is on screen (they scroll away with it). */
+  #features { padding: 56px 0; }
+  .ft-tabs { justify-content: flex-start; gap: 6px; position: sticky; top: 65px; z-index: 50; background: #fff; margin: 0 -24px 12px; padding: 10px 24px; border-bottom: 1px solid #EDEDED; }
   .ft-tab { padding: 9px 13px; font-size: 13px; }
-  .ft-panel { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
-  .ft-shot img { max-width: 240px; }
-  .ft-copy h3 { font-size: 22px; }
-  .ft-icon { margin-bottom: 14px; }
-  .ft-icon svg { width: 48px; height: 48px; }
+  /* Copy first, then a picture sized to the room left on the screen, so pills, text and picture are visible together. */
+  .ft-panel { grid-template-columns: 1fr; gap: 16px; padding: 20px 20px 24px; }
+  .ft-copy { order: 1; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; }
+  .ft-shot { order: 2; }
+  .ft-icon { margin: 0; }
+  .ft-icon svg { width: 36px; height: 36px; }
+  .ft-copy h3 { font-size: 20px; margin: 0; }
+  .ft-copy p { grid-column: 1 / -1; font-size: 15px; line-height: 1.55; margin-top: 10px; }
+  .ft-shot img { width: auto; height: auto; max-width: 100%; max-height: max(200px, calc(100vh - 340px)); max-height: max(200px, calc(100svh - 340px)); }
 }
 @media (prefers-reduced-motion: reduce) { .ft-panel, .ft-tab { transition: none; } }
 
@@ -353,7 +358,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .support-box { text-align: center; border: 1px solid #E0E0E0; border-radius: 16px; padding: 48px; background: #F8F8F8; }
 .support-photo { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; margin: 0 auto 32px; }
 .support-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-.support-box h2 { font-size: 2.25rem; font-weight: 800; color: #0D0D0D; margin: 0 0 20px; letter-spacing: -0.02em; }
+.support-box h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; color: #0D0D0D; margin: 0 0 20px; letter-spacing: -0.02em; }
 .support-box p { color: #4A4A4A; font-size: 16px; line-height: 1.65; margin: 0; }
 
 /* ---------- FAQ ---------- */
@@ -372,6 +377,8 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
   #pricing .wrap, #faq .wrap { padding: 0; }
   .positioning-box { padding: 32px 24px 24px; }
   .positioning-card, .pricing-card { padding: 24px; }
+  .positioning-grid { flex-direction: column; gap: 16px; }
+  .positioning-card { min-width: 0; width: 100%; box-sizing: border-box; }
   .support-box { padding: 32px 24px; }
   .support-photo { width: 160px; height: 160px; }
 }
