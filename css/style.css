@@ -467,3 +467,10 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 /* Klaviyo adds its own padding inside the embed: pull the field up under the heading and flush left with it.
    Target only the embed's outer div; the form inside it carries a similar class and would double the offset. */
 .footer-signup > .klaviyo-form-XRxtqS { margin: -18px 0 -20px -15px; }
+/* Phones: stack the email field above the Subscribe button (Klaviyo lays them out in one row). */
+@media (max-width: 640px) {
+  .footer-signup { flex: 1 1 100%; max-width: none; }
+  .footer-signup [data-testid="form-row"] { flex-direction: column !important; align-items: stretch !important; height: auto !important; }
+  .footer-signup [data-testid="form-component"] { width: 100% !important; box-sizing: border-box !important; flex: 0 0 auto !important; height: auto !important; }
+  .footer-signup button { margin-left: 4px; }
+}
