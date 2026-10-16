@@ -353,7 +353,7 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
 .support-box { text-align: center; border: 1px solid #E0E0E0; border-radius: 16px; padding: 48px; background: #F8F8F8; }
 .support-photo { width: 220px; height: 220px; border-radius: 50%; overflow: hidden; margin: 0 auto 32px; }
 .support-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-.support-box h2 { font-size: 2.25rem; font-weight: 800; color: #0D0D0D; margin: 0 0 20px; letter-spacing: -0.02em; }
+.support-box h2 { font-size: 2.25rem; font-weight: 800; line-height: 1.15; color: #0D0D0D; margin: 0 0 20px; letter-spacing: -0.02em; }
 .support-box p { color: #4A4A4A; font-size: 16px; line-height: 1.65; margin: 0; }
 
 /* ---------- FAQ ---------- */
@@ -372,6 +372,8 @@ footer.site-footer { background: #0D0D0D; color: #fff; padding: 64px 24px 32px; 
   #pricing .wrap, #faq .wrap { padding: 0; }
   .positioning-box { padding: 32px 24px 24px; }
   .positioning-card, .pricing-card { padding: 24px; }
+  .positioning-grid { flex-direction: column; gap: 16px; }
+  .positioning-card { min-width: 0; width: 100%; box-sizing: border-box; }
   .support-box { padding: 32px 24px; }
   .support-photo { width: 160px; height: 160px; }
 }
