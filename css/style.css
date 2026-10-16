@@ -467,3 +467,11 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 /* Klaviyo adds its own padding inside the embed: pull the field up under the heading and flush left with it.
    Target only the embed's outer div; the form inside it carries a similar class and would double the offset. */
 .footer-signup > .klaviyo-form-XRxtqS { margin: -18px 0 -20px -15px; }
+
+/* Phones: land anchored sections about 32px under the sticky header (their top padding was leaving 55-80px of blank space),
+   and give Log in a little more room before the Start Free button. */
+@media (max-width: 640px) {
+  #pricing, #faq { scroll-margin-top: 17px; }
+  #features { scroll-margin-top: 41px; }
+  .btn-book { margin-left: 6px; }
+}
