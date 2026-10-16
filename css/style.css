@@ -462,3 +462,5 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 .legal li { margin-bottom: 6px; }
 .legal a { color: #B88A00; }
 .btn-submit:hover:not(:disabled) { background: #FFD43B; color: #0D0D0D; }
+.footer-signup { flex: 1 1 280px; max-width: 360px; }
+.footer-signup .footer-col-title { margin-bottom: 10px; }
