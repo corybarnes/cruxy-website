@@ -103,7 +103,7 @@ header.site-header .wrap {
 
 /* ---------- Mobile header/nav ---------- */
 @media (max-width: 640px) {
-  header.site-header .wrap { padding: 0 12px; }
+  header.site-header .wrap { padding: 0 22px 0 12px; }
   .logo-link img { height: 30px; }
   .main-nav { gap: 12px; }
   .main-nav a.nav-link { font-size: 12.5px; }
@@ -489,4 +489,5 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
   .main-nav { gap: 8px; }
   .main-nav a.nav-link { font-size: 12px; }
   .logo-link img { height: 26px; }
+  header.site-header .wrap { padding-right: 14px; }
 }
