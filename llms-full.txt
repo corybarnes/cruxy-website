@@ -72,7 +72,7 @@ Tap **Entries**, then **New**, then **Time Entry**. Enter the date, hours and mi
 5. Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.
 
 
-Free includes 3 emailed invoices a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.
+Free includes 3 emailed invoices or reminders a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.
 
 ---
 Still stuck? Email support@cruxy.io and you'll get a quick response from a real person.
@@ -497,7 +497,7 @@ Free also includes unlimited projects and tasks, CSV import from Clockify, Toggl
 
 ## What counts as an active client
 
-Free includes 2 active clients. An inactive client doesn't count, and keeps all its history, read-only. When you finish with a client, make it inactive to make room.
+Free includes 2 active clients. An inactive client doesn't count, and keeps all its history. You can still view and export it, and send or mark its invoices paid, but not log new time. When you finish with a client, make it inactive to make room.
 
 If you try to add a third active client on Free, Cruxy offers Pro instead.
 
@@ -614,7 +614,7 @@ Deleting can't be undone. If you want something removed that you can't delete yo
 ## Delete your account
 
 Open **Settings > Profile**, tap **Delete Account**, type **DELETE** and confirm.
-- Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
+- If you're the workspace owner, your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
 - A Stripe subscription is cancelled straight away, with no refund for the current period.
 - A Google Play subscription is not cancelled by deleting your account. Cancel it first in Google Play (Play Store app > Profile > Payments & subscriptions), or you will keep being charged.
 - There is no undo and no grace period.
