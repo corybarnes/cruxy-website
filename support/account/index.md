@@ -31,11 +31,23 @@ Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If 
 
 Tap your avatar in the top right and choose **Log Out**.
 
+## Delete some of your data without deleting your account
+
+You don't have to delete your account to remove data. You can delete:
+- **Time entries:** open an entry and tap the trash icon. See [Edit or delete an entry](https://cruxy.io/support/time/#edit-entry).
+- **A client**, with its projects and time entries: see [Delete a client](https://cruxy.io/support/clients-projects/#delete-client).
+- **Invoices:** see [Delete an invoice](https://cruxy.io/support/invoices/#delete).
+- **Projects and tasks** that have no entries, and **retainers**.
+
+
+Deleting can't be undone. If you want something removed that you can't delete yourself, email [support@cruxy.io](mailto:support@cruxy.io) from the address on your account and we'll take care of it.
+
 ## Delete your account
 
 Open **Settings > Profile**, tap **Delete Account**, type **DELETE** and confirm.
 - Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
-- A Pro subscription is cancelled straight away, with no refund for the current period.
+- A Stripe subscription is cancelled straight away, with no refund for the current period.
+- A Google Play subscription is not cancelled by deleting your account. Cancel it first in Google Play (Play Store app > Profile > Payments & subscriptions), or you will keep being charged.
 - There is no undo and no grace period.
 
 

@@ -432,33 +432,36 @@ PAGES.append(dict(
 PAGES.append(dict(
     slug='billing', title='Billing', nav='Billing',
     desc='How billing works for Cruxy Pro: upgrading, receipts, updating your card, cancelling, and refunds.',
-    intro='Cruxy Pro is $4.99 a month. Payments are handled by Stripe.',
+    intro='Cruxy Pro is $4.99 a month. Payments are handled by Stripe on the web, or by Google Play in the Android app.',
     sections=[
     ('upgrade', 'Upgrade to Pro', '''
 <ol>
 <li>Open <strong>Settings &gt; Profile</strong> and tap <strong>Go Pro</strong>. You can also tap <strong>Go Pro</strong> when Cruxy offers it, for example when you reach a limit.</li>
-<li>Enter your payment details on the Stripe checkout page.</li>
+<li>Enter your payment details on the Stripe checkout page. (In the Android app, Google Play's purchase screen opens instead.)</li>
 <li>When you return to Cruxy, you're on Pro straight away.</li>
 </ol>
 <p>Pro is billed monthly. There's no contract.</p>''',
      [shot(S+'upgrade.png', 'The Upgrade to Pro sheet')]),
     ('receipts', 'Receipts and invoices', '''
-<p>Stripe handles your payments and billing history. You can see past payments, and download receipts, from the billing page behind <strong>Manage Subscription</strong>. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>''', []),
+<p>Stripe handles your payments and billing history. You can see past payments, and download receipts, from the billing page behind <strong>Manage Subscription</strong>. If you need a receipt in a particular form, email <a href="mailto:support@cruxy.io">support@cruxy.io</a>.</p>
+<p>If you subscribed through Google Play, your receipts and payment history are in Google Play (Payments &amp; subscriptions in the Play Store app).</p>''', []),
     ('manage', 'Manage your subscription or update your card', '''
-<p>Open <strong>Settings &gt; Profile</strong> and tap <strong>Manage Subscription</strong>. This opens Stripe's billing page, where you can update your card, see your payments, or cancel.</p>''',
+<p>Open <strong>Settings &gt; Profile</strong> and tap <strong>Manage Subscription</strong>. This opens Stripe's billing page, where you can update your card, see your payments, or cancel.</p>
+<p>If you subscribed through Google Play, Settings shows <strong>Managed in Google Play</strong> instead. Manage your subscription and payment method in the Play Store app, under Profile &gt; Payments &amp; subscriptions, or on the <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions page</a>.</p>''',
+
      [shot(S+'settings-profile.png', 'The Profile tab in Settings with the Plan row')]),
     ('cancel', 'Cancel Pro', '''
-<p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Manage Subscription</strong>, and cancel there. You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends and a <strong>Keep Pro</strong> button if you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
+<p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Manage Subscription</strong>, and cancel there. (If you subscribed through Google Play, cancel in Google Play instead.) You can cancel at any time. In the last week of your plan Cruxy shows a banner with the date it ends and a <strong>Keep Pro</strong> button if you change your mind. After that your workspace moves to Free. See <a href="../free-vs-pro/#pro-ends">If Pro ends</a>.</p>''', []),
     ('refunds', 'Refunds', '''
 <p>Fees are non-refundable except as required by law. If you were charged by mistake, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> and we'll look into it.</p>
 <p>If you subscribed through Google Play in the Android app, Google Play handles the refund under its refund policy.</p>
-<p>Deleting your account cancels Pro straight away and doesn't refund the current period.</p>''', []),
+<p>Deleting your account cancels a Stripe subscription straight away and doesn't refund the current period. A Google Play subscription is not cancelled by deleting your account, so cancel it in Google Play first.</p>''', []),
     ]))
 
 # ---------------------------------------------------------------- Account
 PAGES.append(dict(
     slug='account', title='Account', nav='Account',
-    desc='Manage your Cruxy account: profile, workspace name, week start, Google sign-in, installing on your phone, logging out and deleting your account.',
+    desc='Manage your Cruxy account: profile, workspace name, week start, Google sign-in, installing on your phone, logging out, deleting some of your data and deleting your account.',
     intro='Your profile, how you sign in, and how to leave.',
     sections=[
     ('profile', 'Edit your profile', '''
@@ -478,11 +481,21 @@ PAGES.append(dict(
 <p>Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
     ('logout', 'Log out', '''
 <p>Tap your avatar in the top right and choose <strong>Log Out</strong>.</p>''', []),
+    ('delete-data', 'Delete some of your data without deleting your account', '''
+<p>You don't have to delete your account to remove data. You can delete:</p>
+<ul>
+<li><strong>Time entries:</strong> open an entry and tap the trash icon. See <a href="../time/#edit-entry">Edit or delete an entry</a>.</li>
+<li><strong>A client</strong>, with its projects and time entries: see <a href="../clients-projects/#delete-client">Delete a client</a>.</li>
+<li><strong>Invoices:</strong> see <a href="../invoices/#delete">Delete an invoice</a>.</li>
+<li><strong>Projects and tasks</strong> that have no entries, and <strong>retainers</strong>.</li>
+</ul>
+<p>Deleting can't be undone. If you want something removed that you can't delete yourself, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account and we'll take care of it.</p>''', []),
     ('delete', 'Delete your account', '''
 <p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Delete Account</strong>, type <strong>DELETE</strong> and confirm.</p>
 <ul>
 <li>Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.</li>
-<li>A Pro subscription is cancelled straight away, with no refund for the current period.</li>
+<li>A Stripe subscription is cancelled straight away, with no refund for the current period.</li>
+<li>A Google Play subscription is not cancelled by deleting your account. Cancel it first in Google Play (Play Store app &gt; Profile &gt; Payments &amp; subscriptions), or you will keep being charged.</li>
 <li>There is no undo and no grace period.</li>
 </ul>
 <p>Export what you need first. See <a href="../time/#export">Export your time</a>, and download your invoice PDFs. If you can't sign in, email <a href="mailto:support@cruxy.io">support@cruxy.io</a> from the address on your account.</p>''',
