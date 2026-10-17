@@ -14,7 +14,7 @@ NOINDEX = True  # True adds noindex and leaves Support out of sitemap.xml / llms
 SITE = 'https://cruxy.io/'
 PUBLISHED = '2026-10-09'
 MODIFIED = '2026-10-14'
-SOCIAL_IMG = SITE + 'images/hero/hero-lifestyle.jpg'
+SOCIAL_IMG = SITE + 'images/hero/og-share-2.png'
 SEO_TITLES = {
     'get-started': 'Get started with Cruxy: set up in 5 minutes',
     'time': 'Log time in Cruxy: timer, entries and timesheet',
