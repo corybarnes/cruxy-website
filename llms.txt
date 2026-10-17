@@ -3,7 +3,7 @@
 > Cruxy is a free time tracking and invoicing app for solo freelancers. Track your time, invoice your clients, and see what you've earned, with no per-seat pricing and no team-tool bloat. Use it on the web at https://get.cruxy.io (add it to your home screen on iPhone or Android). Google Play and App Store versions are coming soon.
 
 ## Pricing
-- Free: $0. Up to 2 active clients, unlimited projects and tasks, 3 emailed invoices per month, CSV import and export, PDF work summaries with your own logo.
+- Free: $0. Up to 2 active clients, unlimited projects and tasks, 3 emailed invoices or reminders per month, CSV import and export, PDF work summaries with your own logo.
 - Pro: $4.99 per month, cancel anytime. Unlimited active clients and emailed invoices, project budgets with monthly rollover, retainers, invoices without the Cruxy footer.
 
 ## What it does

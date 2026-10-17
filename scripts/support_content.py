@@ -71,7 +71,7 @@ PAGES.append(dict(
 <li>Tap <strong>Create Invoice</strong>.</li>
 <li>Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.</li>
 </ol>
-<p class="note">Free includes 3 emailed invoices a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.</p>''',
+<p class="note">Free includes 3 emailed invoices or reminders a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.</p>''',
      [shot(S+'new-invoice.png', 'The New Invoice sheet in Cruxy with period, tax and total'), shot(S+'email-invoice.png', 'The Email invoice sheet in Cruxy')], 'step'),
     ]))
 
@@ -409,7 +409,7 @@ PAGES.append(dict(
 </tbody></table></div>
 <p>Free also includes unlimited projects and tasks, CSV import from Clockify, Toggl and Harvest, and CSV export. Free is not a trial. It doesn't expire.</p>''', []),
     ('clients-limit', 'What counts as an active client', '''
-<p>Free includes 2 active clients. An inactive client doesn't count, and keeps all its history, read-only. When you finish with a client, make it inactive to make room.</p>
+<p>Free includes 2 active clients. An inactive client doesn't count, and keeps all its history. You can still view and export it, and send or mark its invoices paid, but not log new time. When you finish with a client, make it inactive to make room.</p>
 <p>If you try to add a third active client on Free, Cruxy offers Pro instead.</p>''', []),
     ('email-limit', 'The emailed invoice limit', '''
 <p>Free includes 3 emailed invoices or reminders a month, renewing on the 1st (in your time zone). The email sheet shows how many you have left. <strong>Sharing and downloading invoices stay free and unlimited</strong>, so you can always send a PDF yourself.</p>''',
@@ -493,7 +493,7 @@ PAGES.append(dict(
     ('delete', 'Delete your account', '''
 <p>Open <strong>Settings &gt; Profile</strong>, tap <strong>Delete Account</strong>, type <strong>DELETE</strong> and confirm.</p>
 <ul>
-<li>Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.</li>
+<li>If you're the workspace owner, your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.</li>
 <li>A Stripe subscription is cancelled straight away, with no refund for the current period.</li>
 <li>A Google Play subscription is not cancelled by deleting your account. Cancel it first in Google Play (Play Store app &gt; Profile &gt; Payments &amp; subscriptions), or you will keep being charged.</li>
 <li>There is no undo and no grace period.</li>

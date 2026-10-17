@@ -25,7 +25,7 @@ Free also includes unlimited projects and tasks, CSV import from Clockify, Toggl
 
 ## What counts as an active client
 
-Free includes 2 active clients. An inactive client doesn't count, and keeps all its history, read-only. When you finish with a client, make it inactive to make room.
+Free includes 2 active clients. An inactive client doesn't count, and keeps all its history. You can still view and export it, and send or mark its invoices paid, but not log new time. When you finish with a client, make it inactive to make room.
 
 If you try to add a third active client on Free, Cruxy offers Pro instead.
 

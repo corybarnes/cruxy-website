@@ -68,7 +68,7 @@ Tap **Entries**, then **New**, then **Time Entry**. Enter the date, hours and mi
 5. Tap the email icon to send it as a PDF. You can also tap Share or Download and send it yourself.
 
 
-Free includes 3 emailed invoices a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.
+Free includes 3 emailed invoices or reminders a month. Sharing and downloading are always free. When you email or share an invoice, Cruxy marks it as sent.
 
 ---
 Still stuck? Email support@cruxy.io and you'll get a quick response from a real person.

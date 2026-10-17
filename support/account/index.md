@@ -45,7 +45,7 @@ Deleting can't be undone. If you want something removed that you can't delete yo
 ## Delete your account
 
 Open **Settings > Profile**, tap **Delete Account**, type **DELETE** and confirm.
-- Your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
+- If you're the workspace owner, your workspace and everything in it is permanently deleted: clients, time entries, invoices and settings.
 - A Stripe subscription is cancelled straight away, with no refund for the current period.
 - A Google Play subscription is not cancelled by deleting your account. Cancel it first in Google Play (Play Store app > Profile > Payments & subscriptions), or you will keep being charged.
 - There is no undo and no grace period.
