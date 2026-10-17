@@ -29,6 +29,8 @@ Open **Settings > Profile**, tap **Manage Subscription**, and cancel there. You 
 
 Fees are non-refundable except as required by law. If you were charged by mistake, email [support@cruxy.io](mailto:support@cruxy.io) and we'll look into it.
 
+If you subscribed through Google Play in the Android app, Google Play handles the refund under its refund policy.
+
 Deleting your account cancels Pro straight away and doesn't refund the current period.
 
 ---
