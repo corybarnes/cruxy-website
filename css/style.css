@@ -108,7 +108,8 @@ header.site-header .wrap {
   .main-nav { gap: 12px; }
   .main-nav a.nav-link { font-size: 12.5px; }
   .btn-book { padding: 8px 12px; font-size: 12px; }
-  .main-nav a.nav-features { display: none; } /* make room for Log in; Features is right below the hero */
+  .main-nav a.nav-link { white-space: nowrap; }
+  .main-nav .btn-book { display: none; } /* phones: keep all four links; Start Free is in the hero and pricing */
 }
 
 /* ---------- Services ---------- */
@@ -481,4 +482,11 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
   #pricing, #faq { scroll-margin-top: 17px; }
   #features { scroll-margin-top: 41px; }
   .btn-book { margin-left: 6px; }
+}
+
+/* Very small phones (320px): tighten the four header links so Log in stays on one line. */
+@media (max-width: 340px) {
+  .main-nav { gap: 8px; }
+  .main-nav a.nav-link { font-size: 12px; }
+  .logo-link img { height: 26px; }
 }
