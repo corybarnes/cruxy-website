@@ -21,11 +21,11 @@ On the sign-in screen, tap **Forgot Password?**, enter your email and tap **Send
 ## Install Cruxy on your phone
 
 Cruxy works in your browser at get.cruxy.io. To open it like an app:
-- **Android:** open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
+- **Android:** install Cruxy from Google Play. You can also open get.cruxy.io in Chrome, tap the menu, then **Install app** or **Add to Home screen**.
 - **iPhone:** open get.cruxy.io in Safari, tap the Share button, then **Add to Home Screen**.
 
 
-Cruxy is coming soon to Google Play and the App Store. Cruxy updates itself. If it reloads after an update, that's why.
+Cruxy is on Google Play, and an App Store version is coming soon. Cruxy updates itself. If it reloads after an update, that's why.
 
 ## Log out
 
