@@ -86,7 +86,7 @@ header.site-header .wrap {
 .hero-cta-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .btn-primary { background: #FFC60B; color: #0D0D0D; padding: 13px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; }
 .hero-secondary-link { color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; }
-#home .wrap { justify-content: center; gap: 24px; }
+#home .wrap { justify-content: center; gap: 72px; }
 #home .hero-copy { flex: 0 1 480px; min-width: 0; }
 #hero-img-wrap { flex-shrink: 0; margin-left: 0; width: 320px; max-width: 34vw; }
 #hero-img-wrap img { width: 100%; height: auto; display: block; }
