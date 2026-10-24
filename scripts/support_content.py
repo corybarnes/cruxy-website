@@ -476,9 +476,9 @@ PAGES.append(dict(
 <p>Cruxy works in your browser at get.cruxy.io. To open it like an app:</p>
 <ul>
 <li><strong>Android:</strong> install Cruxy from Google Play. You can also open get.cruxy.io in Chrome, tap the menu, then <strong>Install app</strong> or <strong>Add to Home screen</strong>.</li>
-<li><strong>iPhone:</strong> open get.cruxy.io in Safari, tap the Share button, then <strong>Add to Home Screen</strong>.</li>
+<li><strong>iPhone:</strong> install Cruxy from the App Store. You can also open get.cruxy.io in Safari, tap the Share button, then <strong>Add to Home Screen</strong>.</li>
 </ul>
-<p>Cruxy is on Google Play, and an App Store version is coming soon. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
+<p>Cruxy is on the App Store and Google Play. Cruxy updates itself. If it reloads after an update, that's why.</p>''', []),
     ('logout', 'Log out', '''
 <p>Tap your avatar in the top right and choose <strong>Log Out</strong>.</p>''', []),
     ('delete-data', 'Delete some of your data without deleting your account', '''

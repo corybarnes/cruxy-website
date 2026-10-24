@@ -493,7 +493,9 @@ a.btn-secondary:hover { background: #0D0D0D; color: #fff; }
 }
 
 /* ---------- Google Play badge (official artwork, unmodified; keep height at least 28px) ---------- */
-.play-badge { display: inline-flex; align-items: center; }
+.play-badge, .appstore-badge { display: inline-flex; align-items: center; }
+.appstore-badge img { height: 56px; width: auto; display: block; }
+.hero-cta-row, .cta-row { gap: 12px; }
 .play-badge img { height: 56px; width: auto; display: block; }
 .footer-trademark { margin: 14px 0 0; font-size: 11px; line-height: 1.5; opacity: .6; }
 
